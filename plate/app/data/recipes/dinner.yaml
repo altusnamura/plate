@@ -1,0 +1,485 @@
+---
+# Dinners. About 45% vegetarian, matching the config default of 40% — dinner is
+# where the fish and poultry live, since lunch is carrying the vegetarian load.
+#
+# Weeknight prep budget defaults to 35 minutes of active time, so anything above
+# that is tagged `weekend` and the planner will tend to place it on a Saturday or
+# Sunday of its own accord.
+recipes:
+  - id: salmon-charred-broccoli
+    title: Salmon with charred broccoli
+    meals: [dinner]
+    servings: 2
+    prep_min: 8
+    cook_min: 22
+    cuisine: american
+    keeps_days: 2
+    packable: false
+    tags: [omega3, one-pan, high_protein]
+    ingredients:
+      - {item: salmon-fillet, qty: 340, unit: g}
+      - {item: broccoli, qty: 400, unit: g}
+      - {item: rice-brown, qty: 90, unit: g}
+      - {item: garlic, qty: 3, unit: clove}
+      - {item: lemon, qty: 1, unit: ea}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: dijon-mustard, qty: 2, unit: tsp}
+      - {item: honey, qty: 1, unit: tsp}
+      - {item: chili-flakes, qty: 0.5, unit: tsp}
+      - {item: salt-kosher, qty: 1, unit: g}
+    steps:
+      - Start the rice. Heat oven to 230°C / 450°F with a sheet pan inside it.
+      - Toss broccoli with oil, garlic, chilli, salt. Spread on the hot pan, roast 12 minutes.
+      - Push broccoli aside, add salmon brushed with mustard and honey. Roast 9-11 minutes more.
+      - Lemon over everything at the table.
+    notes: Preheating the pan is what gets char rather than steam on the broccoli.
+
+  - id: cod-tomato-olive-braise
+    title: Cod braised with tomatoes and olives
+    meals: [dinner]
+    servings: 2
+    prep_min: 10
+    cook_min: 22
+    cuisine: mediterranean
+    keeps_days: 2
+    packable: false
+    tags: [lean, high_protein, one-pan, high_potassium]
+    ingredients:
+      - {item: cod-fillet, qty: 340, unit: g}
+      - {item: tomatoes-diced-canned, qty: 411, unit: g}
+      - {item: olives-kalamata, qty: 50, unit: g}
+      - {item: onion-yellow, qty: 120, unit: g}
+      - {item: garlic, qty: 3, unit: clove}
+      - {item: capers, qty: 1, unit: tbsp}
+      - {item: couscous-whole-wheat, qty: 90, unit: g}
+      - {item: spinach-baby, qty: 120, unit: g}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: oregano-dried, qty: 1.5, unit: tsp}
+      - {item: chili-flakes, qty: 0.5, unit: tsp}
+      - {item: parsley-flat, qty: 15, unit: g}
+      - {item: lemon, qty: 0.5, unit: ea}
+    steps:
+      - Soften onion in the oil 8 minutes, add garlic, oregano, chilli.
+      - Tomatoes, olives, capers; simmer 8 minutes to thicken.
+      - Nestle the cod into the sauce, cover, 8-10 minutes until it flakes.
+      - Wilt spinach in at the end. Couscous alongside, parsley and lemon over.
+
+  - id: chicken-shawarma-sheet-pan
+    title: Sheet pan chicken shawarma
+    meals: [dinner, lunch]
+    servings: 4
+    prep_min: 15
+    cook_min: 35
+    cuisine: middle-eastern
+    keeps_days: 4
+    packable: true
+    tags: [batch, make-ahead, high_protein, one-pan]
+    ingredients:
+      - {item: chicken-thigh, qty: 700, unit: g}
+      - {item: onion-red, qty: 200, unit: g}
+      - {item: bell-pepper-red, qty: 250, unit: g}
+      - {item: cauliflower, qty: 400, unit: g}
+      - {item: greek-yogurt-nonfat, qty: 200, unit: g}
+      - {item: tahini, qty: 30, unit: g}
+      - {item: garlic, qty: 4, unit: clove}
+      - {item: lemon, qty: 2, unit: ea}
+      - {item: olive-oil, qty: 2, unit: tbsp}
+      - {item: cumin-ground, qty: 2, unit: tsp}
+      - {item: paprika-smoked, qty: 2, unit: tsp}
+      - {item: turmeric-ground, qty: 1, unit: tsp}
+      - {item: coriander-ground, qty: 1, unit: tsp}
+      - {item: pita-whole-wheat, qty: 4, unit: ea}
+      - {item: parsley-flat, qty: 20, unit: g}
+      - {item: salt-kosher, qty: 2, unit: g}
+    steps:
+      - Marinate the thighs in half the lemon juice, oil, garlic, all the spices and salt. 20 minutes is enough.
+      - Heat oven to 220°C / 425°F. Spread chicken and vegetables on one large pan.
+      - Roast 30-35 minutes until the chicken edges catch. Don't crowd the pan.
+      - Yogurt, tahini and remaining lemon into a sauce. Serve with warm pita and parsley.
+    notes: Four servings and the leftovers make excellent lunches, which is the point.
+
+  - id: turkey-zucchini-meatballs
+    title: Turkey and zucchini meatballs
+    meals: [dinner, lunch]
+    servings: 4
+    prep_min: 20
+    cook_min: 30
+    cuisine: italian
+    keeps_days: 4
+    packable: true
+    tags: [batch, make-ahead, high_protein, freezes]
+    ingredients:
+      - {item: turkey-ground-93, qty: 700, unit: g}
+      - {item: zucchini, qty: 250, unit: g}
+      - {item: eggs, qty: 1, unit: ea}
+      - {item: oats-rolled, qty: 45, unit: g}
+      - {item: onion-yellow, qty: 80, unit: g}
+      - {item: garlic, qty: 4, unit: clove}
+      - {item: tomatoes-crushed-canned, qty: 794, unit: g}
+      - {item: pasta-whole-wheat, qty: 200, unit: g}
+      - {item: basil-fresh, qty: 15, unit: g}
+      - {item: oregano-dried, qty: 2, unit: tsp}
+      - {item: chili-flakes, qty: 0.5, unit: tsp}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: salt-kosher, qty: 2, unit: g}
+      - {item: spinach-baby, qty: 120, unit: g}
+    steps:
+      - Grate the zucchini and squeeze it dry in a towel. Wet zucchini makes mush.
+      - Mix turkey, zucchini, egg, oats, grated onion, half the garlic, half the salt. Roll 16 balls.
+      - Brown them in the oil in batches, set aside.
+      - Tomatoes, remaining garlic, oregano, chilli into the pan; return meatballs, simmer 18 minutes.
+      - Spinach in at the end. Pasta, basil over.
+    notes: Oats instead of breadcrumbs, mostly for the fibre. Freezes well in sauce.
+
+  - id: red-lentil-dal
+    title: Red lentil dal with spinach
+    meals: [dinner, lunch]
+    servings: 4
+    prep_min: 10
+    cook_min: 28
+    cuisine: indian
+    keeps_days: 5
+    packable: true
+    tags: [vegan, vegetarian, batch, make-ahead, high_fiber, high_potassium, freezes]
+    ingredients:
+      - {item: lentils-red, qty: 320, unit: g}
+      - {item: onion-yellow, qty: 160, unit: g}
+      - {item: garlic, qty: 5, unit: clove}
+      - {item: ginger, qty: 2, unit: tbsp}
+      - {item: tomatoes-diced-canned, qty: 411, unit: g}
+      - {item: coconut-milk-light, qty: 200, unit: g}
+      - {item: spinach-baby, qty: 200, unit: g}
+      - {item: garam-masala, qty: 1, unit: tbsp}
+      - {item: turmeric-ground, qty: 1.5, unit: tsp}
+      - {item: cumin-ground, qty: 2, unit: tsp}
+      - {item: chili-flakes, qty: 0.5, unit: tsp}
+      - {item: rice-basmati, qty: 150, unit: g}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: lime, qty: 1, unit: ea}
+      - {item: cilantro, qty: 25, unit: g}
+      - {item: salt-kosher, qty: 2, unit: g}
+    steps:
+      - Fry onion in the oil until properly golden, 10 minutes. Add garlic, ginger, spices, 1 minute.
+      - Rinsed lentils, tomatoes, 900 ml water. Simmer 20 minutes, stirring so it doesn't catch.
+      - Coconut milk and spinach at the end. Salt, then lime.
+      - Rice alongside, cilantro over.
+
+  - id: tofu-broccoli-stir-fry
+    title: Tofu and broccoli stir fry
+    meals: [dinner, lunch]
+    servings: 2
+    prep_min: 15
+    cook_min: 14
+    cuisine: asian
+    keeps_days: 3
+    packable: true
+    tags: [vegan, vegetarian, fast, high_protein]
+    ingredients:
+      - {item: tofu-extra-firm, qty: 397, unit: g}
+      - {item: broccoli, qty: 350, unit: g}
+      - {item: bell-pepper-red, qty: 150, unit: g}
+      - {item: snap-peas, qty: 120, unit: g}
+      - {item: rice-brown, qty: 90, unit: g}
+      - {item: garlic, qty: 3, unit: clove}
+      - {item: ginger, qty: 1.5, unit: tbsp}
+      - {item: soy-sauce-low-sodium, qty: 2, unit: tbsp}
+      - {item: rice-vinegar, qty: 1, unit: tbsp}
+      - {item: sesame-oil, qty: 2, unit: tsp}
+      - {item: avocado-oil, qty: 1, unit: tbsp}
+      - {item: cornstarch, qty: 2, unit: tsp}
+      - {item: honey, qty: 2, unit: tsp}
+      - {item: chili-flakes, qty: 0.5, unit: tsp}
+      - {item: sesame-seeds, qty: 1, unit: tbsp}
+    steps:
+      - Press and cube the tofu, toss in half the cornstarch. Start the rice.
+      - Sear tofu in avocado oil in a hot pan until crusted on several sides. Remove.
+      - Broccoli and pepper into the same pan with a splash of water, lid on, 4 minutes.
+      - Snap peas, garlic, ginger, 1 minute. Return tofu.
+      - Soy, vinegar, honey, remaining cornstarch with 3 tbsp water — pour in and toss until glossy.
+      - Sesame oil and seeds off the heat.
+
+  - id: chickpea-cauliflower-curry
+    title: Chickpea and cauliflower curry
+    meals: [dinner, lunch]
+    servings: 4
+    prep_min: 14
+    cook_min: 30
+    cuisine: indian
+    keeps_days: 4
+    packable: true
+    tags: [vegan, vegetarian, batch, make-ahead, high_fiber, freezes]
+    ingredients:
+      - {item: chickpeas-canned, qty: 2, unit: can}
+      - {item: cauliflower, qty: 600, unit: g}
+      - {item: onion-yellow, qty: 160, unit: g}
+      - {item: garlic, qty: 4, unit: clove}
+      - {item: ginger, qty: 2, unit: tbsp}
+      - {item: tomatoes-crushed-canned, qty: 411, unit: g}
+      - {item: coconut-milk-light, qty: 300, unit: g}
+      - {item: curry-powder, qty: 2, unit: tbsp}
+      - {item: garam-masala, qty: 2, unit: tsp}
+      - {item: turmeric-ground, qty: 1, unit: tsp}
+      - {item: spinach-baby, qty: 150, unit: g}
+      - {item: rice-basmati, qty: 150, unit: g}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: cilantro, qty: 25, unit: g}
+      - {item: lime, qty: 1, unit: ea}
+      - {item: salt-kosher, qty: 2, unit: g}
+    steps:
+      - Brown the onion in oil, 10 minutes. Garlic, ginger, all spices, 1 minute.
+      - Tomatoes and 200 ml water, then the cauliflower. Cover, 12 minutes.
+      - Chickpeas and coconut milk, 8 minutes uncovered to reduce.
+      - Spinach, salt, lime. Rice and cilantro.
+
+  - id: mushroom-farro-risotto
+    title: Mushroom farro risotto
+    meals: [dinner]
+    servings: 3
+    prep_min: 12
+    cook_min: 40
+    cuisine: italian
+    keeps_days: 3
+    packable: true
+    tags: [vegetarian, weekend, whole_grain, high_fiber]
+    ingredients:
+      - {item: farro, qty: 200, unit: g}
+      - {item: mushroom-cremini, qty: 400, unit: g}
+      - {item: onion-yellow, qty: 120, unit: g}
+      - {item: garlic, qty: 3, unit: clove}
+      - {item: broth-vegetable-low-sodium, qty: 1000, unit: ml}
+      - {item: nutritional-yeast, qty: 3, unit: tbsp}
+      - {item: butter, qty: 1, unit: tbsp}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: tomato-paste, qty: 1, unit: tbsp}
+      - {item: kale-lacinato, qty: 150, unit: g}
+      - {item: walnuts, qty: 30, unit: g}
+      - {item: parsley-flat, qty: 15, unit: g}
+      - {item: black-pepper, qty: 0.5, unit: tsp}
+      - {item: salt-kosher, qty: 1.5, unit: g}
+    steps:
+      - Brown the mushrooms hard in the oil in a wide pan, in two batches. Set aside.
+      - Soften onion, add garlic and tomato paste, cook until it darkens.
+      - Farro in, then broth a ladle at a time as it absorbs — 35 minutes, stirring often.
+      - Kale in for the last 5 minutes. Mushrooms back in.
+      - Off the heat: butter, nutritional yeast, pepper. Walnuts and parsley on top.
+    notes: >-
+      Nutritional yeast rather than parmesan, so this counts as vegetarian —
+      genuine parmigiano uses animal rennet.
+
+  - id: black-bean-sweet-potato-chili
+    title: Black bean and sweet potato chilli
+    meals: [dinner, lunch]
+    servings: 5
+    prep_min: 15
+    cook_min: 35
+    cuisine: mexican
+    keeps_days: 5
+    packable: true
+    tags: [vegan, vegetarian, batch, make-ahead, high_fiber, high_potassium, freezes]
+    ingredients:
+      - {item: black-beans-canned, qty: 2, unit: can}
+      - {item: kidney-beans-canned, qty: 1, unit: can}
+      - {item: sweet-potato, qty: 500, unit: g}
+      - {item: onion-yellow, qty: 180, unit: g}
+      - {item: bell-pepper-red, qty: 200, unit: g}
+      - {item: garlic, qty: 4, unit: clove}
+      - {item: tomatoes-diced-canned, qty: 822, unit: g}
+      - {item: tomato-paste, qty: 2, unit: tbsp}
+      - {item: broth-vegetable-low-sodium, qty: 500, unit: ml}
+      - {item: cumin-ground, qty: 1, unit: tbsp}
+      - {item: paprika-smoked, qty: 2, unit: tsp}
+      - {item: cocoa-powder, qty: 1, unit: tbsp}
+      - {item: chili-flakes, qty: 1, unit: tsp}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: lime, qty: 1.5, unit: ea}
+      - {item: cilantro, qty: 25, unit: g}
+      - {item: avocado, qty: 1, unit: ea}
+      - {item: salt-kosher, qty: 2.5, unit: g}
+    steps:
+      - Soften onion and pepper in oil, 10 minutes. Garlic, spices, cocoa, tomato paste, 2 minutes.
+      - Sweet potato, tomatoes, broth. Simmer covered 20 minutes until the potato yields.
+      - Beans in, 8 minutes uncovered. Salt, then lime — a lot of lime.
+      - Avocado and cilantro per bowl.
+    notes: >-
+      A tablespoon of cocoa reads as depth, not chocolate. Five servings; freezes
+      better than almost anything else here.
+
+  - id: pasta-cannellini-kale
+    title: Pasta with cannellini and kale
+    meals: [dinner, lunch]
+    servings: 3
+    prep_min: 10
+    cook_min: 20
+    cuisine: italian
+    keeps_days: 3
+    packable: true
+    tags: [vegan, vegetarian, fast, high_fiber]
+    ingredients:
+      - {item: pasta-chickpea, qty: 180, unit: g}
+      - {item: cannellini-canned, qty: 1, unit: can}
+      - {item: kale-lacinato, qty: 250, unit: g}
+      - {item: garlic, qty: 5, unit: clove}
+      - {item: sun-dried-tomatoes, qty: 40, unit: g}
+      - {item: olive-oil, qty: 2, unit: tbsp}
+      - {item: chili-flakes, qty: 0.75, unit: tsp}
+      - {item: nutritional-yeast, qty: 2, unit: tbsp}
+      - {item: lemon, qty: 1, unit: ea}
+      - {item: pine-nuts, qty: 25, unit: g}
+      - {item: black-pepper, qty: 0.5, unit: tsp}
+      - {item: salt-kosher, qty: 1.5, unit: g}
+    steps:
+      - Boil the pasta. Keep a mug of the water back before draining — you need it.
+      - Meanwhile soften sliced garlic and chilli in the oil without browning it.
+      - Sun-dried tomatoes, then the shredded kale with a splash of pasta water. 5 minutes.
+      - Beans in to warm through, then pasta and enough water to make a sauce.
+      - Lemon, yeast, pepper, toasted pine nuts.
+    notes: Chickpea pasta carries this to 30 g of protein a serving with no animal products.
+
+  - id: shrimp-garlic-quinoa
+    title: Garlic shrimp with lemon quinoa
+    meals: [dinner]
+    servings: 2
+    prep_min: 10
+    cook_min: 18
+    cuisine: mediterranean
+    keeps_days: 2
+    packable: false
+    tags: [fast, lean, high_protein]
+    ingredients:
+      - {item: shrimp, qty: 340, unit: g}
+      - {item: quinoa, qty: 100, unit: g}
+      - {item: asparagus, qty: 300, unit: g}
+      - {item: tomato-cherry, qty: 200, unit: g}
+      - {item: garlic, qty: 5, unit: clove}
+      - {item: lemon, qty: 1.5, unit: ea}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: chili-flakes, qty: 0.5, unit: tsp}
+      - {item: parsley-flat, qty: 20, unit: g}
+      - {item: butter, qty: 2, unit: tsp}
+      - {item: salt-kosher, qty: 1, unit: g}
+    steps:
+      - Cook the quinoa; stir lemon zest and juice through it at the end.
+      - Blister the asparagus and tomatoes in a hot pan with oil, 6 minutes. Remove.
+      - Shrimp into the same pan, 90 seconds a side. Garlic and chilli for the last 30 seconds only — it burns fast.
+      - Butter and lemon off the heat, parsley, everything back in the pan.
+
+  - id: pork-tenderloin-roast-veg
+    title: Pork tenderloin with roasted roots
+    meals: [dinner]
+    servings: 3
+    prep_min: 12
+    cook_min: 35
+    cuisine: american
+    keeps_days: 3
+    packable: true
+    tags: [lean, high_protein, one-pan]
+    ingredients:
+      - {item: pork-tenderloin, qty: 500, unit: g}
+      - {item: sweet-potato, qty: 400, unit: g}
+      - {item: brussels-sprouts, qty: 350, unit: g}
+      - {item: onion-red, qty: 150, unit: g}
+      - {item: garlic, qty: 4, unit: clove}
+      - {item: dijon-mustard, qty: 1, unit: tbsp}
+      - {item: maple-syrup, qty: 1, unit: tbsp}
+      - {item: apple-cider-vinegar, qty: 1, unit: tbsp}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: paprika-smoked, qty: 1.5, unit: tsp}
+      - {item: parsley-flat, qty: 12, unit: g}
+      - {item: salt-kosher, qty: 1.75, unit: g}
+    steps:
+      - Heat oven to 220°C / 425°F. Toss vegetables with oil, paprika, salt; roast 15 minutes.
+      - Rub the pork with mustard, maple and vinegar. Sear it in a hot pan on all sides.
+      - Lay it on the vegetables, roast 18-20 minutes to 63°C / 145°F internal.
+      - Rest it 8 minutes before slicing. This matters more than anything else in the recipe.
+
+  - id: eggplant-ricotta-bake
+    title: Eggplant and ricotta bake
+    meals: [dinner]
+    servings: 4
+    prep_min: 20
+    cook_min: 45
+    cuisine: italian
+    keeps_days: 4
+    packable: true
+    tags: [vegetarian, weekend, batch, make-ahead]
+    ingredients:
+      - {item: eggplant, qty: 800, unit: g}
+      - {item: ricotta-part-skim, qty: 300, unit: g}
+      - {item: mozzarella-part-skim, qty: 150, unit: g}
+      - {item: tomatoes-crushed-canned, qty: 794, unit: g}
+      - {item: garlic, qty: 4, unit: clove}
+      - {item: basil-fresh, qty: 20, unit: g}
+      - {item: eggs, qty: 1, unit: ea}
+      - {item: olive-oil, qty: 2, unit: tbsp}
+      - {item: oregano-dried, qty: 2, unit: tsp}
+      - {item: chili-flakes, qty: 0.5, unit: tsp}
+      - {item: nutritional-yeast, qty: 2, unit: tbsp}
+      - {item: bread-whole-grain, qty: 1, unit: slice}
+      - {item: salt-kosher, qty: 2, unit: g}
+    steps:
+      - Slice the eggplant 1 cm thick, salt it, leave 20 minutes, pat dry. Don't skip this.
+      - Brush with oil and roast at 220°C / 425°F for 20 minutes until pliable.
+      - Simmer tomatoes with garlic, oregano and chilli 15 minutes. Beat ricotta with the egg and yeast.
+      - Layer sauce, eggplant, ricotta, repeating. Mozzarella and blitzed breadcrumbs on top.
+      - Bake 25 minutes at 200°C / 400°F. Rest 10 minutes or it slides apart.
+
+  - id: sirloin-chimichurri-potatoes
+    title: Sirloin with chimichurri and smashed potatoes
+    meals: [dinner]
+    servings: 2
+    prep_min: 15
+    cook_min: 35
+    cuisine: argentinian
+    keeps_days: 2
+    packable: false
+    tags: [high_protein, weekend, heme_iron]
+    ingredients:
+      - {item: sirloin-steak, qty: 340, unit: g}
+      - {item: potato-russet, qty: 450, unit: g}
+      - {item: green-beans, qty: 250, unit: g}
+      - {item: parsley-flat, qty: 40, unit: g}
+      - {item: cilantro, qty: 20, unit: g}
+      - {item: garlic, qty: 4, unit: clove}
+      - {item: red-wine-vinegar, qty: 2, unit: tbsp}
+      - {item: olive-oil, qty: 2.5, unit: tbsp}
+      - {item: chili-flakes, qty: 0.75, unit: tsp}
+      - {item: oregano-dried, qty: 1, unit: tsp}
+      - {item: salt-kosher, qty: 1.75, unit: g}
+      - {item: black-pepper, qty: 0.5, unit: tsp}
+    steps:
+      - Boil the potatoes whole until tender, 20 minutes. Smash flat, roast at 230°C / 450°F for 20 minutes.
+      - Chop parsley, cilantro and garlic fine; mix with vinegar, most of the oil, chilli, oregano. Let it sit.
+      - Season the steak hard and sear 3-4 minutes a side in a smoking pan. Rest 8 minutes.
+      - Blanch or steam the beans. Slice the steak against the grain, spoon chimichurri over.
+
+  - id: tempeh-tacos-slaw
+    title: Tempeh tacos with lime slaw
+    meals: [dinner, lunch]
+    servings: 3
+    prep_min: 15
+    cook_min: 15
+    cuisine: mexican
+    keeps_days: 3
+    packable: true
+    tags: [vegan, vegetarian, fast, high_protein]
+    ingredients:
+      - {item: tempeh, qty: 340, unit: g}
+      - {item: tortilla-corn, qty: 9, unit: ea}
+      - {item: cabbage-green, qty: 250, unit: g}
+      - {item: carrot, qty: 100, unit: g}
+      - {item: onion-red, qty: 80, unit: g}
+      - {item: avocado, qty: 1, unit: ea}
+      - {item: cilantro, qty: 25, unit: g}
+      - {item: lime, qty: 2, unit: ea}
+      - {item: soy-sauce-low-sodium, qty: 1.5, unit: tbsp}
+      - {item: maple-syrup, qty: 2, unit: tsp}
+      - {item: cumin-ground, qty: 2, unit: tsp}
+      - {item: paprika-smoked, qty: 1.5, unit: tsp}
+      - {item: chili-flakes, qty: 0.5, unit: tsp}
+      - {item: olive-oil, qty: 1, unit: tbsp}
+      - {item: salsa, qty: 80, unit: g}
+    steps:
+      - Crumble the tempeh coarsely. Steam it 8 minutes first if you find it bitter.
+      - Fry in oil until browned, then add soy, maple and spices; cook until sticky.
+      - Shred cabbage and carrot, dress with lime juice and a pinch of salt.
+      - Char tortillas. Fill with tempeh, slaw, avocado, salsa, cilantro.

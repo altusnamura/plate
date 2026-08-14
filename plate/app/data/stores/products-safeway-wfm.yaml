@@ -1,0 +1,109 @@
+---
+# Safeway and Whole Foods product mappings.
+#
+# Same caveat as the Trader Joe's file, only stronger: Safeway prices move with
+# weekly promotions and vary between stores in the same city, and Whole Foods
+# runs different shelf and Prime prices. Nothing here is live. Treat these as a
+# starting point and fix them as you shop.
+#
+# Coverage here is deliberately narrower than the TJ's file. It exists so the
+# planner has a real second and third option — better prices on some items, and a
+# fallback for the things TJ's doesn't reliably carry (rotisserie chicken, bulk
+# grains, protein powder, pine nuts). The trip-consolidation logic then has
+# something to work with rather than sending you to three stores for one item
+# each.
+products:
+  # ======================= SAFEWAY =======================================
+  # Strong on meat, seafood, dairy, canned goods and anything on promotion.
+  - {store: safeway, food_id: chicken-breast, name: Signature Farms Boneless Skinless Chicken Breast, package_qty: 1, package_unit: lb, price_usd: 5.99, by_weight: true, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: chicken-thigh, name: Boneless Skinless Chicken Thighs, package_qty: 1, package_unit: lb, price_usd: 4.49, by_weight: true, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: turkey-ground-93, name: Ground Turkey 93% Lean, package_qty: 1, package_unit: lb, price_usd: 6.49, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: pork-tenderloin, name: Pork Tenderloin, package_qty: 1.25, package_unit: lb, price_usd: 8.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: sirloin-steak, name: Top Sirloin Steak, package_qty: 1, package_unit: lb, price_usd: 11.99, by_weight: true, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: chicken-rotisserie, name: Deli Rotisserie Chicken, package_qty: 1, package_unit: bird, price_usd: 8.99, aisle: deli, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: salmon-fillet, name: Atlantic Salmon Fillet, package_qty: 1, package_unit: lb, price_usd: 12.99, by_weight: true, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: cod-fillet, name: Wild Alaskan Cod, package_qty: 1, package_unit: lb, price_usd: 11.99, by_weight: true, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: shrimp, name: Raw Shrimp 41/50, package_qty: 1, package_unit: lb, price_usd: 9.99, price_updated: "2026-08-01"}
+
+  - {store: safeway, food_id: eggs, name: Lucerne Large Eggs (dozen), package_qty: 12, package_unit: ea, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: milk-1, name: Lucerne 1% Milk (half gallon), package_qty: 1, package_unit: half_gallon, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: greek-yogurt-nonfat, name: Chobani Nonfat Plain (32 oz), package_qty: 32, package_unit: oz, price_usd: 5.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: cottage-cheese-2, name: Lucerne 2% Cottage Cheese, package_qty: 16, package_unit: oz, price_usd: 3.29, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: cheddar-sharp, name: Tillamook Sharp Cheddar, package_qty: 8, package_unit: oz, price_usd: 4.49, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: mozzarella-part-skim, name: Part Skim Mozzarella, package_qty: 8, package_unit: oz, price_usd: 4.29, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: ricotta-part-skim, name: Precious Part Skim Ricotta, package_qty: 15, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: feta, name: Athenos Crumbled Feta, package_qty: 6, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: butter, name: Lucerne Unsalted Butter, package_qty: 16, package_unit: oz, price_usd: 5.49, price_updated: "2026-08-01"}
+
+  - {store: safeway, food_id: tomatoes-diced-canned, name: Hunt's Diced Tomatoes, package_qty: 14.5, package_unit: oz, price_usd: 1.49, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: tomatoes-crushed-canned, name: Hunt's Crushed Tomatoes, package_qty: 28, package_unit: oz, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: tomato-paste, name: Hunt's Tomato Paste, package_qty: 6, package_unit: oz, price_usd: 1.09, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: chickpeas-canned, name: Signature Garbanzo Beans, package_qty: 1, package_unit: can, price_usd: 1.49, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: black-beans-canned, name: Signature Black Beans, package_qty: 1, package_unit: can, price_usd: 1.39, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: cannellini-canned, name: Signature Cannellini Beans, package_qty: 1, package_unit: can, price_usd: 1.59, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: kidney-beans-canned, name: Signature Kidney Beans, package_qty: 1, package_unit: can, price_usd: 1.39, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: refried-beans-canned, name: Rosarita Refried Beans, package_qty: 16, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: broth-vegetable-low-sodium, name: Swanson Low Sodium Vegetable Broth, package_qty: 32, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: broth-chicken-low-sodium, name: Swanson Low Sodium Chicken Broth, package_qty: 32, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: coconut-milk-light, name: Thai Kitchen Lite Coconut Milk, package_qty: 13.66, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: tuna-canned-water, name: StarKist Chunk Light in Water, package_qty: 5, package_unit: oz, price_usd: 1.49, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: salmon-canned, name: Chicken of the Sea Pink Salmon, package_qty: 6, package_unit: oz, price_usd: 3.29, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: sardines-canned, name: King Oscar Sardines in Olive Oil, package_qty: 3.75, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+
+  - {store: safeway, food_id: potato-russet, name: Russet Potatoes (5 lb), package_qty: 5, package_unit: lb, price_usd: 4.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: sweet-potato, name: Sweet Potatoes, package_qty: 1, package_unit: lb, price_usd: 1.79, by_weight: true, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: onion-yellow, name: Yellow Onions (3 lb), package_qty: 3, package_unit: lb, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: carrot, name: Carrots (2 lb), package_qty: 2, package_unit: lb, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: cabbage-green, name: Green Cabbage, package_qty: 1, package_unit: lb, price_usd: 1.29, by_weight: true, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: banana, name: Bananas, package_qty: 1, package_unit: lb, price_usd: 0.69, by_weight: true, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: apple, name: Gala Apples, package_qty: 1, package_unit: lb, price_usd: 1.99, by_weight: true, price_updated: "2026-08-01"}
+
+  - {store: safeway, food_id: bread-whole-grain, name: Dave's Killer Bread 21 Grain, package_qty: 1, package_unit: loaf, price_usd: 5.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: tortilla-corn, name: Mission Corn Tortillas (30 ct), package_qty: 30, package_unit: ea, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: pasta-whole-wheat, name: Barilla Whole Grain Penne, package_qty: 16, package_unit: oz, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: rice-brown, name: Signature Brown Rice, package_qty: 2, package_unit: lb, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: oats-rolled, name: Quaker Old Fashioned Oats, package_qty: 42, package_unit: oz, price_usd: 5.49, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: peanut-butter, name: Adams Natural Peanut Butter, package_qty: 16, package_unit: oz, price_usd: 4.29, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: olive-oil, name: Signature Extra Virgin Olive Oil, package_qty: 25.5, package_unit: oz, price_usd: 9.99, price_updated: "2026-08-01"}
+  - {store: safeway, food_id: salsa, name: Pace Chunky Salsa, package_qty: 16, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+
+  # ======================= WHOLE FOODS ==================================
+  # Where the specialty and bulk items live. Generally the most expensive of the
+  # three, so the cheapest-per-gram store assignment will only send you here for
+  # things the others don't carry.
+  - {store: whole-foods, food_id: tempeh, name: Lightlife Organic Tempeh, package_qty: 8, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: tofu-extra-firm, name: 365 Organic Extra Firm Tofu, package_qty: 14, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: lentils-cooked-precooked, name: Melissa's Steamed Lentils, package_qty: 17.6, package_unit: oz, price_usd: 4.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: hummus, name: 365 Organic Hummus, package_qty: 10, package_unit: oz, price_usd: 3.29, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: pasta-chickpea, name: Banza Chickpea Rotini, package_qty: 8, package_unit: oz, price_usd: 3.29, price_updated: "2026-08-01"}
+
+  - {store: whole-foods, food_id: whey-protein-isolate, name: 365 Whey Protein Isolate Unflavored, package_qty: 32, package_unit: oz, price_usd: 34.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: pea-protein, name: Anthony's Pea Protein, package_qty: 32, package_unit: oz, price_usd: 24.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: hemp-hearts, name: Manitoba Harvest Hemp Hearts, package_qty: 8, package_unit: oz, price_usd: 8.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: pine-nuts, name: 365 Pine Nuts, package_qty: 4, package_unit: oz, price_usd: 8.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: chia-seeds, name: 365 Organic Chia Seeds, package_qty: 15, package_unit: oz, price_usd: 6.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: flaxseed-ground, name: Bob's Red Mill Ground Flaxseed, package_qty: 16, package_unit: oz, price_usd: 4.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: nutritional-yeast, name: 365 Nutritional Yeast, package_qty: 5, package_unit: oz, price_usd: 5.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: tahini, name: Soom Tahini, package_qty: 16, package_unit: oz, price_usd: 9.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: farro, name: Bob's Red Mill Farro, package_qty: 24, package_unit: oz, price_usd: 5.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: quinoa, name: 365 Organic Quinoa, package_qty: 16, package_unit: oz, price_usd: 4.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: couscous-whole-wheat, name: Bob's Red Mill Whole Wheat Couscous, package_qty: 24, package_unit: oz, price_usd: 4.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: goat-cheese, name: Vermont Creamery Chèvre, package_qty: 4, package_unit: oz, price_usd: 4.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: parmesan, name: Parmigiano Reggiano DOP, package_qty: 8, package_unit: oz, price_usd: 9.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: skyr-plain, name: Siggi's Plain Skyr, package_qty: 24, package_unit: oz, price_usd: 5.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: kefir-plain, name: Lifeway Plain Lowfat Kefir, package_qty: 32, package_unit: oz, price_usd: 4.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: egg-whites, name: 365 Egg Whites, package_qty: 16, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: chicken-rotisserie, name: Whole Foods Rotisserie Chicken, package_qty: 1, package_unit: bird, price_usd: 11.99, aisle: deli, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: miso-white, name: Miso Master Organic White Miso, package_qty: 16, package_unit: oz, price_usd: 6.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: gochujang, name: Chung Jung One Gochujang, package_qty: 17.6, package_unit: oz, price_usd: 6.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: harissa, name: Mina Harissa, package_qty: 10, package_unit: oz, price_usd: 5.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: zaatar, name: Za'atar Blend, package_qty: 2, package_unit: oz, price_usd: 5.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: tamari, name: San-J Organic Tamari, package_qty: 20, package_unit: oz, price_usd: 6.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: dark-chocolate-85, name: 365 85% Dark Chocolate, package_qty: 3.5, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: maple-syrup, name: 365 Organic Maple Syrup, package_qty: 32, package_unit: oz, price_usd: 15.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: mayo-avocado-oil, name: Primal Kitchen Avocado Oil Mayo, package_qty: 12, package_unit: oz, price_usd: 8.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: avocado-oil, name: 365 Avocado Oil, package_qty: 16.9, package_unit: oz, price_usd: 9.99, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: kale-lacinato, name: Organic Lacinato Kale, package_qty: 1, package_unit: bunch, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: spinach-baby, name: 365 Organic Baby Spinach, package_qty: 5, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: berries-mixed-frozen, name: 365 Organic Berry Blend, package_qty: 16, package_unit: oz, price_usd: 5.49, price_updated: "2026-08-01"}
+  - {store: whole-foods, food_id: edamame-frozen, name: 365 Organic Shelled Edamame, package_qty: 16, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}

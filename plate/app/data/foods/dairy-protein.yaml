@@ -1,0 +1,340 @@
+---
+# Dairy, eggs, meat and seafood.
+#
+# Meat and fish are raw weights. Cheeses marked `vegetarian: false` use animal
+# rennet as a rule — parmigiano reggiano is the classic case — and the planner's
+# vegetarian-lunch rule respects that, because a "vegetarian" lunch built on
+# parmesan isn't one. Substitute a microbially-set hard cheese if you want those
+# recipes to count.
+foods:
+  # --- eggs and dairy ----------------------------------------------------
+  - id: eggs
+    name: Eggs (large)
+    aisle: eggs
+    vegan: false
+    vegetarian: true
+    unit_g: {ea: 50, dozen: 600}
+    display_unit: ea
+    keeps_days: 28
+    tags: [complete_protein, b12_source, choline]
+    per_100g: {kcal: 143, protein_g: 12.6, fat_g: 9.5, satfat_g: 3.1, carb_g: 0.7, fiber_g: 0.0, sugar_g: 0.4, sodium_mg: 142, potassium_mg: 138}
+
+  - id: egg-whites
+    name: Egg whites (carton)
+    aisle: eggs
+    vegan: false
+    vegetarian: true
+    g_per_ml: 1.03
+    unit_g: {cup: 243, carton: 473, tbsp: 15}
+    keeps_days: 14
+    tags: [high_protein, lean]
+    per_100g: {kcal: 52, protein_g: 10.9, fat_g: 0.2, satfat_g: 0.0, carb_g: 0.7, fiber_g: 0.0, sugar_g: 0.7, sodium_mg: 166, potassium_mg: 163}
+
+  - id: greek-yogurt-nonfat
+    name: Nonfat Greek yogurt (plain)
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    dash_group: dairy_lowfat
+    dash_serving_g: 170
+    unit_g: {cup: 245, tub: 907, container: 170}
+    keeps_days: 14
+    tags: [high_protein, b12_source, probiotic, dash_bonus]
+    per_100g: {kcal: 59, protein_g: 10.2, fat_g: 0.4, satfat_g: 0.1, carb_g: 3.6, fiber_g: 0.0, sugar_g: 3.2, sodium_mg: 36, potassium_mg: 141}
+
+  - id: skyr-plain
+    name: Skyr (plain)
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    dash_group: dairy_lowfat
+    dash_serving_g: 170
+    unit_g: {cup: 245, container: 150}
+    keeps_days: 14
+    tags: [high_protein, b12_source, dash_bonus]
+    per_100g: {kcal: 63, protein_g: 11.0, fat_g: 0.2, satfat_g: 0.1, carb_g: 4.0, fiber_g: 0.0, sugar_g: 3.5, sodium_mg: 45, potassium_mg: 150}
+
+  - id: cottage-cheese-2
+    name: Cottage cheese (2%)
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    dash_group: dairy_lowfat
+    dash_serving_g: 170
+    unit_g: {cup: 226, tub: 454}
+    keeps_days: 10
+    tags: [high_protein, b12_source, high_sodium]
+    per_100g: {kcal: 84, protein_g: 11.0, fat_g: 2.3, satfat_g: 1.0, carb_g: 4.3, fiber_g: 0.0, sugar_g: 4.1, sodium_mg: 330, potassium_mg: 104}
+
+  - id: milk-1
+    name: Milk (1%)
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    dash_group: dairy_lowfat
+    dash_serving_g: 245
+    g_per_ml: 1.03
+    unit_g: {cup: 245, half_gallon: 1950}
+    keeps_days: 10
+    tags: [b12_source, calcium, dash_bonus]
+    per_100g: {kcal: 42, protein_g: 3.4, fat_g: 1.0, satfat_g: 0.6, carb_g: 5.0, fiber_g: 0.0, sugar_g: 5.0, sodium_mg: 44, potassium_mg: 150}
+
+  - id: kefir-plain
+    name: Plain lowfat kefir
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    dash_group: dairy_lowfat
+    dash_serving_g: 245
+    g_per_ml: 1.03
+    unit_g: {cup: 245, bottle: 946}
+    keeps_days: 14
+    tags: [probiotic, b12_source, dash_bonus]
+    per_100g: {kcal: 41, protein_g: 3.3, fat_g: 0.9, satfat_g: 0.6, carb_g: 4.8, fiber_g: 0.0, sugar_g: 4.6, sodium_mg: 40, potassium_mg: 164}
+
+  - id: almond-milk-unsweetened
+    name: Unsweetened almond milk
+    aisle: dairy
+    vegan: true
+    g_per_ml: 1.0
+    unit_g: {cup: 240, carton: 946}
+    keeps_days: 10
+    pantry_staple: true
+    per_100g: {kcal: 15, protein_g: 0.6, fat_g: 1.2, satfat_g: 0.1, carb_g: 0.6, fiber_g: 0.3, sugar_g: 0.0, sodium_mg: 60, potassium_mg: 60}
+
+  - id: soy-milk-unsweetened
+    name: Unsweetened soy milk
+    aisle: dairy
+    vegan: true
+    dash_group: dairy_lowfat
+    dash_serving_g: 245
+    g_per_ml: 1.03
+    unit_g: {cup: 243, carton: 946}
+    keeps_days: 10
+    tags: [complete_protein, fortified]
+    per_100g: {kcal: 33, protein_g: 3.3, fat_g: 1.8, satfat_g: 0.2, carb_g: 1.2, fiber_g: 0.4, sugar_g: 0.4, sodium_mg: 38, potassium_mg: 122}
+
+  - id: feta
+    name: Feta cheese
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    unit_g: {cup: 150, block: 227, tbsp: 9}
+    keeps_days: 21
+    tags: [high_sodium, b12_source]
+    per_100g: {kcal: 264, protein_g: 14.2, fat_g: 21.3, satfat_g: 14.9, carb_g: 4.1, fiber_g: 0.0, sugar_g: 4.1, sodium_mg: 917, potassium_mg: 62}
+
+  - id: parmesan
+    name: Parmesan cheese
+    aisle: dairy
+    vegan: false
+    vegetarian: false
+    unit_g: {cup: 100, tbsp: 6, wedge: 227}
+    keeps_days: 60
+    tags: [high_sodium, animal_rennet, b12_source]
+    notes: >-
+      Genuine parmigiano reggiano is made with animal rennet, so it is not
+      vegetarian. Swap in a microbial-rennet hard cheese to make the recipes that
+      use it count toward the vegetarian lunch ratio.
+    per_100g: {kcal: 392, protein_g: 35.8, fat_g: 25.8, satfat_g: 16.4, carb_g: 3.2, fiber_g: 0.0, sugar_g: 0.8, sodium_mg: 1529, potassium_mg: 92}
+
+  - id: cheddar-sharp
+    name: Sharp cheddar
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    unit_g: {cup: 113, slice: 28, block: 227, tbsp: 7}
+    keeps_days: 45
+    tags: [high_satfat, high_sodium, b12_source]
+    per_100g: {kcal: 403, protein_g: 24.9, fat_g: 33.1, satfat_g: 18.9, carb_g: 1.3, fiber_g: 0.0, sugar_g: 0.5, sodium_mg: 653, potassium_mg: 98}
+
+  - id: mozzarella-part-skim
+    name: Part-skim mozzarella
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    unit_g: {cup: 112, ball: 227, slice: 28}
+    keeps_days: 21
+    tags: [b12_source]
+    per_100g: {kcal: 254, protein_g: 24.3, fat_g: 15.9, satfat_g: 9.9, carb_g: 2.8, fiber_g: 0.0, sugar_g: 1.2, sodium_mg: 619, potassium_mg: 84}
+
+  - id: ricotta-part-skim
+    name: Part-skim ricotta
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    unit_g: {cup: 246, tub: 425, tbsp: 15}
+    keeps_days: 10
+    tags: [b12_source]
+    per_100g: {kcal: 138, protein_g: 11.4, fat_g: 7.9, satfat_g: 4.9, carb_g: 5.1, fiber_g: 0.0, sugar_g: 0.3, sodium_mg: 125, potassium_mg: 125}
+
+  - id: goat-cheese
+    name: Soft goat cheese
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    unit_g: {log: 113, tbsp: 14, oz: 28.35}
+    keeps_days: 21
+    tags: [b12_source]
+    per_100g: {kcal: 268, protein_g: 18.5, fat_g: 21.1, satfat_g: 14.6, carb_g: 0.9, fiber_g: 0.0, sugar_g: 0.9, sodium_mg: 368, potassium_mg: 26}
+
+  - id: butter
+    name: Butter
+    aisle: dairy
+    vegan: false
+    vegetarian: true
+    unit_g: {tbsp: 14.2, stick: 113, tsp: 4.7}
+    keeps_days: 60
+    pantry_staple: true
+    tags: [high_satfat]
+    per_100g: {kcal: 717, protein_g: 0.9, fat_g: 81.1, satfat_g: 51.4, carb_g: 0.1, fiber_g: 0.0, sugar_g: 0.1, sodium_mg: 11, potassium_mg: 24}
+
+  # --- poultry and meat --------------------------------------------------
+  - id: chicken-breast
+    name: Chicken breast (boneless, skinless)
+    aisle: meat
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {ea: 174, lb: 453.6}
+    keeps_days: 3
+    tags: [high_protein, lean, complete_protein, b12_source, heme_iron]
+    per_100g: {kcal: 120, protein_g: 22.5, fat_g: 2.6, satfat_g: 0.6, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 45, potassium_mg: 334}
+
+  - id: chicken-thigh
+    name: Chicken thighs (boneless, skinless)
+    aisle: meat
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {ea: 110, lb: 453.6}
+    keeps_days: 3
+    tags: [complete_protein, b12_source, heme_iron]
+    per_100g: {kcal: 143, protein_g: 19.7, fat_g: 7.1, satfat_g: 1.9, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 86, potassium_mg: 230}
+
+  - id: turkey-ground-93
+    name: Ground turkey (93% lean)
+    aisle: meat
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {package: 454, lb: 453.6}
+    keeps_days: 3
+    tags: [high_protein, complete_protein, b12_source, heme_iron]
+    per_100g: {kcal: 150, protein_g: 18.9, fat_g: 8.3, satfat_g: 2.2, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 72, potassium_mg: 245}
+
+  - id: pork-tenderloin
+    name: Pork tenderloin
+    aisle: meat
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {ea: 454, lb: 453.6}
+    keeps_days: 3
+    tags: [high_protein, lean, complete_protein, b12_source]
+    per_100g: {kcal: 120, protein_g: 20.9, fat_g: 3.5, satfat_g: 1.2, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 52, potassium_mg: 399}
+
+  - id: sirloin-steak
+    name: Sirloin steak (lean)
+    aisle: meat
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {ea: 227, lb: 453.6}
+    keeps_days: 3
+    tags: [high_protein, complete_protein, b12_source, heme_iron]
+    per_100g: {kcal: 143, protein_g: 21.9, fat_g: 5.3, satfat_g: 2.1, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 53, potassium_mg: 357}
+
+  - id: chicken-rotisserie
+    name: Rotisserie chicken meat
+    aisle: deli
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {cup: 140, bird: 900}
+    keeps_days: 4
+    tags: [high_protein, fast, high_sodium, complete_protein, b12_source]
+    notes: The fastest protein in the store. Sodium is high because it's brined.
+    per_100g: {kcal: 190, protein_g: 25.0, fat_g: 9.0, satfat_g: 2.5, carb_g: 0.5, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 400, potassium_mg: 250}
+
+  # --- fish and seafood --------------------------------------------------
+  - id: salmon-fillet
+    name: Salmon fillet
+    aisle: seafood
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {fillet: 170, lb: 453.6}
+    keeps_days: 2
+    tags: [omega3, high_protein, complete_protein, b12_source, vitamin_d]
+    per_100g: {kcal: 208, protein_g: 20.4, fat_g: 13.4, satfat_g: 3.1, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 59, potassium_mg: 363}
+
+  - id: cod-fillet
+    name: Cod fillet
+    aisle: seafood
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {fillet: 170, lb: 453.6}
+    keeps_days: 2
+    tags: [lean, high_protein, complete_protein, b12_source, high_potassium]
+    per_100g: {kcal: 82, protein_g: 17.8, fat_g: 0.7, satfat_g: 0.13, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 54, potassium_mg: 413}
+
+  - id: shrimp
+    name: Shrimp (raw, peeled)
+    aisle: seafood
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {lb: 453.6, bag: 454}
+    keeps_days: 2
+    tags: [lean, high_protein, fast, complete_protein, b12_source]
+    per_100g: {kcal: 85, protein_g: 20.1, fat_g: 0.5, satfat_g: 0.1, carb_g: 0.2, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 119, potassium_mg: 264}
+
+  - id: tuna-canned-water
+    name: Canned tuna in water (drained)
+    aisle: canned
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {can: 142, pouch: 74}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_protein, lean, fast, complete_protein, b12_source]
+    per_100g: {kcal: 116, protein_g: 25.5, fat_g: 0.8, satfat_g: 0.2, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 247, potassium_mg: 237}
+
+  - id: salmon-canned
+    name: Canned salmon (drained)
+    aisle: canned
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {can: 170}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [omega3, high_protein, fast, calcium, b12_source]
+    per_100g: {kcal: 142, protein_g: 20.5, fat_g: 6.1, satfat_g: 1.4, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 383, potassium_mg: 326}
+
+  - id: sardines-canned
+    name: Canned sardines in olive oil (drained)
+    aisle: canned
+    vegan: false
+    vegetarian: false
+    dash_group: lean_protein
+    dash_serving_g: 85
+    unit_g: {can: 92}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [omega3, high_protein, calcium, fast, b12_source, vitamin_d]
+    per_100g: {kcal: 208, protein_g: 24.6, fat_g: 11.5, satfat_g: 1.5, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 505, potassium_mg: 397}

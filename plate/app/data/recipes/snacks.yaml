@@ -1,0 +1,162 @@
+---
+# Snacks. Small, mostly assembly rather than cooking, and skewed toward protein
+# and potassium because that is where a day usually falls short by mid-afternoon.
+#
+# The planner treats a snack as one slot and will scale portions between 0.5x and
+# 2x, so these are written at a sensible middle size rather than a minimum.
+recipes:
+  - id: apple-almond-butter
+    title: Apple with almond butter
+    meals: [snack]
+    servings: 1
+    prep_min: 2
+    cook_min: 0
+    cuisine: american
+    keeps_days: 0
+    packable: true
+    tags: [vegan, vegetarian, no-cook, fast]
+    ingredients:
+      - {item: apple, qty: 1, unit: ea}
+      - {item: almond-butter, qty: 24, unit: g}
+      - {item: cinnamon-ground, qty: 0.25, unit: tsp}
+    steps:
+      - Slice the apple, dip. Cinnamon over the top if you're feeling organised.
+
+  - id: yogurt-walnut-honey
+    title: Yogurt with walnuts and honey
+    meals: [snack]
+    servings: 1
+    prep_min: 3
+    cook_min: 0
+    cuisine: mediterranean
+    keeps_days: 0
+    packable: true
+    tags: [vegetarian, no-cook, fast, high_protein]
+    ingredients:
+      - {item: greek-yogurt-nonfat, qty: 170, unit: g}
+      - {item: walnuts, qty: 20, unit: g}
+      - {item: honey, qty: 2, unit: tsp}
+      - {item: cinnamon-ground, qty: 0.25, unit: tsp}
+    steps:
+      - Yogurt in a bowl, nuts on, honey over.
+
+  - id: hummus-carrot-sticks
+    title: Hummus with carrots and snap peas
+    meals: [snack]
+    servings: 1
+    prep_min: 5
+    cook_min: 0
+    cuisine: middle-eastern
+    keeps_days: 2
+    packable: true
+    tags: [vegan, vegetarian, no-cook, high_fiber]
+    ingredients:
+      - {item: hummus, qty: 90, unit: g}
+      - {item: carrot, qty: 120, unit: g}
+      - {item: snap-peas, qty: 80, unit: g}
+      - {item: zaatar, qty: 0.5, unit: tsp}
+    steps:
+      - Cut the carrots into sticks. Za'atar over the hummus.
+
+  - id: cottage-cheese-berries
+    title: Cottage cheese with berries
+    meals: [snack, breakfast]
+    servings: 1
+    prep_min: 3
+    cook_min: 0
+    cuisine: american
+    keeps_days: 0
+    packable: true
+    tags: [vegetarian, no-cook, fast, high_protein]
+    ingredients:
+      - {item: cottage-cheese-2, qty: 200, unit: g}
+      - {item: berries-mixed-frozen, qty: 120, unit: g}
+      - {item: hemp-hearts, qty: 1, unit: tbsp}
+    steps:
+      - Thaw the berries 30 seconds in the microwave so they make a syrup.
+      - Over the cottage cheese, hemp hearts on top.
+
+  - id: edamame-salted
+    title: Salted edamame
+    meals: [snack]
+    servings: 1
+    prep_min: 2
+    cook_min: 5
+    cuisine: asian
+    keeps_days: 2
+    packable: true
+    tags: [vegan, vegetarian, high_protein, complete_protein]
+    ingredients:
+      - {item: edamame-frozen, qty: 160, unit: g}
+      - {item: salt-kosher, qty: 0.5, unit: g}
+      - {item: chili-flakes, qty: 0.25, unit: tsp}
+    steps:
+      - Boil 4-5 minutes, drain, toss with salt and chilli while still hot.
+
+  - id: almonds-dark-chocolate
+    title: Almonds and dark chocolate
+    meals: [snack]
+    servings: 1
+    prep_min: 1
+    cook_min: 0
+    cuisine: other
+    keeps_days: 30
+    packable: true
+    tags: [vegetarian, no-cook, fast, magnesium]
+    ingredients:
+      - {item: almonds, qty: 25, unit: g}
+      - {item: dark-chocolate-85, qty: 15, unit: g}
+    steps:
+      - Portion it out rather than eating from the bag. That's the entire recipe.
+
+  - id: boiled-eggs-everything
+    title: Boiled eggs with za'atar
+    meals: [snack, breakfast]
+    servings: 1
+    prep_min: 2
+    cook_min: 10
+    cuisine: middle-eastern
+    keeps_days: 5
+    packable: true
+    tags: [vegetarian, make-ahead, high_protein, fast]
+    ingredients:
+      - {item: eggs, qty: 2, unit: ea}
+      - {item: zaatar, qty: 0.5, unit: tsp}
+      - {item: salt-kosher, qty: 0.25, unit: g}
+    steps:
+      - Nine minutes from boiling, then cold water. Boil six at once on Sunday.
+      - Za'atar and salt as you eat them.
+
+  - id: banana-peanut-butter-hemp
+    title: Banana with peanut butter and hemp
+    meals: [snack]
+    servings: 1
+    prep_min: 2
+    cook_min: 0
+    cuisine: american
+    keeps_days: 0
+    packable: true
+    tags: [vegan, vegetarian, no-cook, fast, high_potassium]
+    ingredients:
+      - {item: banana, qty: 1, unit: ea}
+      - {item: peanut-butter, qty: 20, unit: g}
+      - {item: hemp-hearts, qty: 1, unit: tbsp}
+    steps:
+      - Split the banana lengthways, fill, press back together.
+
+  - id: protein-shake-simple
+    title: Simple protein shake
+    meals: [snack]
+    servings: 1
+    prep_min: 2
+    cook_min: 0
+    cuisine: other
+    keeps_days: 0
+    packable: true
+    tags: [vegetarian, no-cook, fast, high_protein]
+    ingredients:
+      - {item: whey-protein-isolate, qty: 1, unit: scoop}
+      - {item: milk-1, qty: 300, unit: ml}
+      - {item: cocoa-powder, qty: 1, unit: tsp}
+    steps:
+      - Shake. Cold milk, not warm.

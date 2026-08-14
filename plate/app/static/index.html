@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--
+  viewport-fit=cover lets the page paint into the iPhone's safe areas; the CSS
+  then pads the bottom nav by env(safe-area-inset-bottom) so it sits above the
+  home indicator instead of under it.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f7f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111417" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="PLATE">
+<title>PLATE</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-title">
+    <h1 id="view-title">Today</h1>
+    <span class="topbar-sub" id="view-sub"></span>
+  </div>
+  <div class="topbar-actions">
+    <button class="icon-btn" id="btn-refresh" aria-label="Refresh data" title="Refresh">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.65 6.35A8 8 0 1 0 19.73 14h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4z"/></svg>
+    </button>
+    <button class="icon-btn" id="btn-settings" aria-label="Settings" title="Settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 15.5m7.43-2.53a7.9 7.9 0 0 0 0-1.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.6 7.6 0 0 0-1.68-.97l-.36-2.54a.5.5 0 0 0-.5-.42h-3.84a.5.5 0 0 0-.5.42l-.36 2.54a7.6 7.6 0 0 0-1.68.97l-2.39-.96a.5.5 0 0 0-.6.22L2.42 8.81a.5.5 0 0 0 .12.64l2.03 1.58a7.9 7.9 0 0 0 0 1.94L2.54 14.55a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .6.22l2.39-.96a7.6 7.6 0 0 0 1.68.97l.36 2.54a.5.5 0 0 0 .5.42h3.84a.5.5 0 0 0 .5-.42l.36-2.54a7.6 7.6 0 0 0 1.68-.97l2.39.96a.5.5 0 0 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64z"/></svg>
+    </button>
+  </div>
+</header>
+
+<div id="banner" class="banner" hidden></div>
+
+<main id="view" class="view" aria-live="polite">
+  <div class="skeleton-wrap">
+    <div class="skeleton skeleton-ring"></div>
+    <div class="skeleton skeleton-line"></div>
+    <div class="skeleton skeleton-line short"></div>
+  </div>
+</main>
+
+<nav class="tabbar" role="tablist">
+  <button class="tab is-active" data-view="today" role="tab" aria-selected="true">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8m.5-13h-1.5v6l5.2 3.1.8-1.3-4.5-2.7z"/></svg>
+    <span>Today</span>
+  </button>
+  <button class="tab" data-view="week" role="tab" aria-selected="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 16H5V10h14zM5 8V6h14v2z"/></svg>
+    <span>Week</span>
+  </button>
+  <button class="tab" data-view="shop" role="tab" aria-selected="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a2 2 0 1 0 2 2 2 2 0 0 0-2-2m10 0a2 2 0 1 0 2 2 2 2 0 0 0-2-2M7.2 14.6 7 15h12v-2H8.4l1.1-2h6.9a2 2 0 0 0 1.8-1.1l3.2-5.8-1.7-1-3.2 5.9H9.5L5.2 2H2v2h2l3.6 7.6-1.4 2.4a1 1 0 0 0 .9 1.5z"/></svg>
+    <span>Shop</span>
+  </button>
+  <button class="tab" data-view="insight" role="tab" aria-selected="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 18.5 9 13l4 4 6.5-7.3L21 11V4h-7l1.4 1.4-5 5.6-4-4L2 16.5z"/></svg>
+    <span>Insight</span>
+  </button>
+</nav>
+
+<div id="sheet" class="sheet" hidden>
+  <div class="sheet-backdrop" data-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-grab" data-close></div>
+    <h2 id="sheet-title"></h2>
+    <div id="sheet-body"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

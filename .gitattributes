@@ -1,0 +1,24 @@
+# Everything in this repo is consumed inside a Linux container, so line endings
+# are normalised to LF on checkout regardless of the platform you edit on.
+#
+# This is not cosmetic. `run.sh` starts with `#!/usr/bin/with-contenv bashio`;
+# if it is checked out with CRLF, the kernel reads the interpreter path as
+# `...bashio\r`, fails to find it, and the add-on dies at startup with an error
+# that points nowhere near the real cause.
+* text=auto eol=lf
+
+*.sh    text eol=lf
+*.py    text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.html  text eol=lf
+*.svg   text eol=lf
+Dockerfile text eol=lf
+
+*.png binary
+*.jpg binary
+*.ico binary

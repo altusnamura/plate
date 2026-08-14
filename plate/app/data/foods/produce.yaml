@@ -1,0 +1,570 @@
+---
+# Fresh produce and frozen fruit/vegetables.
+#
+# Nutrition is per 100 g of the food AS THE RECIPE USES IT — raw weight for
+# vegetables, since that is how you weigh them when cooking. Values are
+# reference figures for the ordinary supermarket version; they are close enough
+# for planning but they are not laboratory analyses of the specific bunch of kale
+# you bought. Run the USDA importer (Settings -> Data) to replace them with
+# FoodData Central values, or just correct any you care about.
+#
+# dash_serving_g is the gram weight of one DASH serving on the same raw basis:
+# 1 cup raw leafy greens (~30 g), 1/2 cup other vegetables (~80 g), one medium
+# fruit (~120 g).
+foods:
+  - id: spinach-baby
+    name: Baby spinach
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 30
+    unit_g: {cup: 30, bag: 142, handful: 25}
+    keeps_days: 5
+    tags: [high_potassium, dash_bonus, iron_nonheme]
+    per_100g: {kcal: 23, protein_g: 2.9, fat_g: 0.4, satfat_g: 0.06, carb_g: 3.6, fiber_g: 2.2, sugar_g: 0.4, sodium_mg: 79, potassium_mg: 558}
+
+  - id: kale-lacinato
+    name: Lacinato kale
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 30
+    unit_g: {cup: 21, bunch: 200}
+    keeps_days: 7
+    tags: [dash_bonus]
+    per_100g: {kcal: 35, protein_g: 2.9, fat_g: 1.5, satfat_g: 0.2, carb_g: 4.4, fiber_g: 4.1, sugar_g: 0.8, sodium_mg: 53, potassium_mg: 348}
+
+  - id: romaine
+    name: Romaine lettuce
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 30
+    unit_g: {cup: 47, head: 310}
+    keeps_days: 7
+    per_100g: {kcal: 17, protein_g: 1.2, fat_g: 0.3, satfat_g: 0.04, carb_g: 3.3, fiber_g: 2.1, sugar_g: 1.2, sodium_mg: 8, potassium_mg: 247}
+
+  - id: arugula
+    name: Arugula
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 30
+    unit_g: {cup: 20, bag: 142}
+    keeps_days: 4
+    per_100g: {kcal: 25, protein_g: 2.6, fat_g: 0.7, satfat_g: 0.09, carb_g: 3.7, fiber_g: 1.6, sugar_g: 2.1, sodium_mg: 27, potassium_mg: 369}
+
+  - id: salad-greens-mixed
+    name: Mixed salad greens
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 30
+    unit_g: {cup: 25, bag: 142, clamshell: 227}
+    keeps_days: 5
+    per_100g: {kcal: 20, protein_g: 1.8, fat_g: 0.3, satfat_g: 0.04, carb_g: 3.0, fiber_g: 1.8, sugar_g: 0.9, sodium_mg: 20, potassium_mg: 300}
+
+  - id: broccoli
+    name: Broccoli
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 85
+    unit_g: {cup: 91, head: 550, crown: 350}
+    keeps_days: 7
+    tags: [dash_bonus]
+    per_100g: {kcal: 34, protein_g: 2.8, fat_g: 0.4, satfat_g: 0.04, carb_g: 6.6, fiber_g: 2.6, sugar_g: 1.7, sodium_mg: 33, potassium_mg: 316}
+
+  - id: cauliflower
+    name: Cauliflower
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 85
+    unit_g: {cup: 107, head: 600}
+    keeps_days: 7
+    per_100g: {kcal: 25, protein_g: 1.9, fat_g: 0.3, satfat_g: 0.13, carb_g: 5.0, fiber_g: 2.0, sugar_g: 1.9, sodium_mg: 30, potassium_mg: 299}
+
+  - id: carrot
+    name: Carrots
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 61, cup: 128, lb: 453.6}
+    keeps_days: 21
+    per_100g: {kcal: 41, protein_g: 0.9, fat_g: 0.2, satfat_g: 0.03, carb_g: 9.6, fiber_g: 2.8, sugar_g: 4.7, sodium_mg: 69, potassium_mg: 320}
+
+  - id: celery
+    name: Celery
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {stalk: 40, cup: 101, bunch: 500}
+    keeps_days: 14
+    per_100g: {kcal: 16, protein_g: 0.7, fat_g: 0.2, satfat_g: 0.04, carb_g: 3.0, fiber_g: 1.6, sugar_g: 1.3, sodium_mg: 80, potassium_mg: 260}
+
+  - id: cucumber-persian
+    name: Persian cucumbers
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 90, cup: 119}
+    keeps_days: 7
+    per_100g: {kcal: 15, protein_g: 0.7, fat_g: 0.1, satfat_g: 0.04, carb_g: 3.6, fiber_g: 0.5, sugar_g: 1.7, sodium_mg: 2, potassium_mg: 147}
+
+  - id: bell-pepper-red
+    name: Red bell pepper
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 119, cup: 149}
+    keeps_days: 10
+    tags: [dash_bonus]
+    per_100g: {kcal: 31, protein_g: 1.0, fat_g: 0.3, satfat_g: 0.03, carb_g: 6.0, fiber_g: 2.1, sugar_g: 4.2, sodium_mg: 4, potassium_mg: 211}
+
+  - id: zucchini
+    name: Zucchini
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 196, cup: 124}
+    keeps_days: 7
+    per_100g: {kcal: 17, protein_g: 1.2, fat_g: 0.3, satfat_g: 0.08, carb_g: 3.1, fiber_g: 1.0, sugar_g: 2.5, sodium_mg: 8, potassium_mg: 261}
+
+  - id: eggplant
+    name: Eggplant
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 458, cup: 82}
+    keeps_days: 7
+    per_100g: {kcal: 25, protein_g: 1.0, fat_g: 0.2, satfat_g: 0.03, carb_g: 5.9, fiber_g: 3.0, sugar_g: 3.5, sodium_mg: 2, potassium_mg: 229}
+
+  - id: onion-yellow
+    name: Yellow onion
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 150, cup: 160}
+    keeps_days: 30
+    pantry_staple: true
+    per_100g: {kcal: 40, protein_g: 1.1, fat_g: 0.1, satfat_g: 0.04, carb_g: 9.3, fiber_g: 1.7, sugar_g: 4.2, sodium_mg: 4, potassium_mg: 146}
+
+  - id: onion-red
+    name: Red onion
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 150, cup: 160}
+    keeps_days: 30
+    per_100g: {kcal: 40, protein_g: 1.1, fat_g: 0.1, satfat_g: 0.04, carb_g: 9.3, fiber_g: 1.7, sugar_g: 4.2, sodium_mg: 4, potassium_mg: 146}
+
+  - id: shallot
+    name: Shallot
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 40, cup: 160}
+    keeps_days: 30
+    per_100g: {kcal: 72, protein_g: 2.5, fat_g: 0.1, satfat_g: 0.02, carb_g: 16.8, fiber_g: 3.2, sugar_g: 7.9, sodium_mg: 12, potassium_mg: 334}
+
+  - id: garlic
+    name: Garlic
+    aisle: produce
+    vegan: true
+    unit_g: {clove: 3, head: 40, tbsp: 8.4}
+    keeps_days: 60
+    pantry_staple: true
+    per_100g: {kcal: 149, protein_g: 6.4, fat_g: 0.5, satfat_g: 0.09, carb_g: 33.1, fiber_g: 2.1, sugar_g: 1.0, sodium_mg: 17, potassium_mg: 401}
+
+  - id: ginger
+    name: Fresh ginger
+    aisle: produce
+    vegan: true
+    unit_g: {tbsp: 6, tsp: 2, piece: 30}
+    keeps_days: 21
+    per_100g: {kcal: 80, protein_g: 1.8, fat_g: 0.8, satfat_g: 0.2, carb_g: 17.8, fiber_g: 2.0, sugar_g: 1.7, sodium_mg: 13, potassium_mg: 415}
+
+  - id: tomato-roma
+    name: Roma tomatoes
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 62, cup: 180}
+    keeps_days: 7
+    per_100g: {kcal: 18, protein_g: 0.9, fat_g: 0.2, satfat_g: 0.03, carb_g: 3.9, fiber_g: 1.2, sugar_g: 2.6, sodium_mg: 5, potassium_mg: 237}
+
+  - id: tomato-cherry
+    name: Cherry tomatoes
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {cup: 149, ea: 17, pint: 275}
+    keeps_days: 7
+    per_100g: {kcal: 18, protein_g: 0.9, fat_g: 0.2, satfat_g: 0.03, carb_g: 3.9, fiber_g: 1.2, sugar_g: 2.6, sodium_mg: 5, potassium_mg: 237}
+
+  - id: avocado
+    name: Avocado
+    aisle: produce
+    vegan: true
+    dash_group: fats_oils
+    dash_serving_g: 30
+    unit_g: {ea: 150, half: 75, cup: 146}
+    keeps_days: 5
+    tags: [high_potassium, dash_bonus]
+    per_100g: {kcal: 160, protein_g: 2.0, fat_g: 14.7, satfat_g: 2.1, carb_g: 8.5, fiber_g: 6.7, sugar_g: 0.7, sodium_mg: 7, potassium_mg: 485}
+
+  - id: lemon
+    name: Lemon
+    aisle: produce
+    vegan: true
+    unit_g: {ea: 84, tbsp: 15, tsp: 5}
+    display_unit: ea
+    keeps_days: 21
+    tags: [atwater_exempt]
+    notes: >-
+      Citrus breaks the 4/4/9 cross-check legitimately: citric acid is counted as
+      carbohydrate on a label but yields about 2.5 kcal/g, so the stated energy is
+      lower than the macros predict.
+    per_100g: {kcal: 29, protein_g: 1.1, fat_g: 0.3, satfat_g: 0.04, carb_g: 9.3, fiber_g: 2.8, sugar_g: 2.5, sodium_mg: 2, potassium_mg: 138}
+
+  - id: lime
+    name: Lime
+    aisle: produce
+    vegan: true
+    unit_g: {ea: 67, tbsp: 15, tsp: 5}
+    display_unit: ea
+    keeps_days: 21
+    tags: [atwater_exempt]
+    per_100g: {kcal: 30, protein_g: 0.7, fat_g: 0.2, satfat_g: 0.02, carb_g: 10.5, fiber_g: 2.8, sugar_g: 1.7, sodium_mg: 2, potassium_mg: 102}
+
+  - id: sweet-potato
+    name: Sweet potato
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 130, cup: 133}
+    keeps_days: 21
+    tags: [high_potassium, dash_bonus]
+    per_100g: {kcal: 86, protein_g: 1.6, fat_g: 0.1, satfat_g: 0.02, carb_g: 20.1, fiber_g: 3.0, sugar_g: 4.2, sodium_mg: 55, potassium_mg: 337}
+
+  - id: potato-russet
+    name: Russet potato
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 173, cup: 150}
+    keeps_days: 30
+    tags: [high_potassium]
+    per_100g: {kcal: 79, protein_g: 2.1, fat_g: 0.1, satfat_g: 0.03, carb_g: 18.1, fiber_g: 1.3, sugar_g: 0.6, sodium_mg: 6, potassium_mg: 417}
+
+  - id: butternut-squash
+    name: Butternut squash
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {cup: 140, ea: 900}
+    keeps_days: 30
+    tags: [dash_bonus]
+    per_100g: {kcal: 45, protein_g: 1.0, fat_g: 0.1, satfat_g: 0.02, carb_g: 11.7, fiber_g: 2.0, sugar_g: 2.2, sodium_mg: 4, potassium_mg: 352}
+
+  - id: mushroom-cremini
+    name: Cremini mushrooms
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {cup: 72, ea: 20, package: 227}
+    keeps_days: 7
+    per_100g: {kcal: 22, protein_g: 2.5, fat_g: 0.1, satfat_g: 0.01, carb_g: 4.3, fiber_g: 0.6, sugar_g: 1.7, sodium_mg: 6, potassium_mg: 448}
+
+  - id: asparagus
+    name: Asparagus
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {bunch: 340, spear: 16, cup: 134}
+    keeps_days: 5
+    per_100g: {kcal: 20, protein_g: 2.2, fat_g: 0.1, satfat_g: 0.04, carb_g: 3.9, fiber_g: 2.1, sugar_g: 1.9, sodium_mg: 2, potassium_mg: 202}
+
+  - id: green-beans
+    name: Green beans
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {cup: 100, lb: 453.6}
+    keeps_days: 7
+    per_100g: {kcal: 31, protein_g: 1.8, fat_g: 0.2, satfat_g: 0.03, carb_g: 7.0, fiber_g: 2.7, sugar_g: 3.3, sodium_mg: 6, potassium_mg: 211}
+
+  - id: brussels-sprouts
+    name: Brussels sprouts
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {cup: 88, ea: 19, lb: 453.6}
+    keeps_days: 10
+    tags: [dash_bonus]
+    per_100g: {kcal: 43, protein_g: 3.4, fat_g: 0.3, satfat_g: 0.06, carb_g: 9.0, fiber_g: 3.8, sugar_g: 2.2, sodium_mg: 25, potassium_mg: 389}
+
+  - id: cabbage-green
+    name: Green cabbage
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {cup: 89, head: 900}
+    keeps_days: 21
+    per_100g: {kcal: 25, protein_g: 1.3, fat_g: 0.1, satfat_g: 0.03, carb_g: 5.8, fiber_g: 2.5, sugar_g: 3.2, sodium_mg: 18, potassium_mg: 170}
+
+  - id: scallion
+    name: Scallions
+    aisle: produce
+    vegan: true
+    unit_g: {ea: 15, bunch: 100, cup: 100}
+    keeps_days: 10
+    per_100g: {kcal: 32, protein_g: 1.8, fat_g: 0.2, satfat_g: 0.03, carb_g: 7.3, fiber_g: 2.6, sugar_g: 2.3, sodium_mg: 16, potassium_mg: 276}
+
+  - id: snap-peas
+    name: Sugar snap peas
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {cup: 63, bag: 227}
+    keeps_days: 7
+    per_100g: {kcal: 42, protein_g: 2.8, fat_g: 0.2, satfat_g: 0.04, carb_g: 7.6, fiber_g: 2.6, sugar_g: 4.0, sodium_mg: 4, potassium_mg: 200}
+
+  - id: beet
+    name: Beets
+    aisle: produce
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {ea: 82, cup: 136, bunch: 400}
+    keeps_days: 21
+    per_100g: {kcal: 43, protein_g: 1.6, fat_g: 0.2, satfat_g: 0.03, carb_g: 9.6, fiber_g: 2.8, sugar_g: 6.8, sodium_mg: 78, potassium_mg: 325}
+
+  - id: jalapeno
+    name: Jalapeño
+    aisle: produce
+    vegan: true
+    unit_g: {ea: 14, tbsp: 9}
+    keeps_days: 14
+    per_100g: {kcal: 29, protein_g: 0.9, fat_g: 0.4, satfat_g: 0.04, carb_g: 6.5, fiber_g: 2.8, sugar_g: 4.1, sodium_mg: 3, potassium_mg: 248}
+
+  # --- herbs -------------------------------------------------------------
+  - id: cilantro
+    name: Cilantro
+    aisle: produce
+    vegan: true
+    unit_g: {bunch: 60, cup: 16, tbsp: 1}
+    keeps_days: 5
+    per_100g: {kcal: 23, protein_g: 2.1, fat_g: 0.5, satfat_g: 0.01, carb_g: 3.7, fiber_g: 2.8, sugar_g: 0.9, sodium_mg: 46, potassium_mg: 521}
+
+  - id: parsley-flat
+    name: Flat-leaf parsley
+    aisle: produce
+    vegan: true
+    unit_g: {bunch: 60, cup: 60, tbsp: 4}
+    keeps_days: 7
+    per_100g: {kcal: 36, protein_g: 3.0, fat_g: 0.8, satfat_g: 0.13, carb_g: 6.3, fiber_g: 3.3, sugar_g: 0.9, sodium_mg: 56, potassium_mg: 554}
+
+  - id: basil-fresh
+    name: Fresh basil
+    aisle: produce
+    vegan: true
+    unit_g: {cup: 24, tbsp: 1.5, package: 20}
+    keeps_days: 4
+    per_100g: {kcal: 23, protein_g: 3.2, fat_g: 0.6, satfat_g: 0.04, carb_g: 2.7, fiber_g: 1.6, sugar_g: 0.3, sodium_mg: 4, potassium_mg: 295}
+
+  - id: dill-fresh
+    name: Fresh dill
+    aisle: produce
+    vegan: true
+    unit_g: {cup: 9, tbsp: 0.9, bunch: 30}
+    keeps_days: 5
+    per_100g: {kcal: 43, protein_g: 3.5, fat_g: 1.1, satfat_g: 0.06, carb_g: 7.0, fiber_g: 2.1, sugar_g: 0.0, sodium_mg: 61, potassium_mg: 738}
+
+  - id: mint-fresh
+    name: Fresh mint
+    aisle: produce
+    vegan: true
+    unit_g: {cup: 32, tbsp: 2, bunch: 30}
+    keeps_days: 5
+    per_100g: {kcal: 44, protein_g: 3.3, fat_g: 0.7, satfat_g: 0.2, carb_g: 8.4, fiber_g: 6.8, sugar_g: 0.0, sodium_mg: 31, potassium_mg: 458}
+
+  # --- fruit -------------------------------------------------------------
+  - id: apple
+    name: Apple
+    aisle: produce
+    vegan: true
+    dash_group: fruit
+    dash_serving_g: 120
+    unit_g: {ea: 182, cup: 125}
+    display_unit: ea
+    keeps_days: 21
+    per_100g: {kcal: 52, protein_g: 0.3, fat_g: 0.2, satfat_g: 0.03, carb_g: 13.8, fiber_g: 2.4, sugar_g: 10.4, sodium_mg: 1, potassium_mg: 107}
+
+  - id: banana
+    name: Banana
+    aisle: produce
+    vegan: true
+    dash_group: fruit
+    dash_serving_g: 118
+    unit_g: {ea: 118, cup: 150}
+    display_unit: ea
+    keeps_days: 6
+    tags: [high_potassium]
+    per_100g: {kcal: 89, protein_g: 1.1, fat_g: 0.3, satfat_g: 0.11, carb_g: 22.8, fiber_g: 2.6, sugar_g: 12.2, sodium_mg: 1, potassium_mg: 358}
+
+  - id: orange
+    name: Orange
+    aisle: produce
+    vegan: true
+    dash_group: fruit
+    dash_serving_g: 130
+    unit_g: {ea: 131, cup: 165}
+    display_unit: ea
+    keeps_days: 14
+    per_100g: {kcal: 47, protein_g: 0.9, fat_g: 0.1, satfat_g: 0.02, carb_g: 11.8, fiber_g: 2.4, sugar_g: 9.4, sodium_mg: 0, potassium_mg: 181}
+
+  - id: strawberries
+    name: Strawberries
+    aisle: produce
+    vegan: true
+    dash_group: fruit
+    dash_serving_g: 120
+    unit_g: {cup: 152, lb: 453.6, clamshell: 454}
+    keeps_days: 4
+    per_100g: {kcal: 32, protein_g: 0.7, fat_g: 0.3, satfat_g: 0.02, carb_g: 7.7, fiber_g: 2.0, sugar_g: 4.9, sodium_mg: 1, potassium_mg: 153}
+
+  - id: grapes-red
+    name: Red grapes
+    aisle: produce
+    vegan: true
+    dash_group: fruit
+    dash_serving_g: 120
+    unit_g: {cup: 151, lb: 453.6}
+    keeps_days: 10
+    per_100g: {kcal: 69, protein_g: 0.7, fat_g: 0.2, satfat_g: 0.05, carb_g: 18.1, fiber_g: 0.9, sugar_g: 15.5, sodium_mg: 2, potassium_mg: 191}
+
+  - id: dates-medjool
+    name: Medjool dates
+    aisle: produce
+    vegan: true
+    dash_group: sweets
+    dash_serving_g: 24
+    unit_g: {ea: 24, cup: 178}
+    keeps_days: 180
+    pantry_staple: true
+    tags: [high_potassium]
+    per_100g: {kcal: 277, protein_g: 1.8, fat_g: 0.2, satfat_g: 0.03, carb_g: 75.0, fiber_g: 6.7, sugar_g: 66.5, sodium_mg: 1, potassium_mg: 696}
+
+  # --- frozen ------------------------------------------------------------
+  - id: blueberries-frozen
+    name: Frozen blueberries
+    aisle: frozen
+    vegan: true
+    dash_group: fruit
+    dash_serving_g: 120
+    unit_g: {cup: 155, bag: 300}
+    keeps_days: 180
+    per_100g: {kcal: 57, protein_g: 0.7, fat_g: 0.3, satfat_g: 0.03, carb_g: 14.5, fiber_g: 2.4, sugar_g: 10.0, sodium_mg: 1, potassium_mg: 77}
+
+  - id: berries-mixed-frozen
+    name: Frozen mixed berries
+    aisle: frozen
+    vegan: true
+    dash_group: fruit
+    dash_serving_g: 120
+    unit_g: {cup: 140, bag: 340}
+    keeps_days: 180
+    per_100g: {kcal: 60, protein_g: 0.9, fat_g: 0.4, satfat_g: 0.03, carb_g: 14.0, fiber_g: 3.5, sugar_g: 8.5, sodium_mg: 2, potassium_mg: 110}
+
+  - id: mango-frozen
+    name: Frozen mango
+    aisle: frozen
+    vegan: true
+    dash_group: fruit
+    dash_serving_g: 120
+    unit_g: {cup: 165, bag: 454}
+    keeps_days: 180
+    per_100g: {kcal: 60, protein_g: 0.8, fat_g: 0.4, satfat_g: 0.09, carb_g: 15.0, fiber_g: 1.6, sugar_g: 13.7, sodium_mg: 1, potassium_mg: 168}
+
+  - id: corn-frozen
+    name: Frozen corn
+    aisle: frozen
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {cup: 137, bag: 454}
+    keeps_days: 180
+    per_100g: {kcal: 88, protein_g: 3.1, fat_g: 0.7, satfat_g: 0.1, carb_g: 21.0, fiber_g: 2.0, sugar_g: 3.2, sodium_mg: 1, potassium_mg: 230}
+
+  - id: peas-frozen
+    name: Frozen peas
+    aisle: frozen
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {cup: 134, bag: 454}
+    keeps_days: 180
+    per_100g: {kcal: 77, protein_g: 5.2, fat_g: 0.4, satfat_g: 0.07, carb_g: 13.6, fiber_g: 4.5, sugar_g: 5.0, sodium_mg: 72, potassium_mg: 153}
+
+  - id: edamame-frozen
+    name: Frozen shelled edamame
+    aisle: frozen
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 85
+    unit_g: {cup: 155, bag: 454}
+    keeps_days: 180
+    tags: [complete_protein, dash_bonus]
+    per_100g: {kcal: 121, protein_g: 11.9, fat_g: 5.2, satfat_g: 0.6, carb_g: 8.9, fiber_g: 5.2, sugar_g: 2.2, sodium_mg: 6, potassium_mg: 436}
+
+  - id: spinach-frozen
+    name: Frozen chopped spinach
+    aisle: frozen
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {cup: 156, box: 284}
+    keeps_days: 180
+    per_100g: {kcal: 29, protein_g: 3.6, fat_g: 0.6, satfat_g: 0.1, carb_g: 4.3, fiber_g: 2.9, sugar_g: 0.5, sodium_mg: 74, potassium_mg: 466}
+
+  - id: broccoli-frozen
+    name: Frozen broccoli florets
+    aisle: frozen
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 85
+    unit_g: {cup: 91, bag: 454}
+    keeps_days: 180
+    per_100g: {kcal: 26, protein_g: 2.8, fat_g: 0.3, satfat_g: 0.06, carb_g: 4.8, fiber_g: 3.0, sugar_g: 1.4, sodium_mg: 24, potassium_mg: 212}
+
+  - id: cauliflower-rice-frozen
+    name: Frozen cauliflower rice
+    aisle: frozen
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 85
+    unit_g: {cup: 107, bag: 340}
+    keeps_days: 180
+    per_100g: {kcal: 25, protein_g: 2.0, fat_g: 0.3, satfat_g: 0.05, carb_g: 5.0, fiber_g: 2.0, sugar_g: 2.0, sodium_mg: 20, potassium_mg: 300}

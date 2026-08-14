@@ -1,0 +1,19 @@
+{
+  "name": "PLATE — menu planner",
+  "short_name": "PLATE",
+  "description": "Adaptive menu planning driven by your own health metrics.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f5f7",
+  "theme_color": "#03a9f4",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+---
+# Breakfasts. Weighted toward things that are either instant or batch-cooked,
+# because a plan that needs twenty minutes of cooking at 7am is a plan you'll
+# abandon by Wednesday.
+#
+# Quantities are for the stated number of servings. All grain weights are DRY.
+recipes:
+  - id: overnight-oats-berry-chia
+    title: Berry chia overnight oats
+    meals: [breakfast]
+    servings: 2
+    prep_min: 8
+    cook_min: 0
+    cuisine: american
+    keeps_days: 4
+    packable: true
+    tags: [no-cook, make-ahead, high_fiber, vegetarian]
+    ingredients:
+      - {item: oats-rolled, qty: 90, unit: g}
+      - {item: chia-seeds, qty: 24, unit: g}
+      - {item: skyr-plain, qty: 250, unit: g}
+      - {item: almond-milk-unsweetened, qty: 240, unit: ml}
+      - {item: berries-mixed-frozen, qty: 180, unit: g}
+      - {item: walnuts, qty: 20, unit: g}
+      - {item: maple-syrup, qty: 1, unit: tbsp}
+      - {item: cinnamon-ground, qty: 0.5, unit: tsp}
+    steps:
+      - Stir oats, chia, skyr, milk, maple and cinnamon together in a jar or tub.
+      - Fold in the frozen berries — they thaw overnight and bleed colour through.
+      - Refrigerate at least 6 hours. Top with walnuts when you eat it, not before.
+    notes: >-
+      Makes two days at once and is better on day two. If it's too thick in the
+      morning, loosen with a splash of milk.
+
+  - id: skyr-berry-bowl
+    title: Skyr bowl with berries and pepitas
+    meals: [breakfast, snack]
+    servings: 1
+    prep_min: 4
+    cook_min: 0
+    cuisine: nordic
+    keeps_days: 0
+    packable: true
+    tags: [no-cook, fast, high_protein, vegetarian]
+    ingredients:
+      - {item: skyr-plain, qty: 200, unit: g}
+      - {item: blueberries-frozen, qty: 100, unit: g}
+      - {item: pumpkin-seeds, qty: 15, unit: g}
+      - {item: honey, qty: 1, unit: tsp}
+      - {item: flaxseed-ground, qty: 1, unit: tbsp}
+    steps:
+      - Spoon the skyr into a bowl.
+      - Microwave the berries 30 seconds so they release syrup, then pour over.
+      - Scatter pepitas and flax, drizzle honey.
+
+  - id: savoury-oats-soft-egg
+    title: Savoury oats with a soft egg
+    meals: [breakfast]
+    servings: 1
+    prep_min: 5
+    cook_min: 10
+    cuisine: american
+    keeps_days: 0
+    packable: false
+    tags: [warm, high_fiber, vegetarian]
+    ingredients:
+      - {item: oats-rolled, qty: 50, unit: g}
+      - {item: broth-vegetable-low-sodium, qty: 300, unit: ml}
+      - {item: spinach-baby, qty: 60, unit: g}
+      - {item: eggs, qty: 1, unit: ea}
+      - {item: nutritional-yeast, qty: 1, unit: tbsp}
+      - {item: scallion, qty: 15, unit: g}
+      - {item: olive-oil, qty: 1, unit: tsp}
+      - {item: black-pepper, qty: 0.25, unit: tsp}
+    steps:
+      - Simmer oats in the broth, stirring, until creamy — about 8 minutes.
+      - Wilt the spinach into the pot at the end, then the nutritional yeast.
+      - Fry or soft-boil the egg, sit it on top, finish with scallion, oil, pepper.
+    notes: Savoury oats convert people who think they dislike porridge.
+
+  - id: tofu-scramble-peppers
+    title: Turmeric tofu scramble
+    meals: [breakfast]
+    servings: 2
+    prep_min: 8
+    cook_min: 10
+    cuisine: american
+    keeps_days: 3
+    packable: true
+    tags: [vegan, vegetarian, high_protein]
+    ingredients:
+      - {item: tofu-extra-firm, qty: 397, unit: g}
+      - {item: bell-pepper-red, qty: 150, unit: g}
+      - {item: onion-yellow, qty: 80, unit: g}
+      - {item: spinach-baby, qty: 80, unit: g}
+      - {item: nutritional-yeast, qty: 2, unit: tbsp}
+      - {item: turmeric-ground, qty: 0.5, unit: tsp}
+      - {item: cumin-ground, qty: 0.5, unit: tsp}
+      - {item: olive-oil, qty: 1, unit: tbsp}
+      - {item: salt-kosher, qty: 0.75, unit: g}
+      - {item: tortilla-corn, qty: 2, unit: ea}
+    steps:
+      - Crumble the tofu with your hands — no need to press it first.
+      - Soften onion and pepper in the oil, 5 minutes, then add tofu and spices.
+      - Cook hard for 5 minutes to drive off water, fold in spinach and yeast.
+      - Warm the tortillas in the dry pan and eat alongside.
+
+  - id: veggie-egg-muffins
+    title: Batch veggie egg muffins
+    meals: [breakfast, snack]
+    servings: 6
+    prep_min: 12
+    cook_min: 25
+    cuisine: american
+    keeps_days: 5
+    packable: true
+    tags: [make-ahead, batch, high_protein, vegetarian]
+    ingredients:
+      - {item: eggs, qty: 8, unit: ea}
+      - {item: egg-whites, qty: 240, unit: g}
+      - {item: spinach-frozen, qty: 200, unit: g}
+      - {item: bell-pepper-red, qty: 150, unit: g}
+      - {item: onion-red, qty: 80, unit: g}
+      - {item: feta, qty: 90, unit: g}
+      - {item: oregano-dried, qty: 1, unit: tsp}
+      - {item: black-pepper, qty: 0.5, unit: tsp}
+      - {item: olive-oil, qty: 2, unit: tsp}
+    steps:
+      - Heat oven to 190°C / 375°F and oil a 12-cup muffin tin well.
+      - Squeeze every drop of water out of the thawed spinach. This is the whole trick.
+      - Whisk eggs and whites, stir in vegetables, feta and oregano.
+      - Fill cups two-thirds full, bake 22-25 minutes until just set. They deflate; that's fine.
+    notes: >-
+      Two muffins is a serving. They keep five days and reheat in 40 seconds,
+      which makes them the most useful thing in this file.
+
+  - id: greek-yogurt-parfait-walnut
+    title: Yogurt parfait with walnuts and dates
+    meals: [breakfast, snack]
+    servings: 1
+    prep_min: 4
+    cook_min: 0
+    cuisine: mediterranean
+    keeps_days: 2
+    packable: true
+    tags: [no-cook, fast, high_protein, vegetarian]
+    ingredients:
+      - {item: greek-yogurt-nonfat, qty: 220, unit: g}
+      - {item: walnuts, qty: 18, unit: g}
+      - {item: dates-medjool, qty: 1, unit: ea}
+      - {item: strawberries, qty: 100, unit: g}
+      - {item: cinnamon-ground, qty: 0.25, unit: tsp}
+    steps:
+      - Chop the date small and the strawberries in half.
+      - Layer yogurt, fruit, nuts. Dust with cinnamon.
+
+  - id: peanut-butter-banana-toast
+    title: Peanut butter banana toast with hemp
+    meals: [breakfast, snack]
+    servings: 1
+    prep_min: 4
+    cook_min: 2
+    cuisine: american
+    keeps_days: 0
+    packable: false
+    tags: [fast, vegan, vegetarian]
+    ingredients:
+      - {item: bread-whole-grain, qty: 2, unit: slice}
+      - {item: peanut-butter, qty: 32, unit: g}
+      - {item: banana, qty: 1, unit: ea}
+      - {item: hemp-hearts, qty: 1, unit: tbsp}
+      - {item: cinnamon-ground, qty: 0.25, unit: tsp}
+    steps:
+      - Toast the bread properly — dark enough to stay crisp under the banana.
+      - Spread peanut butter, layer banana, scatter hemp hearts and cinnamon.
+
+  - id: green-protein-smoothie
+    title: Green protein smoothie
+    meals: [breakfast, snack]
+    servings: 1
+    prep_min: 5
+    cook_min: 0
+    cuisine: american
+    keeps_days: 0
+    packable: true
+    tags: [fast, no-cook, high_protein, vegetarian]
+    ingredients:
+      - {item: whey-protein-isolate, qty: 1, unit: scoop}
+      - {item: spinach-baby, qty: 60, unit: g}
+      - {item: mango-frozen, qty: 120, unit: g}
+      - {item: almond-milk-unsweetened, qty: 300, unit: ml}
+      - {item: flaxseed-ground, qty: 1, unit: tbsp}
+      - {item: almond-butter, qty: 16, unit: g}
+    steps:
+      - Liquid first, then powder, then everything else — it blends cleaner that way.
+      - Blend 45 seconds. Add water if your blender is struggling.
+    notes: Swap the whey for pea protein to make it vegan; add 20 g to match the protein.
+
+  - id: shakshuka-single-pan
+    title: One-pan shakshuka
+    meals: [breakfast, dinner]
+    servings: 2
+    prep_min: 10
+    cook_min: 22
+    cuisine: middle-eastern
+    keeps_days: 2
+    packable: false
+    tags: [warm, one-pan, vegetarian, high_potassium]
+    ingredients:
+      - {item: tomatoes-crushed-canned, qty: 411, unit: g}
+      - {item: bell-pepper-red, qty: 200, unit: g}
+      - {item: onion-yellow, qty: 120, unit: g}
+      - {item: garlic, qty: 3, unit: clove}
+      - {item: eggs, qty: 4, unit: ea}
+      - {item: cumin-ground, qty: 1, unit: tsp}
+      - {item: paprika-smoked, qty: 1, unit: tsp}
+      - {item: harissa, qty: 1, unit: tsp}
+      - {item: feta, qty: 60, unit: g}
+      - {item: parsley-flat, qty: 15, unit: g}
+      - {item: olive-oil, qty: 1, unit: tbsp}
+      - {item: bread-sourdough, qty: 2, unit: slice}
+    steps:
+      - Soften pepper and onion in the oil over medium heat, 8 minutes. Add garlic and spices, 1 minute.
+      - Pour in the tomatoes and harissa, simmer 8 minutes until it stops being watery.
+      - Make four wells, crack in the eggs, cover and cook 6-8 minutes until whites set.
+      - Crumble over feta and parsley. Bread for mopping.

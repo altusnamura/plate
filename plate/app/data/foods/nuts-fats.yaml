@@ -1,0 +1,268 @@
+---
+# Nuts, seeds, oils and nut butters.
+#
+# These are calorie-dense enough that gram accuracy matters more here than
+# anywhere else in the database: being 20 g out on olive oil is 180 kcal, which is
+# most of a day's deficit. Recipes specify oils by tablespoon because that is how
+# people cook, and the tablespoon weights below are real (13.5 g for oil, not the
+# 15 g you get by assuming water density).
+foods:
+  - id: olive-oil
+    name: Extra virgin olive oil
+    aisle: oils_vinegar
+    vegan: true
+    dash_group: fats_oils
+    dash_serving_g: 4.5
+    g_per_ml: 0.91
+    unit_g: {tbsp: 13.5, tsp: 4.5, cup: 216, bottle: 500}
+    keeps_days: 540
+    pantry_staple: true
+    tags: [monounsaturated, dash_bonus]
+    per_100g: {kcal: 884, protein_g: 0.0, fat_g: 100.0, satfat_g: 13.8, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 2, potassium_mg: 1}
+
+  - id: avocado-oil
+    name: Avocado oil
+    aisle: oils_vinegar
+    vegan: true
+    dash_group: fats_oils
+    dash_serving_g: 4.5
+    g_per_ml: 0.91
+    unit_g: {tbsp: 13.5, tsp: 4.5, bottle: 500}
+    keeps_days: 540
+    pantry_staple: true
+    tags: [monounsaturated, high_smoke_point]
+    per_100g: {kcal: 884, protein_g: 0.0, fat_g: 100.0, satfat_g: 11.6, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 0, potassium_mg: 0}
+
+  - id: sesame-oil
+    name: Toasted sesame oil
+    aisle: oils_vinegar
+    vegan: true
+    dash_group: fats_oils
+    dash_serving_g: 4.5
+    g_per_ml: 0.92
+    unit_g: {tbsp: 13.6, tsp: 4.5, bottle: 250}
+    keeps_days: 365
+    pantry_staple: true
+    per_100g: {kcal: 884, protein_g: 0.0, fat_g: 100.0, satfat_g: 14.2, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 0, potassium_mg: 0}
+
+  - id: tahini
+    name: Tahini
+    aisle: condiments
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 16
+    g_per_ml: 1.05
+    unit_g: {tbsp: 15, cup: 240, jar: 454}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [calcium, high_potassium]
+    per_100g: {kcal: 595, protein_g: 17.0, fat_g: 53.8, satfat_g: 7.5, carb_g: 21.2, fiber_g: 9.3, sugar_g: 0.5, sodium_mg: 115, potassium_mg: 414}
+
+  - id: peanut-butter
+    name: Natural peanut butter
+    aisle: condiments
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 16
+    unit_g: {tbsp: 16, cup: 258, jar: 454}
+    keeps_days: 180
+    pantry_staple: true
+    tags: [high_protein, high_potassium]
+    per_100g: {kcal: 588, protein_g: 25.1, fat_g: 50.4, satfat_g: 10.3, carb_g: 21.6, fiber_g: 5.0, sugar_g: 5.9, sodium_mg: 17, potassium_mg: 649}
+
+  - id: almond-butter
+    name: Almond butter
+    aisle: condiments
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 16
+    unit_g: {tbsp: 16, cup: 256, jar: 340}
+    keeps_days: 180
+    pantry_staple: true
+    tags: [high_potassium, vitamin_e]
+    per_100g: {kcal: 614, protein_g: 21.2, fat_g: 55.5, satfat_g: 4.2, carb_g: 18.8, fiber_g: 10.3, sugar_g: 4.4, sodium_mg: 7, potassium_mg: 748}
+
+  - id: almonds
+    name: Almonds (raw)
+    aisle: nuts_seeds
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 28
+    unit_g: {cup: 143, oz: 28.35, bag: 454, tbsp: 9}
+    keeps_days: 270
+    pantry_staple: true
+    tags: [vitamin_e, magnesium, high_potassium, dash_bonus]
+    per_100g: {kcal: 579, protein_g: 21.2, fat_g: 49.9, satfat_g: 3.8, carb_g: 21.6, fiber_g: 12.5, sugar_g: 4.4, sodium_mg: 1, potassium_mg: 733}
+
+  - id: walnuts
+    name: Walnuts
+    aisle: nuts_seeds
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 28
+    unit_g: {cup: 117, oz: 28.35, bag: 454, tbsp: 7.5}
+    keeps_days: 180
+    pantry_staple: true
+    tags: [omega3, dash_bonus]
+    per_100g: {kcal: 654, protein_g: 15.2, fat_g: 65.2, satfat_g: 6.1, carb_g: 13.7, fiber_g: 6.7, sugar_g: 2.6, sodium_mg: 2, potassium_mg: 441}
+
+  - id: cashews
+    name: Cashews (raw)
+    aisle: nuts_seeds
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 28
+    unit_g: {cup: 137, oz: 28.35, bag: 454}
+    keeps_days: 180
+    pantry_staple: true
+    tags: [magnesium, high_potassium]
+    per_100g: {kcal: 553, protein_g: 18.2, fat_g: 43.9, satfat_g: 7.8, carb_g: 30.2, fiber_g: 3.3, sugar_g: 5.9, sodium_mg: 12, potassium_mg: 660}
+
+  - id: pumpkin-seeds
+    name: Pumpkin seeds (pepitas)
+    aisle: nuts_seeds
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 28
+    unit_g: {cup: 129, oz: 28.35, tbsp: 8, bag: 340}
+    keeps_days: 180
+    pantry_staple: true
+    tags: [high_protein, magnesium, iron_nonheme, high_potassium]
+    per_100g: {kcal: 559, protein_g: 30.2, fat_g: 49.1, satfat_g: 8.7, carb_g: 10.7, fiber_g: 6.0, sugar_g: 1.4, sodium_mg: 7, potassium_mg: 809}
+
+  - id: sunflower-seeds
+    name: Sunflower seeds
+    aisle: nuts_seeds
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 28
+    unit_g: {cup: 140, tbsp: 9, bag: 340}
+    keeps_days: 180
+    pantry_staple: true
+    tags: [vitamin_e, magnesium]
+    per_100g: {kcal: 584, protein_g: 20.8, fat_g: 51.5, satfat_g: 4.5, carb_g: 20.0, fiber_g: 8.6, sugar_g: 2.6, sodium_mg: 9, potassium_mg: 645}
+
+  - id: chia-seeds
+    name: Chia seeds
+    aisle: nuts_seeds
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 28
+    unit_g: {tbsp: 12, cup: 170, bag: 340}
+    keeps_days: 540
+    pantry_staple: true
+    tags: [omega3, high_fiber, calcium]
+    per_100g: {kcal: 486, protein_g: 16.5, fat_g: 30.7, satfat_g: 3.3, carb_g: 42.1, fiber_g: 34.4, sugar_g: 0.0, sodium_mg: 16, potassium_mg: 407}
+
+  - id: flaxseed-ground
+    name: Ground flaxseed
+    aisle: nuts_seeds
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 28
+    unit_g: {tbsp: 7, cup: 112, bag: 454}
+    keeps_days: 120
+    pantry_staple: true
+    tags: [omega3, high_fiber, high_potassium]
+    notes: Keep it in the freezer; ground flax goes rancid within a few months at room temperature.
+    per_100g: {kcal: 534, protein_g: 18.3, fat_g: 42.2, satfat_g: 3.7, carb_g: 28.9, fiber_g: 27.3, sugar_g: 1.6, sodium_mg: 30, potassium_mg: 813}
+
+  - id: hemp-hearts
+    name: Hemp hearts
+    aisle: nuts_seeds
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 28
+    unit_g: {tbsp: 10, cup: 160, bag: 340}
+    keeps_days: 180
+    pantry_staple: true
+    tags: [high_protein, complete_protein, omega3, magnesium, high_potassium]
+    per_100g: {kcal: 553, protein_g: 31.6, fat_g: 48.8, satfat_g: 4.6, carb_g: 8.7, fiber_g: 4.0, sugar_g: 1.5, sodium_mg: 5, potassium_mg: 1200}
+
+  - id: sesame-seeds
+    name: Sesame seeds
+    aisle: nuts_seeds
+    vegan: true
+    unit_g: {tbsp: 9, cup: 144, jar: 113}
+    keeps_days: 270
+    pantry_staple: true
+    tags: [calcium]
+    per_100g: {kcal: 573, protein_g: 17.7, fat_g: 49.7, satfat_g: 7.0, carb_g: 23.4, fiber_g: 11.8, sugar_g: 0.3, sodium_mg: 11, potassium_mg: 468}
+
+  - id: pine-nuts
+    name: Pine nuts
+    aisle: nuts_seeds
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 28
+    unit_g: {tbsp: 8.5, cup: 135, bag: 113}
+    keeps_days: 120
+    tags: [expensive]
+    per_100g: {kcal: 673, protein_g: 13.7, fat_g: 68.4, satfat_g: 4.9, carb_g: 13.1, fiber_g: 3.7, sugar_g: 3.6, sodium_mg: 2, potassium_mg: 597}
+
+  - id: coconut-milk-light
+    name: Light coconut milk (canned)
+    aisle: canned
+    vegan: true
+    g_per_ml: 0.98
+    unit_g: {can: 400, cup: 240, tbsp: 15}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_satfat]
+    per_100g: {kcal: 73, protein_g: 0.7, fat_g: 7.0, satfat_g: 6.2, carb_g: 2.0, fiber_g: 0.0, sugar_g: 1.5, sodium_mg: 13, potassium_mg: 150}
+
+  - id: coconut-flakes-unsweetened
+    name: Unsweetened coconut flakes
+    aisle: baking
+    vegan: true
+    unit_g: {tbsp: 5, cup: 80, bag: 227}
+    keeps_days: 270
+    pantry_staple: true
+    tags: [high_satfat]
+    per_100g: {kcal: 660, protein_g: 6.9, fat_g: 64.5, satfat_g: 57.2, carb_g: 23.7, fiber_g: 16.3, sugar_g: 7.4, sodium_mg: 37, potassium_mg: 543}
+
+  - id: dark-chocolate-85
+    name: Dark chocolate (85%)
+    aisle: baking
+    vegan: false
+    vegetarian: true
+    dash_group: sweets
+    dash_serving_g: 20
+    unit_g: {bar: 100, square: 10, oz: 28.35}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [high_satfat, magnesium, high_potassium]
+    per_100g: {kcal: 592, protein_g: 10.3, fat_g: 49.3, satfat_g: 29.7, carb_g: 31.0, fiber_g: 11.0, sugar_g: 14.0, sodium_mg: 12, potassium_mg: 722}
+
+  - id: mayo-avocado-oil
+    name: Avocado oil mayonnaise
+    aisle: condiments
+    vegan: false
+    vegetarian: true
+    unit_g: {tbsp: 14, cup: 224, jar: 340}
+    keeps_days: 120
+    pantry_staple: true
+    per_100g: {kcal: 680, protein_g: 0.6, fat_g: 75.0, satfat_g: 9.0, carb_g: 0.6, fiber_g: 0.0, sugar_g: 0.6, sodium_mg: 500, potassium_mg: 20}
+
+  - id: whey-protein-isolate
+    name: Whey protein isolate (unflavoured)
+    aisle: other
+    vegan: false
+    vegetarian: true
+    unit_g: {scoop: 30, tbsp: 8, tub: 907}
+    display_unit: scoop
+    keeps_days: 540
+    pantry_staple: true
+    tags: [high_protein, complete_protein, b12_source]
+    per_100g: {kcal: 373, protein_g: 83.0, fat_g: 1.7, satfat_g: 1.0, carb_g: 6.7, fiber_g: 1.7, sugar_g: 3.3, sodium_mg: 330, potassium_mg: 500}
+
+  - id: pea-protein
+    name: Pea protein powder (unflavoured)
+    aisle: other
+    vegan: true
+    unit_g: {scoop: 30, tbsp: 8, tub: 907}
+    display_unit: scoop
+    keeps_days: 540
+    pantry_staple: true
+    tags: [high_protein, iron_nonheme]
+    per_100g: {kcal: 360, protein_g: 80.0, fat_g: 5.0, satfat_g: 0.8, carb_g: 5.0, fiber_g: 3.0, sugar_g: 0.0, sodium_mg: 800, potassium_mg: 200}

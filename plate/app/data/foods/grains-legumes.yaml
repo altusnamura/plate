@@ -1,0 +1,321 @@
+---
+# Grains and legumes.
+#
+# IMPORTANT BASIS NOTE: grains, dried lentils and dried beans are recorded DRY,
+# because that is how you weigh them into a pot. 100 g of dry brown rice is
+# ~370 kcal and becomes roughly 260 g cooked. Recipes here therefore specify dry
+# weights — if you swap in a recipe measured in cooked cups, convert it or the
+# calorie maths will be off by a factor of nearly three.
+#
+# Canned beans are recorded DRAINED, which is how they land in the pan. Sodium
+# figures assume the ordinary salted version; rinsing under the tap removes
+# roughly 40% of it, which the recipes assume you do.
+foods:
+  # --- grains ------------------------------------------------------------
+  - id: rice-brown
+    name: Brown rice (dry)
+    aisle: grains
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 24
+    unit_g: {cup: 185, bag: 907}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [whole_grain]
+    per_100g: {kcal: 370, protein_g: 7.9, fat_g: 2.9, satfat_g: 0.6, carb_g: 77.2, fiber_g: 3.5, sugar_g: 0.7, sodium_mg: 7, potassium_mg: 223}
+
+  - id: rice-basmati
+    name: White basmati rice (dry)
+    aisle: grains
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 24
+    unit_g: {cup: 185, bag: 907}
+    keeps_days: 365
+    pantry_staple: true
+    per_100g: {kcal: 360, protein_g: 7.5, fat_g: 0.7, satfat_g: 0.2, carb_g: 79.0, fiber_g: 1.4, sugar_g: 0.1, sodium_mg: 1, potassium_mg: 115}
+
+  - id: quinoa
+    name: Quinoa (dry)
+    aisle: grains
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 24
+    unit_g: {cup: 170, bag: 454}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [whole_grain, complete_protein, high_potassium]
+    per_100g: {kcal: 368, protein_g: 14.1, fat_g: 6.1, satfat_g: 0.7, carb_g: 64.2, fiber_g: 7.0, sugar_g: 0.0, sodium_mg: 5, potassium_mg: 563}
+
+  - id: oats-rolled
+    name: Rolled oats
+    aisle: grains
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 28
+    unit_g: {cup: 81, half_cup: 40, canister: 1190}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [whole_grain, beta_glucan]
+    per_100g: {kcal: 379, protein_g: 13.2, fat_g: 6.5, satfat_g: 1.1, carb_g: 67.7, fiber_g: 10.1, sugar_g: 1.0, sodium_mg: 6, potassium_mg: 362}
+
+  - id: oats-steel-cut
+    name: Steel-cut oats
+    aisle: grains
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 28
+    unit_g: {cup: 176, quarter_cup: 44, canister: 850}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [whole_grain, beta_glucan]
+    per_100g: {kcal: 379, protein_g: 13.2, fat_g: 6.5, satfat_g: 1.1, carb_g: 67.7, fiber_g: 10.1, sugar_g: 1.0, sodium_mg: 6, potassium_mg: 362}
+
+  - id: farro
+    name: Farro (dry)
+    aisle: grains
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 24
+    unit_g: {cup: 190, bag: 454}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [whole_grain]
+    per_100g: {kcal: 340, protein_g: 13.0, fat_g: 2.0, satfat_g: 0.4, carb_g: 71.0, fiber_g: 9.0, sugar_g: 1.0, sodium_mg: 5, potassium_mg: 330}
+
+  - id: pasta-whole-wheat
+    name: Whole wheat pasta (dry)
+    aisle: pasta_sauce
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 28
+    unit_g: {box: 454, cup: 105}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [whole_grain]
+    per_100g: {kcal: 348, protein_g: 14.6, fat_g: 2.5, satfat_g: 0.4, carb_g: 75.0, fiber_g: 9.0, sugar_g: 2.7, sodium_mg: 8, potassium_mg: 320}
+
+  - id: pasta-chickpea
+    name: Chickpea pasta (dry)
+    aisle: pasta_sauce
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 45
+    unit_g: {box: 227, cup: 100}
+    keeps_days: 365
+    tags: [high_protein, high_fiber]
+    per_100g: {kcal: 350, protein_g: 20.0, fat_g: 5.0, satfat_g: 0.5, carb_g: 57.0, fiber_g: 12.0, sugar_g: 3.0, sodium_mg: 30, potassium_mg: 600}
+
+  - id: couscous-whole-wheat
+    name: Whole wheat couscous (dry)
+    aisle: grains
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 28
+    unit_g: {cup: 173, box: 283}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [whole_grain, fast]
+    per_100g: {kcal: 376, protein_g: 12.8, fat_g: 1.1, satfat_g: 0.2, carb_g: 77.4, fiber_g: 5.0, sugar_g: 0.0, sodium_mg: 10, potassium_mg: 166}
+
+  - id: tortilla-corn
+    name: Corn tortillas
+    aisle: bakery
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 26
+    unit_g: {ea: 26, package: 454}
+    display_unit: ea
+    keeps_days: 21
+    tags: [whole_grain, gluten_free]
+    per_100g: {kcal: 218, protein_g: 5.7, fat_g: 2.9, satfat_g: 0.4, carb_g: 44.6, fiber_g: 6.3, sugar_g: 1.0, sodium_mg: 45, potassium_mg: 186}
+
+  - id: tortilla-whole-wheat
+    name: Whole wheat tortillas
+    aisle: bakery
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 45
+    unit_g: {ea: 45, package: 454}
+    display_unit: ea
+    keeps_days: 21
+    tags: [whole_grain, high_sodium]
+    per_100g: {kcal: 290, protein_g: 9.0, fat_g: 7.0, satfat_g: 1.5, carb_g: 48.0, fiber_g: 6.0, sugar_g: 2.0, sodium_mg: 560, potassium_mg: 200}
+
+  - id: bread-whole-grain
+    name: Whole grain bread
+    aisle: bakery
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 43
+    unit_g: {slice: 43, loaf: 680}
+    display_unit: slice
+    keeps_days: 7
+    tags: [whole_grain]
+    per_100g: {kcal: 250, protein_g: 12.0, fat_g: 3.5, satfat_g: 0.6, carb_g: 43.0, fiber_g: 7.0, sugar_g: 4.0, sodium_mg: 400, potassium_mg: 250}
+
+  - id: bread-sourdough
+    name: Sourdough bread
+    aisle: bakery
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 50
+    unit_g: {slice: 50, loaf: 680}
+    display_unit: slice
+    keeps_days: 5
+    per_100g: {kcal: 270, protein_g: 10.5, fat_g: 1.7, satfat_g: 0.4, carb_g: 53.0, fiber_g: 2.4, sugar_g: 2.0, sodium_mg: 540, potassium_mg: 120}
+
+  - id: pita-whole-wheat
+    name: Whole wheat pita
+    aisle: bakery
+    vegan: true
+    dash_group: grains
+    dash_serving_g: 64
+    unit_g: {ea: 64, package: 384}
+    display_unit: ea
+    keeps_days: 7
+    tags: [whole_grain]
+    per_100g: {kcal: 275, protein_g: 9.8, fat_g: 1.7, satfat_g: 0.3, carb_g: 55.7, fiber_g: 7.4, sugar_g: 0.6, sodium_mg: 536, potassium_mg: 170}
+
+  # --- legumes -----------------------------------------------------------
+  - id: chickpeas-canned
+    name: Canned chickpeas (drained)
+    aisle: canned
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 45
+    unit_g: {can: 254, cup: 164}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_fiber, dash_bonus]
+    notes: >-
+      Drained weight from a 15.5 oz can. Sodium assumes the salted version after a
+      rinse; no-salt-added cans run about 25 mg/100 g if you'd rather.
+    per_100g: {kcal: 139, protein_g: 7.0, fat_g: 2.6, satfat_g: 0.3, carb_g: 22.5, fiber_g: 6.4, sugar_g: 3.8, sodium_mg: 150, potassium_mg: 220}
+
+  - id: black-beans-canned
+    name: Canned black beans (drained)
+    aisle: canned
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 45
+    unit_g: {can: 254, cup: 172}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_fiber, high_potassium, dash_bonus]
+    per_100g: {kcal: 132, protein_g: 8.9, fat_g: 0.5, satfat_g: 0.13, carb_g: 23.7, fiber_g: 8.7, sugar_g: 0.3, sodium_mg: 145, potassium_mg: 355}
+
+  - id: cannellini-canned
+    name: Canned cannellini beans (drained)
+    aisle: canned
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 45
+    unit_g: {can: 254, cup: 179}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_fiber, high_potassium, dash_bonus]
+    per_100g: {kcal: 130, protein_g: 8.6, fat_g: 0.5, satfat_g: 0.1, carb_g: 23.0, fiber_g: 6.3, sugar_g: 0.3, sodium_mg: 140, potassium_mg: 370}
+
+  - id: kidney-beans-canned
+    name: Canned kidney beans (drained)
+    aisle: canned
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 45
+    unit_g: {can: 254, cup: 177}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_fiber, high_potassium]
+    per_100g: {kcal: 127, protein_g: 8.7, fat_g: 0.5, satfat_g: 0.07, carb_g: 22.8, fiber_g: 7.4, sugar_g: 0.3, sodium_mg: 140, potassium_mg: 403}
+
+  - id: lentils-red
+    name: Red lentils (dry)
+    aisle: legumes
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 22
+    unit_g: {cup: 192, bag: 454}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_protein, high_fiber, high_potassium, fast, dash_bonus]
+    per_100g: {kcal: 352, protein_g: 24.6, fat_g: 1.1, satfat_g: 0.2, carb_g: 63.1, fiber_g: 10.7, sugar_g: 2.0, sodium_mg: 6, potassium_mg: 955}
+
+  - id: lentils-brown
+    name: Brown lentils (dry)
+    aisle: legumes
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 22
+    unit_g: {cup: 192, bag: 454}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_protein, high_fiber, high_potassium, dash_bonus]
+    per_100g: {kcal: 352, protein_g: 24.6, fat_g: 1.1, satfat_g: 0.2, carb_g: 63.1, fiber_g: 10.7, sugar_g: 2.0, sodium_mg: 6, potassium_mg: 955}
+
+  - id: lentils-cooked-precooked
+    name: Precooked lentils (steamed)
+    aisle: refrigerated
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 45
+    unit_g: {package: 250, cup: 198}
+    keeps_days: 21
+    tags: [high_protein, fast, dash_bonus]
+    notes: Trader Joe's steamed lentils — the single biggest weeknight time saver here.
+    per_100g: {kcal: 116, protein_g: 9.0, fat_g: 0.4, satfat_g: 0.06, carb_g: 20.1, fiber_g: 7.9, sugar_g: 1.8, sodium_mg: 8, potassium_mg: 369}
+
+  - id: split-peas
+    name: Split peas (dry)
+    aisle: legumes
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 22
+    unit_g: {cup: 197, bag: 454}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_protein, high_fiber, high_potassium]
+    per_100g: {kcal: 341, protein_g: 24.6, fat_g: 1.2, satfat_g: 0.2, carb_g: 60.4, fiber_g: 25.5, sugar_g: 8.0, sodium_mg: 15, potassium_mg: 981}
+
+  - id: refried-beans-canned
+    name: Canned refried beans
+    aisle: canned
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 60
+    unit_g: {can: 454, cup: 238}
+    keeps_days: 730
+    tags: [high_sodium, fast]
+    per_100g: {kcal: 90, protein_g: 5.3, fat_g: 1.4, satfat_g: 0.5, carb_g: 13.6, fiber_g: 5.0, sugar_g: 0.5, sodium_mg: 400, potassium_mg: 400}
+
+  - id: hummus
+    name: Hummus
+    aisle: refrigerated
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 60
+    unit_g: {tub: 284, tbsp: 15, cup: 246}
+    keeps_days: 10
+    per_100g: {kcal: 166, protein_g: 7.9, fat_g: 9.6, satfat_g: 1.4, carb_g: 14.3, fiber_g: 6.0, sugar_g: 0.3, sodium_mg: 379, potassium_mg: 228}
+
+  - id: tofu-extra-firm
+    name: Extra firm tofu
+    aisle: refrigerated
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 85
+    unit_g: {block: 397, cup: 252}
+    keeps_days: 10
+    tags: [high_protein, complete_protein, calcium_set, dash_bonus]
+    per_100g: {kcal: 144, protein_g: 17.3, fat_g: 8.7, satfat_g: 1.3, carb_g: 2.8, fiber_g: 2.3, sugar_g: 0.6, sodium_mg: 14, potassium_mg: 237}
+
+  - id: tempeh
+    name: Tempeh
+    aisle: refrigerated
+    vegan: true
+    dash_group: nuts_legumes
+    dash_serving_g: 85
+    unit_g: {package: 227, cup: 166}
+    keeps_days: 21
+    tags: [high_protein, complete_protein, fermented, dash_bonus]
+    per_100g: {kcal: 192, protein_g: 20.3, fat_g: 10.8, satfat_g: 2.2, carb_g: 7.6, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 14, potassium_mg: 412}

@@ -1,0 +1,171 @@
+---
+# Trader Joe's product mappings.
+#
+# READ THIS BEFORE TRUSTING A PRICE. Every `price_usd` below is a hand-entered
+# estimate for a West Coast store in mid-2026, not live data — Trader Joe's has no
+# API and nothing here queries them. TJ's prices are unusually uniform nationally
+# and change rarely, so these age better than the other two chains, but they will
+# still drift. Correct them as you shop; the app shows how stale each one is.
+#
+# `by_weight: true` marks loose goods you can buy a fractional amount of.
+# `package_unit` may be any mass unit (g, oz, lb) or any count unit the food
+# declares in its `unit_g` block.
+products:
+  # --- produce -----------------------------------------------------------
+  - {store: trader-joes, food_id: spinach-baby, name: Baby Spinach, package_qty: 6, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: kale-lacinato, name: Lacinato Kale, package_qty: 8, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: romaine, name: Romaine Hearts (3 ct), package_qty: 22, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: arugula, name: Baby Arugula, package_qty: 5, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: salad-greens-mixed, name: Organic Spring Mix, package_qty: 5, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: broccoli, name: Broccoli Florets, package_qty: 12, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cauliflower, name: Cauliflower, package_qty: 1, package_unit: head, price_usd: 3.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: carrot, name: Carrots (2 lb bag), package_qty: 2, package_unit: lb, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: celery, name: Celery, package_qty: 1, package_unit: bunch, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cucumber-persian, name: Persian Cucumbers, package_qty: 1, package_unit: lb, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: bell-pepper-red, name: Red Bell Pepper, package_qty: 1, package_unit: ea, price_usd: 1.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: zucchini, name: Zucchini, package_qty: 1, package_unit: lb, price_usd: 1.99, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: eggplant, name: Eggplant, package_qty: 1, package_unit: ea, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: onion-yellow, name: Yellow Onions (3 lb), package_qty: 3, package_unit: lb, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: onion-red, name: Red Onion, package_qty: 1, package_unit: lb, price_usd: 1.79, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: shallot, name: Shallots, package_qty: 8, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: garlic, name: Garlic (3 heads), package_qty: 3, package_unit: head, price_usd: 1.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: ginger, name: Fresh Ginger, package_qty: 4, package_unit: oz, price_usd: 1.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: tomato-roma, name: Roma Tomatoes, package_qty: 1, package_unit: lb, price_usd: 2.29, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: tomato-cherry, name: Cherry Tomatoes, package_qty: 1, package_unit: pint, price_usd: 3.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: avocado, name: Hass Avocado, package_qty: 1, package_unit: ea, price_usd: 1.79, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: lemon, name: Lemon, package_qty: 1, package_unit: ea, price_usd: 0.69, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: lime, name: Lime, package_qty: 1, package_unit: ea, price_usd: 0.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: sweet-potato, name: Sweet Potatoes, package_qty: 1, package_unit: lb, price_usd: 1.49, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: potato-russet, name: Russet Potatoes, package_qty: 1, package_unit: lb, price_usd: 1.29, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: butternut-squash, name: Cut Butternut Squash, package_qty: 20, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: mushroom-cremini, name: Cremini Mushrooms, package_qty: 8, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: asparagus, name: Asparagus, package_qty: 1, package_unit: bunch, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: green-beans, name: Green Beans, package_qty: 12, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: brussels-sprouts, name: Brussels Sprouts, package_qty: 16, package_unit: oz, price_usd: 3.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cabbage-green, name: Green Cabbage, package_qty: 1, package_unit: head, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: scallion, name: Green Onions, package_qty: 1, package_unit: bunch, price_usd: 1.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: snap-peas, name: Sugar Snap Peas, package_qty: 8, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: beet, name: Beets, package_qty: 1, package_unit: bunch, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: jalapeno, name: Jalapeño Peppers, package_qty: 4, package_unit: oz, price_usd: 0.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cilantro, name: Cilantro, package_qty: 1, package_unit: bunch, price_usd: 0.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: parsley-flat, name: Flat Leaf Parsley, package_qty: 1, package_unit: bunch, price_usd: 0.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: basil-fresh, name: Fresh Basil, package_qty: 20, package_unit: g, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: dill-fresh, name: Fresh Dill, package_qty: 1, package_unit: bunch, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: mint-fresh, name: Fresh Mint, package_qty: 1, package_unit: bunch, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: apple, name: Honeycrisp Apples, package_qty: 1, package_unit: lb, price_usd: 2.29, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: banana, name: Banana, package_qty: 1, package_unit: ea, price_usd: 0.27, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: orange, name: Navel Oranges, package_qty: 1, package_unit: lb, price_usd: 1.79, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: strawberries, name: Strawberries, package_qty: 1, package_unit: lb, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: grapes-red, name: Red Seedless Grapes, package_qty: 1, package_unit: lb, price_usd: 2.99, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: dates-medjool, name: Medjool Dates, package_qty: 8, package_unit: oz, price_usd: 4.99, price_updated: "2026-08-01"}
+
+  # --- frozen ------------------------------------------------------------
+  - {store: trader-joes, food_id: blueberries-frozen, name: Frozen Wild Blueberries, package_qty: 18, package_unit: oz, price_usd: 4.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: berries-mixed-frozen, name: Frozen Berry Medley, package_qty: 16, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: mango-frozen, name: Frozen Mango Chunks, package_qty: 16, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: corn-frozen, name: Frozen Roasted Corn, package_qty: 16, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: peas-frozen, name: Frozen Petite Peas, package_qty: 16, package_unit: oz, price_usd: 1.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: edamame-frozen, name: Frozen Shelled Edamame, package_qty: 16, package_unit: oz, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: spinach-frozen, name: Frozen Chopped Spinach, package_qty: 16, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: broccoli-frozen, name: Frozen Broccoli Florets, package_qty: 16, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cauliflower-rice-frozen, name: Riced Cauliflower, package_qty: 16, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: shrimp, name: Frozen Raw Shrimp, package_qty: 1, package_unit: lb, price_usd: 10.99, price_updated: "2026-08-01"}
+
+  # --- bakery ------------------------------------------------------------
+  - {store: trader-joes, food_id: tortilla-corn, name: Corn Tortillas (12 ct), package_qty: 12, package_unit: ea, price_usd: 1.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: tortilla-whole-wheat, name: Whole Wheat Tortillas (6 ct), package_qty: 6, package_unit: ea, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: bread-whole-grain, name: Whole Grain Bread, package_qty: 1, package_unit: loaf, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: bread-sourdough, name: Sourdough Loaf, package_qty: 1, package_unit: loaf, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: pita-whole-wheat, name: Whole Wheat Pita (6 ct), package_qty: 6, package_unit: ea, price_usd: 2.49, price_updated: "2026-08-01"}
+
+  # --- refrigerated ------------------------------------------------------
+  - {store: trader-joes, food_id: lentils-cooked-precooked, name: Steamed Lentils, package_qty: 17.6, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: hummus, name: Classic Hummus, package_qty: 16, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: tofu-extra-firm, name: Extra Firm Tofu, package_qty: 16, package_unit: oz, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: tempeh, name: Organic Tempeh, package_qty: 8, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: miso-white, name: White Miso Paste, package_qty: 14, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+
+  # --- dairy and eggs ----------------------------------------------------
+  - {store: trader-joes, food_id: eggs, name: Large Eggs (dozen), package_qty: 12, package_unit: ea, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: egg-whites, name: Egg Whites, package_qty: 16, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: greek-yogurt-nonfat, name: Nonfat Greek Yogurt, package_qty: 32, package_unit: oz, price_usd: 4.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: skyr-plain, name: Plain Skyr, package_qty: 24, package_unit: oz, price_usd: 4.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cottage-cheese-2, name: Lowfat Cottage Cheese, package_qty: 16, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: milk-1, name: 1% Milk (half gallon), package_qty: 1, package_unit: half_gallon, price_usd: 3.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: soy-milk-unsweetened, name: Unsweetened Soy Milk, package_qty: 32, package_unit: oz, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: almond-milk-unsweetened, name: Unsweetened Almond Milk, package_qty: 32, package_unit: oz, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: kefir-plain, name: Lowfat Plain Kefir, package_qty: 32, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: feta, name: Feta Cheese, package_qty: 8, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: parmesan, name: Parmigiano Reggiano, package_qty: 8, package_unit: oz, price_usd: 6.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cheddar-sharp, name: Sharp Cheddar, package_qty: 8, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: mozzarella-part-skim, name: Part Skim Mozzarella, package_qty: 8, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: ricotta-part-skim, name: Part Skim Ricotta, package_qty: 15, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: goat-cheese, name: Chèvre Goat Cheese, package_qty: 4, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: butter, name: Unsalted Butter, package_qty: 16, package_unit: oz, price_usd: 4.49, price_updated: "2026-08-01"}
+
+  # --- meat and seafood --------------------------------------------------
+  - {store: trader-joes, food_id: chicken-breast, name: Boneless Skinless Chicken Breast, package_qty: 1, package_unit: lb, price_usd: 6.49, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: chicken-thigh, name: Boneless Skinless Chicken Thighs, package_qty: 1, package_unit: lb, price_usd: 4.99, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: turkey-ground-93, name: Ground Turkey 93%, package_qty: 1, package_unit: lb, price_usd: 5.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: salmon-fillet, name: Atlantic Salmon Fillets, package_qty: 1, package_unit: lb, price_usd: 13.99, by_weight: true, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cod-fillet, name: Wild Cod Fillets, package_qty: 1, package_unit: lb, price_usd: 10.99, by_weight: true, price_updated: "2026-08-01"}
+
+  # --- pantry ------------------------------------------------------------
+  - {store: trader-joes, food_id: olive-oil, name: Extra Virgin Olive Oil, package_qty: 33.8, package_unit: oz, price_usd: 8.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: avocado-oil, name: Avocado Oil, package_qty: 16.9, package_unit: oz, price_usd: 6.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: sesame-oil, name: Toasted Sesame Oil, package_qty: 8.5, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: chickpeas-canned, name: Garbanzo Beans, package_qty: 1, package_unit: can, price_usd: 1.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: black-beans-canned, name: Black Beans, package_qty: 1, package_unit: can, price_usd: 1.19, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cannellini-canned, name: Cannellini Beans, package_qty: 1, package_unit: can, price_usd: 1.39, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: kidney-beans-canned, name: Red Kidney Beans, package_qty: 1, package_unit: can, price_usd: 1.19, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: refried-beans-canned, name: Refried Beans, package_qty: 16, package_unit: oz, price_usd: 1.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: lentils-red, name: Red Lentils, package_qty: 16, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: lentils-brown, name: Brown Lentils, package_qty: 16, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: split-peas, name: Green Split Peas, package_qty: 16, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: rice-brown, name: Brown Basmati Rice, package_qty: 2, package_unit: lb, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: rice-basmati, name: White Basmati Rice, package_qty: 2, package_unit: lb, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: quinoa, name: Organic Quinoa, package_qty: 16, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: oats-rolled, name: Rolled Oats, package_qty: 32, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: oats-steel-cut, name: Steel Cut Oats, package_qty: 30, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: farro, name: 10 Minute Farro, package_qty: 16, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: pasta-whole-wheat, name: Whole Wheat Penne, package_qty: 16, package_unit: oz, price_usd: 1.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: pasta-chickpea, name: Chickpea Pasta, package_qty: 8, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: couscous-whole-wheat, name: Whole Wheat Couscous, package_qty: 17.6, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: tomatoes-diced-canned, name: Diced Tomatoes, package_qty: 14.5, package_unit: oz, price_usd: 1.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: tomatoes-crushed-canned, name: Crushed Tomatoes, package_qty: 28, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: tomato-paste, name: Tomato Paste, package_qty: 6, package_unit: oz, price_usd: 0.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: broth-vegetable-low-sodium, name: Low Sodium Vegetable Broth, package_qty: 32, package_unit: oz, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: broth-chicken-low-sodium, name: Low Sodium Chicken Broth, package_qty: 32, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: coconut-milk-light, name: Light Coconut Milk, package_qty: 13.5, package_unit: oz, price_usd: 1.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: tuna-canned-water, name: Albacore Tuna in Water, package_qty: 5, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: salmon-canned, name: Wild Pink Salmon, package_qty: 6, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: sardines-canned, name: Sardines in Olive Oil, package_qty: 3.75, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: tahini, name: Tahini, package_qty: 16, package_unit: oz, price_usd: 4.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: peanut-butter, name: Creamy Salted Peanut Butter, package_qty: 16, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: almond-butter, name: Raw Almond Butter, package_qty: 16, package_unit: oz, price_usd: 6.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: almonds, name: Raw Almonds, package_qty: 16, package_unit: oz, price_usd: 6.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: walnuts, name: Walnut Halves, package_qty: 8, package_unit: oz, price_usd: 5.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cashews, name: Raw Cashews, package_qty: 16, package_unit: oz, price_usd: 8.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: pumpkin-seeds, name: Pepitas, package_qty: 8, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: sunflower-seeds, name: Sunflower Seeds, package_qty: 8, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: chia-seeds, name: Chia Seeds, package_qty: 12, package_unit: oz, price_usd: 4.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: flaxseed-ground, name: Ground Flaxseed, package_qty: 16, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: sesame-seeds, name: Sesame Seeds, package_qty: 4, package_unit: oz, price_usd: 1.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: olives-kalamata, name: Kalamata Olives, package_qty: 12, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: capers, name: Capers, package_qty: 3.5, package_unit: oz, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: sun-dried-tomatoes, name: Sun Dried Tomatoes, package_qty: 8, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: roasted-red-peppers, name: Fire Roasted Red Peppers, package_qty: 12, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: artichoke-hearts-canned, name: Artichoke Hearts, package_qty: 12, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: salsa, name: Chunky Salsa, package_qty: 16, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: dijon-mustard, name: Dijon Mustard, package_qty: 8, package_unit: oz, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: sriracha, name: Sriracha, package_qty: 17, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: soy-sauce-low-sodium, name: Reduced Sodium Soy Sauce, package_qty: 15, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: mayo-avocado-oil, name: Avocado Oil Mayonnaise, package_qty: 12, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: honey, name: Clover Honey, package_qty: 16, package_unit: oz, price_usd: 4.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: maple-syrup, name: Pure Maple Syrup, package_qty: 12, package_unit: oz, price_usd: 6.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: nutritional-yeast, name: Nutritional Yeast, package_qty: 4.5, package_unit: oz, price_usd: 3.99, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: dark-chocolate-85, name: 85% Dark Chocolate Bar, package_qty: 3.5, package_unit: oz, price_usd: 2.29, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: cocoa-powder, name: Unsweetened Cocoa Powder, package_qty: 8, package_unit: oz, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: flour-whole-wheat, name: Whole Wheat Flour, package_qty: 5, package_unit: lb, price_usd: 3.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: harissa, name: Harissa Paste, package_qty: 6, package_unit: oz, price_usd: 2.49, price_updated: "2026-08-01"}
+  - {store: trader-joes, food_id: zaatar, name: Za'atar Seasoning, package_qty: 2.6, package_unit: oz, price_usd: 2.99, price_updated: "2026-08-01"}

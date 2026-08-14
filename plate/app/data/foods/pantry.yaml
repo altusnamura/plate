@@ -1,0 +1,452 @@
+---
+# Condiments, canned goods, broths, spices, sweeteners and baking staples.
+#
+# Most of these are `pantry_staple: true`, which keeps them off shopping lists —
+# the assumption being you own cumin and don't need reminding weekly. Mark the
+# ones you actually run out of as out-of-stock in the app and they reappear.
+#
+# A few records carry `atwater_exempt`: their label energy legitimately disagrees
+# with the 4/4/9 macro reconstruction (cocoa's unavailable carbohydrate, baking
+# powder's mineral salts, the ethanol in vanilla extract), so the startup
+# consistency check skips them instead of crying wolf.
+foods:
+  # --- vinegars and acids ------------------------------------------------
+  - id: rice-vinegar
+    name: Rice vinegar
+    aisle: oils_vinegar
+    vegan: true
+    g_per_ml: 1.01
+    unit_g: {tbsp: 15, tsp: 5, bottle: 355}
+    keeps_days: 730
+    pantry_staple: true
+    per_100g: {kcal: 18, protein_g: 0.1, fat_g: 0.0, satfat_g: 0.0, carb_g: 0.5, fiber_g: 0.0, sugar_g: 0.5, sodium_mg: 2, potassium_mg: 10}
+
+  - id: apple-cider-vinegar
+    name: Apple cider vinegar
+    aisle: oils_vinegar
+    vegan: true
+    g_per_ml: 1.01
+    unit_g: {tbsp: 15, tsp: 5, bottle: 473}
+    keeps_days: 730
+    pantry_staple: true
+    per_100g: {kcal: 21, protein_g: 0.0, fat_g: 0.0, satfat_g: 0.0, carb_g: 0.9, fiber_g: 0.0, sugar_g: 0.4, sodium_mg: 5, potassium_mg: 73}
+
+  - id: red-wine-vinegar
+    name: Red wine vinegar
+    aisle: oils_vinegar
+    vegan: true
+    g_per_ml: 1.01
+    unit_g: {tbsp: 15, tsp: 5, bottle: 355}
+    keeps_days: 730
+    pantry_staple: true
+    per_100g: {kcal: 19, protein_g: 0.04, fat_g: 0.0, satfat_g: 0.0, carb_g: 0.3, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 8, potassium_mg: 39}
+
+  - id: balsamic-vinegar
+    name: Balsamic vinegar
+    aisle: oils_vinegar
+    vegan: true
+    g_per_ml: 1.06
+    unit_g: {tbsp: 16, tsp: 5.3, bottle: 250}
+    keeps_days: 730
+    pantry_staple: true
+    per_100g: {kcal: 88, protein_g: 0.5, fat_g: 0.0, satfat_g: 0.0, carb_g: 17.0, fiber_g: 0.0, sugar_g: 15.0, sodium_mg: 23, potassium_mg: 112}
+
+  # --- savoury condiments ------------------------------------------------
+  - id: soy-sauce-low-sodium
+    name: Low sodium soy sauce
+    aisle: condiments
+    vegan: true
+    g_per_ml: 1.2
+    unit_g: {tbsp: 18, tsp: 6, bottle: 500}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_sodium]
+    notes: >-
+      Even the low sodium version is 3300 mg/100 g. One tablespoon is ~590 mg —
+      a quarter of the standard daily limit, or 40% of the tightened one.
+    per_100g: {kcal: 53, protein_g: 5.2, fat_g: 0.1, satfat_g: 0.0, carb_g: 7.6, fiber_g: 0.8, sugar_g: 1.7, sodium_mg: 3300, potassium_mg: 180}
+
+  - id: tamari
+    name: Tamari (gluten free)
+    aisle: condiments
+    vegan: true
+    g_per_ml: 1.2
+    unit_g: {tbsp: 18, tsp: 6, bottle: 500}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_sodium, gluten_free]
+    per_100g: {kcal: 60, protein_g: 10.5, fat_g: 0.1, satfat_g: 0.0, carb_g: 5.6, fiber_g: 0.8, sugar_g: 1.7, sodium_mg: 3500, potassium_mg: 200}
+
+  - id: dijon-mustard
+    name: Dijon mustard
+    aisle: condiments
+    vegan: true
+    unit_g: {tbsp: 15, tsp: 5, jar: 215}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [high_sodium]
+    per_100g: {kcal: 66, protein_g: 4.4, fat_g: 3.6, satfat_g: 0.2, carb_g: 5.3, fiber_g: 2.0, sugar_g: 1.0, sodium_mg: 1120, potassium_mg: 138}
+
+  - id: sriracha
+    name: Sriracha
+    aisle: condiments
+    vegan: true
+    unit_g: {tbsp: 16, tsp: 5.3, bottle: 482}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_sodium]
+    per_100g: {kcal: 93, protein_g: 1.9, fat_g: 0.9, satfat_g: 0.1, carb_g: 19.2, fiber_g: 2.2, sugar_g: 15.0, sodium_mg: 2124, potassium_mg: 300}
+
+  - id: harissa
+    name: Harissa paste
+    aisle: condiments
+    vegan: true
+    unit_g: {tbsp: 16, tsp: 5.3, jar: 170}
+    keeps_days: 180
+    pantry_staple: true
+    tags: [high_sodium]
+    per_100g: {kcal: 120, protein_g: 3.0, fat_g: 7.0, satfat_g: 1.0, carb_g: 11.0, fiber_g: 5.0, sugar_g: 4.0, sodium_mg: 1200, potassium_mg: 400}
+
+  - id: miso-white
+    name: White miso paste
+    aisle: refrigerated
+    vegan: true
+    unit_g: {tbsp: 17, tsp: 5.7, tub: 400}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [high_sodium, fermented]
+    per_100g: {kcal: 199, protein_g: 12.0, fat_g: 6.0, satfat_g: 1.0, carb_g: 26.0, fiber_g: 5.4, sugar_g: 6.2, sodium_mg: 3728, potassium_mg: 210}
+
+  - id: gochujang
+    name: Gochujang
+    aisle: condiments
+    vegan: true
+    unit_g: {tbsp: 18, tsp: 6, tub: 500}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [high_sodium, fermented]
+    per_100g: {kcal: 205, protein_g: 4.0, fat_g: 1.5, satfat_g: 0.3, carb_g: 43.0, fiber_g: 2.0, sugar_g: 25.0, sodium_mg: 1800, potassium_mg: 300}
+
+  - id: salsa
+    name: Tomato salsa
+    aisle: condiments
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {tbsp: 16, cup: 260, jar: 454}
+    keeps_days: 21
+    tags: [high_sodium]
+    per_100g: {kcal: 36, protein_g: 1.5, fat_g: 0.2, satfat_g: 0.03, carb_g: 7.0, fiber_g: 1.8, sugar_g: 3.6, sodium_mg: 430, potassium_mg: 280}
+
+  - id: nutritional-yeast
+    name: Nutritional yeast
+    aisle: spices
+    vegan: true
+    unit_g: {tbsp: 5, cup: 60, bag: 127}
+    keeps_days: 540
+    pantry_staple: true
+    tags: [b12_source, high_protein, high_potassium]
+    notes: Fortified brands are one of the few reliable non-animal B12 sources.
+    per_100g: {kcal: 385, protein_g: 50.0, fat_g: 5.0, satfat_g: 0.8, carb_g: 36.0, fiber_g: 26.0, sugar_g: 0.0, sodium_mg: 30, potassium_mg: 2000}
+
+  # --- canned tomatoes and broths ----------------------------------------
+  - id: tomatoes-diced-canned
+    name: Canned diced tomatoes
+    aisle: canned
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {can: 411, cup: 240}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_potassium]
+    per_100g: {kcal: 32, protein_g: 1.6, fat_g: 0.2, satfat_g: 0.03, carb_g: 7.3, fiber_g: 1.9, sugar_g: 4.3, sodium_mg: 120, potassium_mg: 293}
+
+  - id: tomatoes-crushed-canned
+    name: Canned crushed tomatoes
+    aisle: canned
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {can: 794, small_can: 411, cup: 240}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_potassium]
+    per_100g: {kcal: 34, protein_g: 1.7, fat_g: 0.3, satfat_g: 0.04, carb_g: 7.6, fiber_g: 1.9, sugar_g: 4.4, sodium_mg: 160, potassium_mg: 320}
+
+  - id: tomato-paste
+    name: Tomato paste
+    aisle: canned
+    vegan: true
+    unit_g: {tbsp: 16, can: 170, tube: 130}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_potassium, umami]
+    per_100g: {kcal: 82, protein_g: 4.3, fat_g: 0.5, satfat_g: 0.1, carb_g: 18.9, fiber_g: 4.1, sugar_g: 12.2, sodium_mg: 59, potassium_mg: 1014}
+
+  - id: broth-vegetable-low-sodium
+    name: Low sodium vegetable broth
+    aisle: canned
+    vegan: true
+    g_per_ml: 1.0
+    unit_g: {cup: 240, carton: 946}
+    keeps_days: 365
+    pantry_staple: true
+    per_100g: {kcal: 6, protein_g: 0.3, fat_g: 0.1, satfat_g: 0.0, carb_g: 1.0, fiber_g: 0.0, sugar_g: 0.5, sodium_mg: 60, potassium_mg: 40}
+
+  - id: broth-chicken-low-sodium
+    name: Low sodium chicken broth
+    aisle: canned
+    vegan: false
+    vegetarian: false
+    g_per_ml: 1.0
+    unit_g: {cup: 240, carton: 946}
+    keeps_days: 365
+    pantry_staple: true
+    per_100g: {kcal: 8, protein_g: 1.2, fat_g: 0.2, satfat_g: 0.05, carb_g: 0.4, fiber_g: 0.0, sugar_g: 0.2, sodium_mg: 70, potassium_mg: 60}
+
+  # --- jarred and preserved ----------------------------------------------
+  - id: olives-kalamata
+    name: Kalamata olives (pitted)
+    aisle: canned
+    vegan: true
+    unit_g: {ea: 4, cup: 135, jar: 340, tbsp: 17}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [high_sodium, monounsaturated]
+    per_100g: {kcal: 115, protein_g: 0.8, fat_g: 10.7, satfat_g: 1.4, carb_g: 6.3, fiber_g: 3.2, sugar_g: 0.0, sodium_mg: 1556, potassium_mg: 9}
+
+  - id: capers
+    name: Capers
+    aisle: condiments
+    vegan: true
+    unit_g: {tbsp: 8.6, tsp: 2.9, jar: 99}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [high_sodium, atwater_exempt]
+    per_100g: {kcal: 23, protein_g: 2.4, fat_g: 0.9, satfat_g: 0.2, carb_g: 4.9, fiber_g: 3.2, sugar_g: 0.4, sodium_mg: 2348, potassium_mg: 40}
+
+  - id: sun-dried-tomatoes
+    name: Sun-dried tomatoes
+    aisle: canned
+    vegan: true
+    unit_g: {cup: 54, ea: 2, jar: 227, tbsp: 4}
+    keeps_days: 365
+    pantry_staple: true
+    tags: [high_sodium, high_potassium, umami]
+    per_100g: {kcal: 258, protein_g: 14.1, fat_g: 3.0, satfat_g: 0.4, carb_g: 55.8, fiber_g: 12.3, sugar_g: 37.6, sodium_mg: 2095, potassium_mg: 3427}
+
+  - id: roasted-red-peppers
+    name: Jarred roasted red peppers
+    aisle: canned
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {jar: 340, cup: 240, ea: 60}
+    keeps_days: 365
+    tags: [high_sodium]
+    per_100g: {kcal: 25, protein_g: 0.9, fat_g: 0.2, satfat_g: 0.03, carb_g: 4.6, fiber_g: 1.5, sugar_g: 2.9, sodium_mg: 290, potassium_mg: 180}
+
+  - id: artichoke-hearts-canned
+    name: Canned artichoke hearts
+    aisle: canned
+    vegan: true
+    dash_group: vegetables
+    dash_serving_g: 80
+    unit_g: {can: 396, cup: 168, ea: 35}
+    keeps_days: 730
+    tags: [high_sodium, high_fiber]
+    per_100g: {kcal: 47, protein_g: 2.7, fat_g: 0.3, satfat_g: 0.07, carb_g: 10.4, fiber_g: 5.4, sugar_g: 0.9, sodium_mg: 350, potassium_mg: 250}
+
+  # --- sweeteners --------------------------------------------------------
+  - id: honey
+    name: Honey
+    aisle: baking
+    vegan: false
+    vegetarian: true
+    dash_group: sweets
+    dash_serving_g: 21
+    g_per_ml: 1.42
+    unit_g: {tbsp: 21, tsp: 7, jar: 340}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 304, protein_g: 0.3, fat_g: 0.0, satfat_g: 0.0, carb_g: 82.4, fiber_g: 0.2, sugar_g: 82.1, sodium_mg: 4, potassium_mg: 52}
+
+  - id: maple-syrup
+    name: Maple syrup
+    aisle: baking
+    vegan: true
+    dash_group: sweets
+    dash_serving_g: 20
+    g_per_ml: 1.32
+    unit_g: {tbsp: 20, tsp: 6.7, bottle: 355}
+    keeps_days: 730
+    pantry_staple: true
+    per_100g: {kcal: 260, protein_g: 0.04, fat_g: 0.06, satfat_g: 0.01, carb_g: 67.0, fiber_g: 0.0, sugar_g: 60.4, sodium_mg: 12, potassium_mg: 212}
+
+  # --- baking ------------------------------------------------------------
+  - id: flour-whole-wheat
+    name: Whole wheat flour
+    aisle: baking
+    vegan: true
+    unit_g: {cup: 120, tbsp: 7.5, bag: 2270}
+    keeps_days: 180
+    pantry_staple: true
+    tags: [whole_grain]
+    per_100g: {kcal: 340, protein_g: 13.2, fat_g: 2.5, satfat_g: 0.4, carb_g: 72.0, fiber_g: 10.7, sugar_g: 0.4, sodium_mg: 2, potassium_mg: 363}
+
+  - id: cornstarch
+    name: Cornstarch
+    aisle: baking
+    vegan: true
+    unit_g: {tbsp: 8, tsp: 2.7, box: 454}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 381, protein_g: 0.3, fat_g: 0.1, satfat_g: 0.0, carb_g: 91.3, fiber_g: 0.9, sugar_g: 0.0, sodium_mg: 9, potassium_mg: 3}
+
+  - id: baking-powder
+    name: Baking powder
+    aisle: baking
+    vegan: true
+    unit_g: {tsp: 4.6, tbsp: 13.8, can: 227}
+    keeps_days: 540
+    pantry_staple: true
+    tags: [high_sodium, atwater_exempt]
+    per_100g: {kcal: 53, protein_g: 0.0, fat_g: 0.0, satfat_g: 0.0, carb_g: 27.7, fiber_g: 0.2, sugar_g: 0.0, sodium_mg: 10600, potassium_mg: 20}
+
+  - id: cocoa-powder
+    name: Unsweetened cocoa powder
+    aisle: baking
+    vegan: true
+    unit_g: {tsp: 1.8, tbsp: 5.4, cup: 86, can: 227}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [magnesium, high_potassium, atwater_exempt]
+    per_100g: {kcal: 228, protein_g: 19.6, fat_g: 13.7, satfat_g: 8.1, carb_g: 57.9, fiber_g: 37.0, sugar_g: 1.8, sodium_mg: 21, potassium_mg: 1524}
+
+  - id: vanilla-extract
+    name: Vanilla extract
+    aisle: baking
+    vegan: true
+    g_per_ml: 0.88
+    unit_g: {tsp: 4.2, tbsp: 13, bottle: 59}
+    keeps_days: 1460
+    pantry_staple: true
+    tags: [atwater_exempt]
+    per_100g: {kcal: 288, protein_g: 0.1, fat_g: 0.1, satfat_g: 0.0, carb_g: 12.7, fiber_g: 0.0, sugar_g: 12.7, sodium_mg: 9, potassium_mg: 148}
+
+  # --- salt, pepper, spices ----------------------------------------------
+  - id: salt-kosher
+    name: Kosher salt
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 2.8, tbsp: 8.4, box: 1360}
+    keeps_days: 3650
+    pantry_staple: true
+    tags: [sodium_source]
+    notes: >-
+      Teaspoon weight assumes Diamond Crystal (2.8 g). Morton kosher is nearly
+      twice as dense at ~4.8 g/tsp, and fine table salt is ~6 g — so if you use
+      those, the sodium figures here understate reality by a lot. Recipes in this
+      library specify salt in grams for exactly that reason.
+    per_100g: {kcal: 0, protein_g: 0.0, fat_g: 0.0, satfat_g: 0.0, carb_g: 0.0, fiber_g: 0.0, sugar_g: 0.0, sodium_mg: 38758, potassium_mg: 8}
+
+  - id: black-pepper
+    name: Black pepper
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 2.3, tbsp: 6.9, jar: 100}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 251, protein_g: 10.4, fat_g: 3.3, satfat_g: 1.4, carb_g: 63.9, fiber_g: 25.3, sugar_g: 0.6, sodium_mg: 20, potassium_mg: 1329}
+
+  - id: cumin-ground
+    name: Ground cumin
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 2.1, tbsp: 6.3, jar: 60}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 375, protein_g: 17.8, fat_g: 22.3, satfat_g: 1.5, carb_g: 44.2, fiber_g: 10.5, sugar_g: 2.2, sodium_mg: 168, potassium_mg: 1788}
+
+  - id: paprika-smoked
+    name: Smoked paprika
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 2.3, tbsp: 6.9, jar: 60}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 282, protein_g: 14.1, fat_g: 12.9, satfat_g: 2.1, carb_g: 54.0, fiber_g: 34.9, sugar_g: 10.3, sodium_mg: 68, potassium_mg: 2280}
+
+  - id: coriander-ground
+    name: Ground coriander
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 1.8, tbsp: 5.4, jar: 50}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 298, protein_g: 12.4, fat_g: 17.8, satfat_g: 1.0, carb_g: 55.0, fiber_g: 41.9, sugar_g: 0.0, sodium_mg: 35, potassium_mg: 1267}
+
+  - id: turmeric-ground
+    name: Ground turmeric
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 3.0, tbsp: 9.0, jar: 60}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 312, protein_g: 9.7, fat_g: 3.3, satfat_g: 1.8, carb_g: 67.1, fiber_g: 22.7, sugar_g: 3.2, sodium_mg: 27, potassium_mg: 2080}
+
+  - id: cinnamon-ground
+    name: Ground cinnamon
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 2.6, tbsp: 7.8, jar: 60}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 247, protein_g: 4.0, fat_g: 1.2, satfat_g: 0.3, carb_g: 80.6, fiber_g: 53.1, sugar_g: 2.2, sodium_mg: 10, potassium_mg: 431}
+
+  - id: oregano-dried
+    name: Dried oregano
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 1.0, tbsp: 3.0, jar: 20}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 265, protein_g: 9.0, fat_g: 4.3, satfat_g: 1.6, carb_g: 68.9, fiber_g: 42.5, sugar_g: 4.1, sodium_mg: 25, potassium_mg: 1260}
+
+  - id: chili-flakes
+    name: Crushed red chili flakes
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 1.8, tbsp: 5.4, jar: 40}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 318, protein_g: 12.0, fat_g: 17.3, satfat_g: 3.3, carb_g: 56.6, fiber_g: 27.2, sugar_g: 10.3, sodium_mg: 30, potassium_mg: 2010}
+
+  - id: curry-powder
+    name: Curry powder
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 2.0, tbsp: 6.0, jar: 60}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 325, protein_g: 14.3, fat_g: 14.0, satfat_g: 2.3, carb_g: 55.8, fiber_g: 53.2, sugar_g: 2.8, sodium_mg: 52, potassium_mg: 1543}
+
+  - id: garam-masala
+    name: Garam masala
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 2.0, tbsp: 6.0, jar: 60}
+    keeps_days: 1095
+    pantry_staple: true
+    per_100g: {kcal: 379, protein_g: 15.0, fat_g: 15.0, satfat_g: 3.0, carb_g: 45.0, fiber_g: 25.0, sugar_g: 3.0, sodium_mg: 70, potassium_mg: 1300}
+
+  - id: zaatar
+    name: Za'atar
+    aisle: spices
+    vegan: true
+    unit_g: {tsp: 2.0, tbsp: 6.0, jar: 100}
+    keeps_days: 730
+    pantry_staple: true
+    tags: [high_sodium]
+    per_100g: {kcal: 300, protein_g: 10.0, fat_g: 14.0, satfat_g: 2.0, carb_g: 40.0, fiber_g: 25.0, sugar_g: 2.0, sodium_mg: 1200, potassium_mg: 1000}

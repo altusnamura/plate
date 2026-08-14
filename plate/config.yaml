@@ -1,0 +1,119 @@
+---
+# Home Assistant add-on manifest for PLATE.
+# Ingress means HA serves the UI under a rotating path and handles auth for us,
+# so the app must never emit absolute URLs. See app/static/js/api.js.
+name: PLATE
+version: "0.1.0"
+slug: plate
+description: >-
+  Adaptive menu planner driven by your own Fitbit, blood pressure and weight
+  history. Vegetarian-leaning lunches, per-store shopping lists.
+url: https://github.com/altusnamura/plate
+arch:
+  - aarch64
+  - amd64
+  - armv7
+init: false
+ingress: true
+ingress_port: 8099
+ingress_stream: false
+panel_icon: mdi:silverware-fork-knife
+panel_title: PLATE
+panel_admin: false
+# homeassistant_api gives us http://supervisor/core/api with SUPERVISOR_TOKEN,
+# which is how we read Fitbit/BP/weight states and write our own sensors back.
+homeassistant_api: true
+hassio_api: true
+hassio_role: default
+# /config inside the container is this add-on's own config dir. User-editable
+# recipe and food YAML lives there so it survives updates.
+map:
+  - addon_config:rw
+options:
+  log_level: info
+  units: imperial
+  profile:
+    sex: male
+    birth_year: 1980
+    height_in: 70
+    goal: lose
+    target_rate_lb_per_week: -1.0
+    goal_weight_lb: 175
+  entities:
+    weight: ""
+    body_fat: ""
+    calories_burned: ""
+    steps: ""
+    resting_hr: ""
+    sleep_minutes: ""
+    bp_systolic: ""
+    bp_diastolic: ""
+  diet:
+    vegetarian_lunch_ratio: 0.85
+    vegetarian_dinner_ratio: 0.4
+    exclude_foods: []
+    dislikes: []
+    max_weekday_prep_min: 35
+    meals_per_day: 3
+    snacks_per_day: 1
+  stores:
+    enabled:
+      - trader-joes
+      - safeway
+      - whole-foods
+    delivery_partner: instacart
+  mealie:
+    url: ""
+    token: ""
+  usda:
+    api_key: ""
+  mqtt:
+    enabled: false
+    host: core-mosquitto
+    port: 1883
+    username: ""
+    password: ""
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)
+  units: list(imperial|metric)
+  profile:
+    sex: list(male|female)
+    birth_year: int(1900,2020)
+    height_in: float(36,96)
+    goal: list(lose|maintain|gain)
+    target_rate_lb_per_week: float(-2.5,1.5)
+    goal_weight_lb: float(60,600)
+  entities:
+    weight: str?
+    body_fat: str?
+    calories_burned: str?
+    steps: str?
+    resting_hr: str?
+    sleep_minutes: str?
+    bp_systolic: str?
+    bp_diastolic: str?
+  diet:
+    vegetarian_lunch_ratio: float(0,1)
+    vegetarian_dinner_ratio: float(0,1)
+    exclude_foods:
+      - str
+    dislikes:
+      - str
+    max_weekday_prep_min: int(5,240)
+    meals_per_day: int(2,5)
+    snacks_per_day: int(0,3)
+  stores:
+    enabled:
+      - str
+    delivery_partner: list(instacart|amazon-fresh|none)
+  mealie:
+    url: str?
+    token: password?
+  usda:
+    api_key: password?
+  mqtt:
+    enabled: bool
+    host: str?
+    port: port?
+    username: str?
+    password: password?

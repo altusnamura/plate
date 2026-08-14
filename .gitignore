@@ -1,0 +1,17 @@
+# Local development artefacts.
+# Note: .gitignore has no trailing-comment syntax — a `#` on a pattern line
+# becomes part of the pattern and silently matches nothing.
+
+# launch.json holds an absolute path to this machine's virtualenv
+.claude/
+
+.venv/
+.devdata/
+.devconfig/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.db
+*.db-wal
+*.db-shm
+.DS_Store

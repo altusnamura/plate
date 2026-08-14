@@ -1,0 +1,108 @@
+---
+# Store definitions.
+#
+# `search_url`, `instacart_url` and `amazon_url` are templates with a single {q}
+# placeholder that the app fills with a URL-encoded search term. They are search
+# handoffs and nothing more: no login, no cart, no order placement. Read
+# docs/GROCERY.md before assuming any of this talks to a store's systems,
+# because none of it does.
+#
+# `aisle_order` is the order you physically encounter sections in that chain, so
+# the shopping list sorts into one walk instead of sending you back and forth.
+# Adjust it to match your actual local store — that is the single highest-value
+# edit you can make to this file.
+stores:
+  - id: trader-joes
+    name: Trader Joe's
+    short: TJ
+    delivers: false
+    search_url: "https://www.traderjoes.com/home/search?q={q}&section=products"
+    notes: >-
+      Trader Joe's has no API, no online ordering and no delivery partner. The
+      link opens their product search for reference only. Prices are unusually
+      stable nationally, so the estimates here age better than the other two.
+    aisle_order:
+      - produce
+      - bakery
+      - deli
+      - dairy
+      - eggs
+      - refrigerated
+      - meat
+      - seafood
+      - frozen
+      - grains
+      - legumes
+      - canned
+      - pasta_sauce
+      - condiments
+      - oils_vinegar
+      - spices
+      - nuts_seeds
+      - baking
+      - beverages
+      - other
+
+  - id: safeway
+    name: Safeway
+    short: SFW
+    delivers: true
+    search_url: "https://www.safeway.com/shop/search-results.html?q={q}"
+    instacart_url: "https://www.instacart.com/store/safeway/s?k={q}"
+    notes: >-
+      Reachable through Instacart, which is the only handoff here that leads to a
+      working cart. Shelf prices swing with promotions and vary by store, so
+      treat the estimates as rough and correct them as you go.
+    aisle_order:
+      - produce
+      - bakery
+      - deli
+      - seafood
+      - meat
+      - dairy
+      - eggs
+      - refrigerated
+      - pasta_sauce
+      - canned
+      - grains
+      - legumes
+      - condiments
+      - oils_vinegar
+      - spices
+      - baking
+      - nuts_seeds
+      - frozen
+      - beverages
+      - other
+
+  - id: whole-foods
+    name: Whole Foods Market
+    short: WFM
+    delivers: true
+    search_url: "https://www.wholefoodsmarket.com/search?text={q}"
+    amazon_url: "https://www.amazon.com/s?k={q}&i=amazonfresh"
+    notes: >-
+      Owned by Amazon, so ordering runs through Amazon rather than any Whole Foods
+      API. The order link searches Amazon Fresh, which does not carry the whole
+      in-store range. Prime pricing differs from shelf pricing.
+    aisle_order:
+      - produce
+      - bakery
+      - deli
+      - seafood
+      - meat
+      - dairy
+      - eggs
+      - refrigerated
+      - nuts_seeds
+      - grains
+      - legumes
+      - canned
+      - pasta_sauce
+      - condiments
+      - oils_vinegar
+      - spices
+      - baking
+      - frozen
+      - beverages
+      - other

@@ -1,0 +1,521 @@
+---
+# Lunches. Deliberately vegetarian-heavy — the config default asks for 85% of
+# them to be meat-free — and deliberately protein-dense, because that is the hard
+# part of a vegetarian lunch. A bowl of grains and roasted vegetables is pleasant
+# and useless at 12 g of protein; every recipe here clears 25 g a serving, most
+# of them 30, by leaning on legumes, tofu, tempeh and strained dairy.
+#
+# `packable: true` means it survives a morning in a bag and is edible cold or
+# after a microwave. The planner won't put an unpackable lunch on a weekday.
+recipes:
+  - id: chickpea-shawarma-bowl
+    title: Chickpea shawarma bowl
+    meals: [lunch, dinner]
+    servings: 2
+    prep_min: 12
+    cook_min: 22
+    cuisine: middle-eastern
+    keeps_days: 4
+    packable: true
+    tags: [vegetarian, make-ahead, high_fiber, high_potassium]
+    ingredients:
+      - {item: chickpeas-canned, qty: 1, unit: can}
+      - {item: quinoa, qty: 80, unit: g}
+      - {item: greek-yogurt-nonfat, qty: 150, unit: g}
+      - {item: tahini, qty: 20, unit: g}
+      - {item: cucumber-persian, qty: 180, unit: g}
+      - {item: tomato-cherry, qty: 150, unit: g}
+      - {item: onion-red, qty: 60, unit: g}
+      - {item: parsley-flat, qty: 20, unit: g}
+      - {item: hemp-hearts, qty: 20, unit: g}
+      - {item: olive-oil, qty: 1, unit: tbsp}
+      - {item: cumin-ground, qty: 1, unit: tsp}
+      - {item: paprika-smoked, qty: 1, unit: tsp}
+      - {item: coriander-ground, qty: 0.5, unit: tsp}
+      - {item: lemon, qty: 0.5, unit: ea}
+      - {item: salt-kosher, qty: 1, unit: g}
+    steps:
+      - Heat oven to 220°C / 425°F. Toss drained chickpeas with oil, spices and salt.
+      - Roast 20-22 minutes until some have split and gone crisp at the edges.
+      - Cook the quinoa in twice its volume of water, 15 minutes, then fork through.
+      - Thin the yogurt with tahini and lemon juice into a pourable sauce.
+      - Build bowls: quinoa, chickpeas, chopped raw vegetables, sauce, hemp, parsley.
+    notes: >-
+      The crisp chickpeas soften overnight — no real loss. Keep the sauce separate
+      if you're packing it.
+
+  - id: lentil-tabbouleh-feta
+    title: Lentil tabbouleh with feta
+    meals: [lunch]
+    servings: 2
+    prep_min: 15
+    cook_min: 0
+    cuisine: middle-eastern
+    keeps_days: 4
+    packable: true
+    tags: [vegetarian, no-cook, make-ahead, high_fiber]
+    ingredients:
+      - {item: lentils-cooked-precooked, qty: 250, unit: g}
+      - {item: couscous-whole-wheat, qty: 50, unit: g}
+      - {item: parsley-flat, qty: 45, unit: g}
+      - {item: mint-fresh, qty: 12, unit: g}
+      - {item: tomato-roma, qty: 180, unit: g}
+      - {item: cucumber-persian, qty: 150, unit: g}
+      - {item: scallion, qty: 30, unit: g}
+      - {item: feta, qty: 70, unit: g}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: lemon, qty: 1, unit: ea}
+      - {item: black-pepper, qty: 0.5, unit: tsp}
+    steps:
+      - Pour 75 ml boiling water over the couscous, cover 5 minutes, fluff, cool.
+      - Chop the herbs and vegetables finely — tabbouleh is a herb salad, not a grain salad.
+      - Combine everything with lemon juice and oil, crumble feta over last.
+    notes: Uses precooked lentils so this is genuinely a no-cook lunch.
+
+  - id: hummus-veggie-pita
+    title: Loaded hummus pita
+    meals: [lunch]
+    servings: 1
+    prep_min: 8
+    cook_min: 0
+    cuisine: middle-eastern
+    keeps_days: 0
+    packable: true
+    tags: [vegan, vegetarian, no-cook, fast]
+    ingredients:
+      - {item: pita-whole-wheat, qty: 1, unit: ea}
+      - {item: hummus, qty: 100, unit: g}
+      - {item: chickpeas-canned, qty: 80, unit: g}
+      - {item: cucumber-persian, qty: 90, unit: g}
+      - {item: tomato-roma, qty: 80, unit: g}
+      - {item: salad-greens-mixed, qty: 40, unit: g}
+      - {item: onion-red, qty: 25, unit: g}
+      - {item: pumpkin-seeds, qty: 15, unit: g}
+      - {item: zaatar, qty: 1, unit: tsp}
+      - {item: lemon, qty: 0.25, unit: ea}
+    steps:
+      - Split the pita, spread hummus thickly inside both halves.
+      - Pack in greens, then the chopped vegetables and whole chickpeas.
+      - Pepitas, za'atar and a squeeze of lemon before you close it.
+
+  - id: quinoa-black-bean-salad
+    title: Quinoa and black bean salad
+    meals: [lunch]
+    servings: 3
+    prep_min: 15
+    cook_min: 15
+    cuisine: mexican
+    keeps_days: 4
+    packable: true
+    tags: [vegan, vegetarian, make-ahead, batch, high_fiber, high_potassium]
+    ingredients:
+      - {item: quinoa, qty: 130, unit: g}
+      - {item: black-beans-canned, qty: 1, unit: can}
+      - {item: corn-frozen, qty: 150, unit: g}
+      - {item: bell-pepper-red, qty: 150, unit: g}
+      - {item: onion-red, qty: 70, unit: g}
+      - {item: avocado, qty: 1, unit: ea}
+      - {item: cilantro, qty: 25, unit: g}
+      - {item: jalapeno, qty: 1, unit: ea}
+      - {item: lime, qty: 1.5, unit: ea}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: cumin-ground, qty: 1.5, unit: tsp}
+      - {item: pumpkin-seeds, qty: 25, unit: g}
+      - {item: salt-kosher, qty: 1.25, unit: g}
+    steps:
+      - Cook quinoa, spread on a plate to cool fast so it doesn't steam into mush.
+      - Thaw the corn under hot water; drain and rinse the beans.
+      - Whisk lime juice, oil, cumin and salt. Toss everything but the avocado.
+      - Add avocado per-portion as you serve, not into the whole batch.
+    notes: >-
+      Three days of lunches from one bowl. Keeping the avocado out until serving
+      is the difference between day-three lunch and day-three disappointment.
+
+  - id: white-bean-tuna-salad
+    title: White bean and tuna salad
+    meals: [lunch]
+    servings: 2
+    prep_min: 10
+    cook_min: 0
+    cuisine: mediterranean
+    keeps_days: 3
+    packable: true
+    tags: [no-cook, fast, high_protein, omega3]
+    ingredients:
+      - {item: cannellini-canned, qty: 1, unit: can}
+      - {item: tuna-canned-water, qty: 2, unit: can}
+      - {item: celery, qty: 80, unit: g}
+      - {item: onion-red, qty: 40, unit: g}
+      - {item: parsley-flat, qty: 20, unit: g}
+      - {item: capers, qty: 1, unit: tbsp}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: lemon, qty: 1, unit: ea}
+      - {item: dijon-mustard, qty: 1, unit: tsp}
+      - {item: black-pepper, qty: 0.5, unit: tsp}
+      - {item: salad-greens-mixed, qty: 80, unit: g}
+    steps:
+      - Whisk lemon juice, mustard, oil and pepper in the bottom of the bowl.
+      - Fold in drained beans and tuna, breaking the tuna up only a little.
+      - Add celery, onion, capers, parsley. Serve over the greens.
+    notes: One of only two non-vegetarian lunches in the library, by design.
+
+  - id: tofu-banh-mi-bowl
+    title: Tofu bánh mì bowl
+    meals: [lunch, dinner]
+    servings: 2
+    prep_min: 18
+    cook_min: 15
+    cuisine: vietnamese
+    keeps_days: 3
+    packable: true
+    tags: [vegan, vegetarian, high_protein, make-ahead]
+    ingredients:
+      - {item: tofu-extra-firm, qty: 397, unit: g}
+      - {item: rice-basmati, qty: 80, unit: g}
+      - {item: carrot, qty: 120, unit: g}
+      - {item: cucumber-persian, qty: 150, unit: g}
+      - {item: cabbage-green, qty: 100, unit: g}
+      - {item: cilantro, qty: 20, unit: g}
+      - {item: rice-vinegar, qty: 3, unit: tbsp}
+      - {item: soy-sauce-low-sodium, qty: 1.5, unit: tbsp}
+      - {item: sriracha, qty: 2, unit: tsp}
+      - {item: mayo-avocado-oil, qty: 1, unit: tbsp}
+      - {item: sesame-oil, qty: 2, unit: tsp}
+      - {item: avocado-oil, qty: 1, unit: tbsp}
+      - {item: honey, qty: 1, unit: tsp}
+      - {item: peanut-butter, qty: 16, unit: g}
+    steps:
+      - Press the tofu 10 minutes under something heavy, then cube it.
+      - Quick-pickle shredded carrot and cabbage in the vinegar with the honey.
+      - Sear tofu in avocado oil until browned on most sides, then glaze with soy and sesame oil.
+      - Whisk mayo, sriracha and peanut butter into a sauce. Build over rice.
+
+  - id: farro-roasted-veg-bowl
+    title: Farro bowl with roasted vegetables
+    meals: [lunch, dinner]
+    servings: 3
+    prep_min: 15
+    cook_min: 35
+    cuisine: mediterranean
+    keeps_days: 4
+    packable: true
+    tags: [vegan, vegetarian, batch, make-ahead, high_fiber, whole_grain]
+    ingredients:
+      - {item: farro, qty: 140, unit: g}
+      - {item: butternut-squash, qty: 400, unit: g}
+      - {item: brussels-sprouts, qty: 300, unit: g}
+      - {item: onion-red, qty: 120, unit: g}
+      - {item: chickpeas-canned, qty: 1, unit: can}
+      - {item: kale-lacinato, qty: 100, unit: g}
+      - {item: tahini, qty: 40, unit: g}
+      - {item: lemon, qty: 1, unit: ea}
+      - {item: olive-oil, qty: 2, unit: tbsp}
+      - {item: maple-syrup, qty: 1, unit: tsp}
+      - {item: paprika-smoked, qty: 1, unit: tsp}
+      - {item: pumpkin-seeds, qty: 30, unit: g}
+      - {item: salt-kosher, qty: 1.5, unit: g}
+    steps:
+      - Heat oven to 220°C / 425°F. Cube squash, halve sprouts, wedge the onion.
+      - Toss vegetables and drained chickpeas with oil, paprika and salt. Roast 30-35 minutes, turning once.
+      - Simmer farro 25 minutes until chewy-tender, drain.
+      - Massage the raw kale with a little oil and lemon so it softens.
+      - Thin tahini with lemon and water into a sauce. Assemble, top with pepitas.
+
+  - id: greek-chickpea-salad
+    title: Greek chickpea salad
+    meals: [lunch]
+    servings: 2
+    prep_min: 12
+    cook_min: 0
+    cuisine: greek
+    keeps_days: 3
+    packable: true
+    tags: [vegetarian, no-cook, fast, high_fiber]
+    ingredients:
+      - {item: chickpeas-canned, qty: 1, unit: can}
+      - {item: cucumber-persian, qty: 200, unit: g}
+      - {item: tomato-cherry, qty: 180, unit: g}
+      - {item: bell-pepper-red, qty: 120, unit: g}
+      - {item: onion-red, qty: 50, unit: g}
+      - {item: olives-kalamata, qty: 40, unit: g}
+      - {item: feta, qty: 80, unit: g}
+      - {item: greek-yogurt-nonfat, qty: 120, unit: g}
+      - {item: olive-oil, qty: 1, unit: tbsp}
+      - {item: red-wine-vinegar, qty: 1.5, unit: tbsp}
+      - {item: oregano-dried, qty: 1.5, unit: tsp}
+      - {item: dill-fresh, qty: 8, unit: g}
+    steps:
+      - Chop everything to roughly chickpea size so each forkful gets some of each.
+      - Whisk yogurt, oil, vinegar, oregano and dill into a dressing.
+      - Toss, then let it sit 10 minutes before eating.
+
+  - id: curried-red-lentil-soup
+    title: Curried red lentil soup
+    meals: [lunch, dinner]
+    servings: 4
+    prep_min: 10
+    cook_min: 30
+    cuisine: indian
+    keeps_days: 5
+    packable: true
+    tags: [vegan, vegetarian, batch, make-ahead, high_fiber, high_potassium, freezes]
+    ingredients:
+      - {item: lentils-red, qty: 300, unit: g}
+      - {item: onion-yellow, qty: 150, unit: g}
+      - {item: carrot, qty: 200, unit: g}
+      - {item: garlic, qty: 4, unit: clove}
+      - {item: ginger, qty: 2, unit: tbsp}
+      - {item: tomatoes-diced-canned, qty: 411, unit: g}
+      - {item: coconut-milk-light, qty: 200, unit: g}
+      - {item: broth-vegetable-low-sodium, qty: 900, unit: ml}
+      - {item: curry-powder, qty: 2, unit: tbsp}
+      - {item: turmeric-ground, qty: 1, unit: tsp}
+      - {item: cumin-ground, qty: 1, unit: tsp}
+      - {item: spinach-baby, qty: 120, unit: g}
+      - {item: olive-oil, qty: 1, unit: tbsp}
+      - {item: lime, qty: 1, unit: ea}
+      - {item: cilantro, qty: 20, unit: g}
+      - {item: salt-kosher, qty: 2, unit: g}
+    steps:
+      - Soften onion and carrot in the oil, 8 minutes. Add garlic, ginger, spices; 1 minute.
+      - Add rinsed lentils, tomatoes, broth. Simmer 22-25 minutes until the lentils collapse.
+      - Stir in coconut milk and spinach, cook 2 more minutes.
+      - Finish with lime juice — it's what makes the whole pot taste like something.
+    notes: >-
+      Four servings, keeps five days, freezes properly. The single most useful
+      batch recipe here for hitting fibre and potassium at once.
+
+  - id: minestrone-cannellini
+    title: Cannellini minestrone
+    meals: [lunch, dinner]
+    servings: 4
+    prep_min: 15
+    cook_min: 30
+    cuisine: italian
+    keeps_days: 4
+    packable: true
+    tags: [vegan, vegetarian, batch, make-ahead, high_fiber, freezes]
+    ingredients:
+      - {item: cannellini-canned, qty: 2, unit: can}
+      - {item: pasta-whole-wheat, qty: 100, unit: g}
+      - {item: onion-yellow, qty: 130, unit: g}
+      - {item: carrot, qty: 150, unit: g}
+      - {item: celery, qty: 120, unit: g}
+      - {item: zucchini, qty: 200, unit: g}
+      - {item: garlic, qty: 3, unit: clove}
+      - {item: tomatoes-crushed-canned, qty: 411, unit: g}
+      - {item: broth-vegetable-low-sodium, qty: 1000, unit: ml}
+      - {item: kale-lacinato, qty: 120, unit: g}
+      - {item: olive-oil, qty: 2, unit: tbsp}
+      - {item: oregano-dried, qty: 2, unit: tsp}
+      - {item: chili-flakes, qty: 0.5, unit: tsp}
+      - {item: basil-fresh, qty: 12, unit: g}
+      - {item: salt-kosher, qty: 2, unit: g}
+    steps:
+      - Sweat onion, carrot and celery in the oil for 10 minutes — don't rush this part.
+      - Garlic, oregano, chilli for a minute, then tomatoes and broth. Simmer 15 minutes.
+      - Add zucchini, beans and pasta; cook until the pasta is just done.
+      - Kale in for the last 3 minutes, basil off the heat.
+    notes: Cook the pasta separately if you want it to survive four days in the fridge.
+
+  - id: egg-salad-avocado-toast
+    title: Egg and avocado smash on toast
+    meals: [lunch, breakfast]
+    servings: 1
+    prep_min: 10
+    cook_min: 10
+    cuisine: american
+    keeps_days: 0
+    packable: false
+    tags: [vegetarian, fast, high_protein]
+    ingredients:
+      - {item: eggs, qty: 3, unit: ea}
+      - {item: avocado, qty: 0.5, unit: ea}
+      - {item: bread-whole-grain, qty: 2, unit: slice}
+      - {item: greek-yogurt-nonfat, qty: 40, unit: g}
+      - {item: dijon-mustard, qty: 1, unit: tsp}
+      - {item: dill-fresh, qty: 5, unit: g}
+      - {item: scallion, qty: 15, unit: g}
+      - {item: chili-flakes, qty: 0.25, unit: tsp}
+      - {item: lemon, qty: 0.25, unit: ea}
+      - {item: black-pepper, qty: 0.25, unit: tsp}
+    steps:
+      - Boil the eggs 9 minutes, then straight into cold water so they peel.
+      - Mash the avocado onto the toast with lemon and pepper.
+      - Chop the eggs, fold with yogurt, mustard, dill and scallion. Pile on top.
+
+  - id: cottage-cheese-crunch-bowl
+    title: Cottage cheese crunch bowl
+    meals: [lunch, snack]
+    servings: 1
+    prep_min: 7
+    cook_min: 0
+    cuisine: american
+    keeps_days: 2
+    packable: true
+    tags: [vegetarian, no-cook, fast, high_protein]
+    ingredients:
+      - {item: cottage-cheese-2, qty: 250, unit: g}
+      - {item: cucumber-persian, qty: 120, unit: g}
+      - {item: tomato-cherry, qty: 120, unit: g}
+      - {item: snap-peas, qty: 70, unit: g}
+      - {item: sunflower-seeds, qty: 15, unit: g}
+      - {item: dill-fresh, qty: 5, unit: g}
+      - {item: olive-oil, qty: 2, unit: tsp}
+      - {item: black-pepper, qty: 0.25, unit: tsp}
+      - {item: lemon, qty: 0.25, unit: ea}
+    steps:
+      - Spoon cottage cheese into a wide bowl and grind pepper over it.
+      - Pile the chopped raw vegetables on one side, seeds and dill over the top.
+      - Oil and lemon last.
+    notes: >-
+      35 g of protein for very little effort. Cottage cheese carries a lot of
+      sodium, so this one lands high on that count — the planner accounts for it.
+
+  - id: tempeh-kale-caesar
+    title: Tempeh kale caesar
+    meals: [lunch, dinner]
+    servings: 2
+    prep_min: 15
+    cook_min: 12
+    cuisine: american
+    keeps_days: 3
+    packable: true
+    tags: [vegetarian, high_protein, make-ahead]
+    ingredients:
+      - {item: tempeh, qty: 227, unit: g}
+      - {item: kale-lacinato, qty: 220, unit: g}
+      - {item: romaine, qty: 150, unit: g}
+      - {item: greek-yogurt-nonfat, qty: 120, unit: g}
+      - {item: dijon-mustard, qty: 2, unit: tsp}
+      - {item: nutritional-yeast, qty: 2, unit: tbsp}
+      - {item: capers, qty: 1, unit: tbsp}
+      - {item: garlic, qty: 1, unit: clove}
+      - {item: lemon, qty: 1, unit: ea}
+      - {item: olive-oil, qty: 1, unit: tbsp}
+      - {item: soy-sauce-low-sodium, qty: 1, unit: tbsp}
+      - {item: maple-syrup, qty: 1, unit: tsp}
+      - {item: black-pepper, qty: 0.5, unit: tsp}
+      - {item: bread-sourdough, qty: 1, unit: slice}
+    steps:
+      - Cube the tempeh, pan-fry in the oil until golden, then glaze with soy and maple.
+      - Blitz or finely chop capers and garlic into the yogurt with mustard, yeast, lemon, pepper.
+      - Strip and shred the kale, massage with a little dressing until it darkens.
+      - Tear the bread into croutons and toast dry in the tempeh pan. Toss it all together.
+
+  - id: sweet-potato-black-bean-tacos
+    title: Sweet potato and black bean tacos
+    meals: [lunch, dinner]
+    servings: 2
+    prep_min: 12
+    cook_min: 28
+    cuisine: mexican
+    keeps_days: 3
+    packable: true
+    tags: [vegan, vegetarian, high_fiber, high_potassium]
+    ingredients:
+      - {item: sweet-potato, qty: 400, unit: g}
+      - {item: black-beans-canned, qty: 1, unit: can}
+      - {item: tortilla-corn, qty: 6, unit: ea}
+      - {item: cabbage-green, qty: 150, unit: g}
+      - {item: avocado, qty: 1, unit: ea}
+      - {item: cilantro, qty: 20, unit: g}
+      - {item: lime, qty: 1.5, unit: ea}
+      - {item: jalapeno, qty: 1, unit: ea}
+      - {item: pumpkin-seeds, qty: 20, unit: g}
+      - {item: olive-oil, qty: 1, unit: tbsp}
+      - {item: cumin-ground, qty: 1.5, unit: tsp}
+      - {item: paprika-smoked, qty: 1, unit: tsp}
+      - {item: salt-kosher, qty: 1.25, unit: g}
+    steps:
+      - Heat oven to 220°C / 425°F. Cube the sweet potato, toss with oil, spices, salt, roast 25 minutes.
+      - Warm the beans with a splash of water and a pinch more cumin, mash some of them.
+      - Shred the cabbage and dress it with lime juice — this is the crunch, don't skip it.
+      - Char the tortillas in a dry pan. Fill, top with avocado, jalapeño, cilantro, pepitas.
+
+  - id: sardine-toast-fennel-lemon
+    title: Sardines on toast with lemon and parsley
+    meals: [lunch]
+    servings: 1
+    prep_min: 8
+    cook_min: 3
+    cuisine: mediterranean
+    keeps_days: 0
+    packable: false
+    tags: [fast, omega3, high_protein]
+    ingredients:
+      - {item: sardines-canned, qty: 1, unit: can}
+      - {item: bread-sourdough, qty: 2, unit: slice}
+      - {item: cannellini-canned, qty: 100, unit: g}
+      - {item: parsley-flat, qty: 12, unit: g}
+      - {item: onion-red, qty: 25, unit: g}
+      - {item: lemon, qty: 0.5, unit: ea}
+      - {item: olive-oil, qty: 2, unit: tsp}
+      - {item: chili-flakes, qty: 0.25, unit: tsp}
+      - {item: salad-greens-mixed, qty: 60, unit: g}
+    steps:
+      - Toast the bread hard. Mash the beans onto it with oil, lemon and a little salt.
+      - Lay the sardines over, break them up roughly.
+      - Sliced red onion, parsley, chilli, more lemon. Greens alongside.
+    notes: >-
+      The second and last non-vegetarian lunch. Sardines are the cheapest omega-3
+      and calcium source in the store by a wide margin.
+
+  - id: edamame-quinoa-crunch
+    title: Edamame quinoa crunch salad
+    meals: [lunch]
+    servings: 2
+    prep_min: 14
+    cook_min: 15
+    cuisine: asian
+    keeps_days: 4
+    packable: true
+    tags: [vegan, vegetarian, make-ahead, high_protein, complete_protein]
+    ingredients:
+      - {item: quinoa, qty: 90, unit: g}
+      - {item: edamame-frozen, qty: 250, unit: g}
+      - {item: cabbage-green, qty: 150, unit: g}
+      - {item: carrot, qty: 120, unit: g}
+      - {item: bell-pepper-red, qty: 120, unit: g}
+      - {item: scallion, qty: 30, unit: g}
+      - {item: cilantro, qty: 20, unit: g}
+      - {item: peanut-butter, qty: 32, unit: g}
+      - {item: soy-sauce-low-sodium, qty: 1, unit: tbsp}
+      - {item: rice-vinegar, qty: 2, unit: tbsp}
+      - {item: sesame-oil, qty: 2, unit: tsp}
+      - {item: ginger, qty: 1, unit: tbsp}
+      - {item: honey, qty: 1, unit: tsp}
+      - {item: sesame-seeds, qty: 1, unit: tbsp}
+      - {item: lime, qty: 1, unit: ea}
+    steps:
+      - Cook the quinoa and cool it. Boil the edamame 4 minutes, drain, cool.
+      - Shred cabbage and carrot as fine as you have patience for.
+      - Whisk peanut butter, soy, vinegar, sesame oil, ginger, honey and lime with 2 tbsp water.
+      - Toss everything. Sesame seeds last.
+
+  - id: caprese-white-bean-salad
+    title: White bean caprese
+    meals: [lunch]
+    servings: 2
+    prep_min: 10
+    cook_min: 0
+    cuisine: italian
+    keeps_days: 2
+    packable: true
+    tags: [vegetarian, no-cook, fast]
+    ingredients:
+      - {item: cannellini-canned, qty: 1, unit: can}
+      - {item: mozzarella-part-skim, qty: 120, unit: g}
+      - {item: tomato-cherry, qty: 250, unit: g}
+      - {item: basil-fresh, qty: 15, unit: g}
+      - {item: arugula, qty: 80, unit: g}
+      - {item: olive-oil, qty: 1.5, unit: tbsp}
+      - {item: balsamic-vinegar, qty: 1, unit: tbsp}
+      - {item: garlic, qty: 1, unit: clove}
+      - {item: black-pepper, qty: 0.5, unit: tsp}
+      - {item: pine-nuts, qty: 15, unit: g}
+    steps:
+      - Halve the tomatoes and salt them lightly for five minutes so they weep.
+      - Rub the bowl with the cut garlic clove, then whisk oil and balsamic in it.
+      - Fold in beans, torn mozzarella, tomatoes with their juice, basil.
+      - Arugula and toasted pine nuts on top.
