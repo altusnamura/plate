@@ -6,6 +6,12 @@
 .claude/
 
 .venv/
+
+# Standalone runtime state: your database and your own YAML overrides.
+# Deliberately not committed — it's personal data.
+/data/
+/config/
+
 .devdata/
 .devconfig/
 __pycache__/

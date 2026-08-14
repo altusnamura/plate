@@ -3,7 +3,7 @@
 # Ingress means HA serves the UI under a rotating path and handles auth for us,
 # so the app must never emit absolute URLs. See app/static/js/api.js.
 name: PLATE
-version: "0.1.0"
+version: "0.2.0"
 slug: plate
 description: >-
   Adaptive menu planner driven by your own Fitbit, blood pressure and weight

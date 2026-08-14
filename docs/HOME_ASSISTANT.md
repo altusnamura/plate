@@ -1,5 +1,16 @@
 # Home Assistant integration
 
+**This is entirely optional.** PLATE runs standalone with measurements entered by
+hand, and the calibration works identically that way. This document covers what
+you gain by connecting Home Assistant: automatic weight and blood pressure
+readings, Fitbit expenditure, and PLATE's own numbers published back as sensors
+you can put on a dashboard or drive automations with.
+
+Two ways to connect, covered at the end of the README: point the standalone app
+at your HA with `HA_URL`/`HA_TOKEN`, or install PLATE as an add-on so it lives in
+the sidebar. Either way, anything you already typed by hand is preserved and
+never overwritten by a sync.
+
 ## Entities PLATE publishes
 
 | Entity | Unit | What it is |

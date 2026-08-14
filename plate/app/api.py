@@ -16,6 +16,7 @@ from typing import Any
 from fastapi import APIRouter, HTTPException, Query, Request
 from pydantic import BaseModel, Field
 
+from . import metrics as mx
 from .engine.models import Meal
 from .engine.nutrients import CORE
 from .importers import (
@@ -395,6 +396,135 @@ async def set_pantry(request: Request, body: PantryBody):
 
 
 # --------------------------------------------------------------------------
+# measurements entered by hand
+# --------------------------------------------------------------------------
+
+# Field name in the request -> storage key. Deliberately friendlier names than
+# the internal keys, since these are typed by a person.
+_MANUAL_FIELDS = {
+    "weight_lb": "weight_lb",
+    "body_fat_pct": "body_fat_pct",
+    "calories_burned": "calories_burned",
+    "steps": "steps",
+    "resting_hr": "resting_hr",
+    "sleep_minutes": "sleep_minutes",
+    "bp_systolic": "bp_systolic",
+    "bp_diastolic": "bp_diastolic",
+}
+
+
+class MetricsBody(BaseModel):
+    """Everything optional; only what you send gets written."""
+
+    day: str | None = None
+    weight_lb: float | None = None
+    body_fat_pct: float | None = None
+    calories_burned: float | None = None
+    steps: float | None = None
+    resting_hr: float | None = None
+    sleep_minutes: float | None = None
+    bp_systolic: float | None = None
+    bp_diastolic: float | None = None
+
+
+@router.post("/metrics")
+async def put_metrics(request: Request, body: MetricsBody):
+    """Record measurements by hand.
+
+    This is what makes PLATE usable with no Home Assistant at all: type a weight
+    every few days and a blood pressure when you take one, and the whole adaptive
+    engine works exactly as it would with a Fitbit attached — just with sparser
+    data, which the trend smoothing already handles.
+
+    Values are range-checked, because a slipped decimal in a weight quietly
+    corrupts the TDEE calibration somewhere nobody would look for it.
+    """
+    service = svc(request)
+    assert service.store is not None
+    day = _parse_day(body.day)
+    if day > date.today():
+        raise HTTPException(400, "cannot record a measurement in the future")
+
+    payload = body.model_dump(exclude_none=True)
+    payload.pop("day", None)
+    if not payload:
+        raise HTTPException(400, "send at least one measurement")
+
+    written: dict[str, float] = {}
+    for field, value in payload.items():
+        key = _MANUAL_FIELDS.get(field)
+        if key is None:
+            continue
+        if not mx.is_plausible(key, float(value)):
+            raise HTTPException(
+                400,
+                f"{field} of {value:g} is outside the plausible range "
+                f"({mx.range_hint(key)}) — check for a slipped decimal point",
+            )
+        service.store.put_metrics(key, {day: float(value)}, source="manual")
+        written[key] = float(value)
+
+    # Blood pressure only means anything as a pair; half of one is a data bug
+    # waiting to be misread as a category.
+    has_sys = "bp_systolic" in written
+    has_dia = "bp_diastolic" in written
+    if has_sys != has_dia:
+        existing = service.store.metrics(
+            "bp_diastolic" if has_sys else "bp_systolic", since=day
+        )
+        if day not in existing:
+            missing = "bp_diastolic" if has_sys else "bp_systolic"
+            service.store.delete_metric(day, "bp_systolic")
+            service.store.delete_metric(day, "bp_diastolic")
+            raise HTTPException(400, f"blood pressure needs both numbers; {missing} is missing")
+
+    service._invalidate()
+    snapshot = await service.snapshot(force=True)
+    await service.publish(snapshot)
+    return {"ok": True, "day": day.isoformat(), "written": written, "snapshot": snapshot}
+
+
+@router.get("/metrics")
+async def get_metrics(request: Request, days: int = Query(60, ge=1, le=730)):
+    """Recent measurements with their source, for review and correction."""
+    service = svc(request)
+    assert service.store is not None
+    since = date.today() - timedelta(days=days)
+
+    by_day: dict[str, dict[str, object]] = {}
+    for row in service.store.metric_rows(since):
+        entry = by_day.setdefault(row["day"], {"day": row["day"], "values": {}, "sources": {}})
+        entry["values"][row["key"]] = row["value"]  # type: ignore[index]
+        entry["sources"][row["key"]] = row["source"]  # type: ignore[index]
+
+    return {
+        "days": sorted(by_day.values(), key=lambda d: d["day"], reverse=True),
+        "fields": [
+            {"key": k, "range": mx.range_hint(k), "label": mx.BY_KEY[k].label,
+             "unit": mx.BY_KEY[k].unit}
+            for k in _MANUAL_FIELDS.values() if k in mx.BY_KEY
+        ],
+        "counts": service.store.metric_keys(),
+    }
+
+
+class MetricDeleteBody(BaseModel):
+    day: str
+    key: str
+
+
+@router.post("/metrics/delete")
+async def delete_metric(request: Request, body: MetricDeleteBody):
+    service = svc(request)
+    assert service.store is not None
+    removed = service.store.delete_metric(_parse_day(body.day), body.key)
+    if not removed:
+        raise HTTPException(404, "no such measurement")
+    service._invalidate()
+    return {"ok": True, "snapshot": await service.snapshot(force=True)}
+
+
+# --------------------------------------------------------------------------
 # insight
 # --------------------------------------------------------------------------
 
@@ -442,7 +572,10 @@ async def insight(request: Request, days: int = Query(90, ge=14, le=365)):
 async def get_settings(request: Request):
     service = svc(request)
     assert service.store is not None and service.library is not None
+    standalone = not (service.ha and service.ha.configured)
     return {
+        "standalone": standalone,
+        "ha_mode": service.ha.mode if service.ha else "none",
         "config": service.config.public_dict(),
         "overrides": service.store.get_settings(),
         "stores": [

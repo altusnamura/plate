@@ -175,21 +175,58 @@ class Store:
 
     # ---- metrics ----------------------------------------------------------
 
-    def put_metrics(self, key: str, series: Mapping[date, float], source: str = "ha") -> int:
-        """Upsert a daily series. Returns rows written."""
+    def put_metrics(
+        self,
+        key: str,
+        series: Mapping[date, float],
+        source: str = "ha",
+        protect_manual: bool = True,
+    ) -> int:
+        """Upsert a daily series. Returns rows written.
+
+        ``protect_manual`` is what keeps a hand-typed reading from being silently
+        replaced by an automatic sync. If you weighed yourself, typed it in, and
+        later connected a scale integration that reports something different for
+        that day, the number you typed wins — you were there, the integration is
+        guessing at a day boundary. Passing ``source="manual"`` always writes.
+        """
         if not series:
             return 0
         now = datetime.now().isoformat(timespec="seconds")
         rows = [(d.isoformat(), key, float(v), source, now) for d, v in series.items()]
+
+        sql = (
+            "INSERT INTO metric_daily(day,key,value,source,updated) VALUES(?,?,?,?,?) "
+            "ON CONFLICT(day,key) DO UPDATE SET "
+            "  value=excluded.value, source=excluded.source, updated=excluded.updated"
+        )
+        if protect_manual and source != "manual":
+            sql += " WHERE metric_daily.source <> 'manual'"
+
         with self._lock:
-            self._conn.executemany(
-                "INSERT INTO metric_daily(day,key,value,source,updated) VALUES(?,?,?,?,?) "
-                "ON CONFLICT(day,key) DO UPDATE SET "
-                "  value=excluded.value, source=excluded.source, updated=excluded.updated",
-                rows,
-            )
+            self._conn.executemany(sql, rows)
             self._conn.commit()
         return len(rows)
+
+    def delete_metric(self, day: date, key: str) -> int:
+        with self._lock:
+            cur = self._conn.execute(
+                "DELETE FROM metric_daily WHERE day=? AND key=?", (day.isoformat(), key)
+            )
+            self._conn.commit()
+            return cur.rowcount
+
+    def metric_rows(self, since: date | None = None) -> list[dict[str, Any]]:
+        """Full daily metric records including source, for the review table."""
+        sql = "SELECT day, key, value, source, updated FROM metric_daily"
+        params: list[Any] = []
+        if since:
+            sql += " WHERE day >= ?"
+            params.append(since.isoformat())
+        sql += " ORDER BY day DESC, key"
+        with self._lock:
+            rows = self._conn.execute(sql, params).fetchall()
+        return [dict(r) for r in rows]
 
     def metrics(self, key: str, since: date | None = None) -> dict[date, float]:
         sql = "SELECT day, value FROM metric_daily WHERE key=?"

@@ -241,8 +241,12 @@ async def sync_metrics(
         if spec.convert:
             series = {d: spec.convert(v, unit) for d, v in series.items()}
 
-        series = {d: v for d, v in series.items() if _plausible(spec.key, v)}
-        written[spec.key] = store.put_metrics(spec.key, series)
+        series = {d: v for d, v in series.items() if is_plausible(spec.key, v)}
+        # protect_manual: a reading you typed by hand outranks whatever an
+        # integration later reports for the same day.
+        written[spec.key] = store.put_metrics(
+            spec.key, series, source="ha", protect_manual=True
+        )
 
     log.info(
         "metric sync: %s written, %d via statistics, %d via history",
@@ -255,7 +259,10 @@ async def sync_metrics(
 # emits 255 on a failed read, would otherwise poison the trend for weeks — and
 # unlike a wrong number in a chart, a bad weight silently corrupts the TDEE
 # calibration where nobody would think to look for it.
-_PLAUSIBLE = {
+#
+# Also applied to hand-typed entries, where a slipped decimal point ("18.5" for a
+# weight, "1320" for a systolic) is at least as likely as a sensor glitch.
+PLAUSIBLE_RANGES: Mapping[str, tuple[float, float]] = {
     "weight_lb": (50.0, 700.0),
     "body_fat_pct": (2.0, 70.0),
     "calories_burned": (600.0, 10000.0),
@@ -267,9 +274,14 @@ _PLAUSIBLE = {
 }
 
 
-def _plausible(key: str, value: float) -> bool:
-    lo, hi = _PLAUSIBLE.get(key, (float("-inf"), float("inf")))
+def is_plausible(key: str, value: float) -> bool:
+    lo, hi = PLAUSIBLE_RANGES.get(key, (float("-inf"), float("inf")))
     return lo <= value <= hi
+
+
+def range_hint(key: str) -> str:
+    lo, hi = PLAUSIBLE_RANGES.get(key, (0.0, 0.0))
+    return f"{lo:g}–{hi:g}"
 
 
 # --------------------------------------------------------------------------

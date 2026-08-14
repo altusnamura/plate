@@ -116,10 +116,14 @@
     /* --- trend --- */
     const trend = snap.trend || {};
     root.appendChild(el('div', { class: 'card' }, [
-      el('div', { class: 'card-head' }, [el('h2', { text: 'Progress' })]),
+      el('div', { class: 'card-head' }, [
+        el('h2', { text: 'Progress' }),
+        el('span', { class: 'hint', text: trend.readings
+          ? `${trend.readings} weigh-ins` : 'no data yet' }),
+      ]),
       el('div', { class: 'stats' }, [
         UI.stat(num(trend.trend_lb, 1) + ' lb', 'Trend weight',
-          trend.raw_lb ? `last scale ${num(trend.raw_lb, 1)}` : null),
+          trend.raw_lb ? `last weigh-in ${num(trend.raw_lb, 1)}` : null),
         UI.stat(signed(trend.rate_lb_per_week, 2), 'lb / week',
           `target ${signed(snap.profile.target_rate_lb_per_week, 1)}`),
         UI.stat(num(energy.tdee), 'TDEE', energy.source),
@@ -128,11 +132,27 @@
               trend.goal_date)
           : UI.stat('–', 'Goal ETA', 'not on track'),
       ]),
+      el('button', {
+        class: 'btn btn-block' + (trend.readings ? '' : ' btn-primary'),
+        style: 'margin-top:12px',
+        text: trend.readings ? 'Add measurement' : 'Add your first weigh-in',
+        onclick: () => showMetricsSheet(snap),
+      }),
     ]));
 
     /* --- blood pressure --- */
     const bp = snap.bp || {};
-    if (bp.systolic) {
+    if (!bp.systolic) {
+      root.appendChild(el('div', { class: 'card card-tight' }, [
+        el('div', { class: 'row-between' }, [
+          el('span', { class: 'small muted grow', text:
+            'No blood pressure readings. Add a few and the sodium, saturated fat ' +
+            'and potassium targets adjust to match.' }),
+          el('button', { class: 'btn btn-sm', text: 'Add',
+            onclick: () => showMetricsSheet(snap) }),
+        ]),
+      ]));
+    } else {
       root.appendChild(el('div', { class: 'card' }, [
         el('div', { class: 'card-head' }, [
           el('h2', { text: 'Blood pressure' }),
@@ -474,19 +494,48 @@
       API.discover().catch(() => ({ candidates: {}, current: {} })),
     ]);
     const cfg = settings.config;
+    const standalone = settings.standalone;
     const root = el('div');
     const inputs = {};
 
+    /* --- measurements: the standalone equivalent of connecting a tracker --- */
+    if (standalone) {
+      root.appendChild(el('div', { class: 'card' }, [
+        el('div', { class: 'card-head' }, [
+          el('h2', { text: 'Measurements' }),
+          el('span', { class: 'hint', text: 'running standalone' }),
+        ]),
+        el('p', { class: 'small muted', text:
+          'No Home Assistant connected, so weight and blood pressure are entered by ' +
+          'hand. That is a fully supported way to run this — the calibration works ' +
+          'the same, it just needs you to weigh in every few days.' }),
+        el('div', { class: 'btn-row' }, [
+          el('button', { class: 'btn btn-primary grow', text: 'Add measurement',
+            onclick: () => showMetricsSheet(null) }),
+          el('button', { class: 'btn', text: 'History',
+            onclick: () => showMetricsHistory() }),
+        ]),
+      ]));
+    }
+
     /* --- entities --- */
-    const entityCard = el('div', { class: 'card' }, [
-      el('div', { class: 'card-head' }, [
-        el('h2', { text: 'Home Assistant entities' }),
-        el('span', { class: 'hint', text: 'auto-detected' }),
-      ]),
-      el('p', { class: 'small muted', text:
-        'PLATE suggests entities by name and unit. Confirm each one — calibrating ' +
-        'against the wrong sensor produces confident nonsense.' }),
-    ]);
+    const entityCard = standalone
+      ? el('details', { class: 'card' }, [
+          el('summary', { text: 'Home Assistant entities (not connected)' }),
+          el('p', { class: 'small muted', text:
+            'Nothing to pick while running standalone. Connect Home Assistant and ' +
+            'these fill in automatically — your hand-entered measurements are kept ' +
+            'and are never overwritten by a sync.' }),
+        ])
+      : el('div', { class: 'card' }, [
+          el('div', { class: 'card-head' }, [
+            el('h2', { text: 'Home Assistant entities' }),
+            el('span', { class: 'hint', text: 'auto-detected' }),
+          ]),
+          el('p', { class: 'small muted', text:
+            'PLATE suggests entities by name and unit. Confirm each one — calibrating ' +
+            'against the wrong sensor produces confident nonsense.' }),
+        ]);
     for (const [key, label] of Object.entries({
       weight: 'Weight', body_fat: 'Body fat %', calories_burned: 'Calories burned',
       steps: 'Steps', resting_hr: 'Resting heart rate', sleep_minutes: 'Sleep',
@@ -683,6 +732,135 @@
     }
   }
 
+  /* --------------------------------------------------- measurement entry */
+
+  /* The standalone path's equivalent of a Fitbit. Weight and blood pressure are
+   * the two that matter — everything else the engine can estimate or do without.
+   * Deliberately a short form: a measurement screen you dread is a measurement
+   * screen you stop using, and sparse data is handled fine by the trend
+   * smoothing. */
+  function showMetricsSheet(snapshot) {
+    const today = new Date().toLocaleDateString('en-CA');
+    const fields = {};
+
+    const field = (key, label, unit, attrs, help) => {
+      const input = el('input', {
+        id: 'm-' + key, type: 'number', inputmode: 'decimal', ...attrs,
+      });
+      fields[key] = input;
+      return el('div', { class: 'field' }, [
+        el('label', { for: 'm-' + key, text: unit ? `${label} (${unit})` : label }),
+        input,
+        help ? el('div', { class: 'help', text: help }) : null,
+      ]);
+    };
+
+    const dayInput = el('input', { id: 'm-day', type: 'date', value: today, max: today });
+
+    const body = el('div', {}, [
+      el('p', { class: 'small muted', text:
+        'Weight is the one that matters — a few times a week is plenty, the trend ' +
+        'smoothing handles the gaps. Everything else is optional.' }),
+
+      el('div', { class: 'field' }, [
+        el('label', { for: 'm-day', text: 'Date' }),
+        dayInput,
+      ]),
+
+      el('div', { class: 'section-label', text: 'Weight' }),
+      el('div', { class: 'field-row' }, [
+        field('weight_lb', 'Weight', 'lb', { step: '0.1', placeholder: '—' }),
+        field('body_fat_pct', 'Body fat', '%', { step: '0.1', placeholder: 'optional' },
+          'If your scale reports it, this switches the resting-rate formula to a more accurate one.'),
+      ]),
+
+      el('div', { class: 'section-label', text: 'Blood pressure' }),
+      el('div', { class: 'field-row' }, [
+        field('bp_systolic', 'Systolic', 'mmHg', { step: '1', placeholder: '—' }),
+        field('bp_diastolic', 'Diastolic', 'mmHg', { step: '1', placeholder: '—' }),
+      ]),
+      el('div', { class: 'help', style: 'margin-top:-6px', text:
+        'Both numbers or neither. Categories are based on an average of readings ' +
+        'across several days, so one measurement won\'t move much on its own.' }),
+
+      el('details', { style: 'margin-top:14px' }, [
+        el('summary', { text: 'Activity (optional)' }),
+        el('p', { class: 'small muted', text:
+          'Only worth filling in if you have a real number from a tracker. Left ' +
+          'blank, PLATE estimates expenditure and then corrects it against your ' +
+          'weight trend, which ends up more accurate than a guess here.' }),
+        el('div', { class: 'field-row' }, [
+          field('calories_burned', 'Calories burned', 'kcal', { step: '10', placeholder: 'optional' }),
+          field('steps', 'Steps', '', { step: '100', placeholder: 'optional' }),
+        ]),
+        el('div', { class: 'field-row' }, [
+          field('resting_hr', 'Resting HR', 'bpm', { step: '1', placeholder: 'optional' }),
+          field('sleep_minutes', 'Sleep', 'min', { step: '5', placeholder: 'optional' }),
+        ]),
+      ]),
+
+      el('button', {
+        class: 'btn btn-primary btn-block', style: 'margin-top:16px',
+        text: 'Save measurement',
+        onclick: async (e) => {
+          const payload = { day: dayInput.value };
+          let any = false;
+          for (const [key, input] of Object.entries(fields)) {
+            if (input.value !== '') { payload[key] = Number(input.value); any = true; }
+          }
+          if (!any) { UI.toast('Nothing to save'); return; }
+          e.target.disabled = true;
+          try {
+            await API.putMetrics(payload);
+            UI.closeSheet();
+            UI.toast('Saved');
+            await render();
+          } catch (err) {
+            UI.toast(err.message);
+            e.target.disabled = false;
+          }
+        },
+      }),
+
+      el('button', {
+        class: 'btn btn-block', style: 'margin-top:8px',
+        text: 'Recent measurements',
+        onclick: () => showMetricsHistory(),
+      }),
+    ]);
+
+    UI.sheet('Add measurement', body);
+    setTimeout(() => fields.weight_lb.focus(), 120);
+  }
+
+  async function showMetricsHistory() {
+    try {
+      const data = await API.metrics(60);
+      const labels = Object.fromEntries(data.fields.map((f) => [f.key, f]));
+      UI.sheet('Recent measurements', el('div', {}, [
+        el('p', { class: 'small muted', text:
+          'Hand-entered values are never overwritten by an integration, so if you ' +
+          'connect Home Assistant later these stay put.' }),
+        data.days.length
+          ? el('div', {}, data.days.slice(0, 40).map((d) =>
+              el('div', { class: 'line' }, [
+                el('div', { class: 'line-body' }, [
+                  el('div', { class: 'line-name', text: dayName(d.day, true) }),
+                  el('div', { class: 'line-meta', text:
+                    Object.entries(d.values).map(([k, v]) => {
+                      const f = labels[k];
+                      const src = d.sources[k] === 'manual' ? '' : ' (synced)';
+                      return `${f ? f.label : k} ${num(v, 1)}${f && f.unit ? ' ' + f.unit : ''}${src}`;
+                    }).join(' · ') }),
+                ]),
+              ])))
+          : UI.empty('No measurements recorded yet.'),
+      ]));
+    } catch (err) {
+      UI.toast(err.message);
+    }
+  }
+
   /* --------------------------------------------------------------- sheets */
 
   async function showRecipe(recipeId) {
@@ -864,8 +1042,15 @@
     const btn = e.currentTarget;
     btn.classList.add('is-busy');
     try {
-      await API.refresh();
-      UI.toast('Synced with Home Assistant');
+      const result = await API.refresh();
+      // /api/refresh succeeds even with no Home Assistant — it still recomputes
+      // and republishes. Report what actually happened rather than claiming a
+      // sync that never occurred.
+      const synced = result && result.sync && result.sync.ok;
+      const written = synced
+        ? Object.values(result.sync.written || {}).reduce((a, b) => a + b, 0)
+        : 0;
+      UI.toast(synced ? `Synced ${written} readings` : 'Recalculated');
       await render();
     } catch (err) {
       UI.toast(err.message);

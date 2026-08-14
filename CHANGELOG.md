@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.2.0
+
+Standalone is now the primary way to run PLATE; the Home Assistant add-on became
+the optional upgrade rather than the only path.
+
+- **Manual measurement entry.** Weight, body fat, blood pressure and optionally
+  activity can be typed in. The calibration works identically from hand-entered
+  data — there is a test that recovers a known TDEE with no tracker involved at
+  all.
+- **Manual entries are authoritative.** A hand-typed reading is never overwritten
+  by a Home Assistant sync for the same day, so connecting HA later loses nothing.
+- Blood pressure requires both numbers or neither; half a reading would otherwise
+  be categorised as though it were whole.
+- All entered values are range-checked, because a slipped decimal in a weight
+  corrupts the TDEE calibration somewhere nobody would look for it.
+- `run.py` standalone launcher with `--lan` for phone access, `PLATE.bat` for
+  Windows double-click, and a standalone `Dockerfile` plus compose file.
+- Setup advice, the Settings screen and the refresh button now adapt to whether
+  Home Assistant is present instead of giving instructions that don't apply.
+- 19 new tests covering the standalone path; 105 total.
+
 ## 0.1.0
 
 First release.

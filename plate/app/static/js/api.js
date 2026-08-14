@@ -104,6 +104,10 @@
 
     insight: (days) => get('insight', { days }),
 
+    putMetrics: (body) => post('metrics', body),
+    metrics: (days) => get('metrics', { days }),
+    deleteMetric: (day, key) => post('metrics/delete', { day, key }),
+
     settings: () => get('settings'),
     saveSettings: (body) => put('settings', body),
     discover: () => get('entities/discover'),

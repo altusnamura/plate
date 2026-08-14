@@ -233,12 +233,18 @@ class Service:
         rate = energy.trend_rate_lb_per_week(trend_points)
         needs_setup: list[str] = []
 
+        # Standalone means no Home Assistant is reachable, so advice about
+        # picking entities is useless — the user needs to be told to type a
+        # number in instead.
+        standalone = not (self.ha and self.ha.configured)
+
         if trend_lb is None:
             trend_lb = p.assumed_weight_lb
             needs_setup.append(
                 "No weight history yet, so everything below is based on the assumed "
-                f"weight of {p.assumed_weight_lb:.0f} lb. Point PLATE at your scale "
-                "entity in Settings."
+                f"weight of {p.assumed_weight_lb:.0f} lb. "
+                + ("Tap Add measurement to enter one." if standalone
+                   else "Point PLATE at your scale entity in Settings.")
             )
         body_fat = mx.recent_mean(snap_metrics.body_fat, days=21, today=today)
 
@@ -259,8 +265,12 @@ class Service:
         )
         if not snap_metrics.burn:
             needs_setup.append(
-                "No tracker expenditure data. Targets fall back to a formula estimate "
-                "until a Fitbit calories entity is configured."
+                "No tracker expenditure data, so targets use a formula estimate. "
+                + ("That's fine — once there are a few weeks of weights and food "
+                   "logs, the calibration corrects the formula against your actual "
+                   "rate of change anyway."
+                   if standalone
+                   else "Configure a Fitbit calories entity to improve it.")
             )
 
         target = energy.calorie_target(
@@ -332,6 +342,10 @@ class Service:
             "day": today.isoformat(),
             "generated": datetime.now().isoformat(timespec="seconds"),
             "needs_setup": needs_setup,
+            # Lets the UI hide the entity pickers and lead with manual entry when
+            # there's no Home Assistant behind this.
+            "mode": "standalone" if standalone else self.ha.mode,
+            "standalone": standalone,
             "profile": {
                 "goal": p.goal,
                 "goal_weight_lb": p.goal_weight_lb,
