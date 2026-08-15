@@ -207,10 +207,18 @@ def load_options(path: Path | str | None = None) -> dict[str, Any]:
         log.info("no options file at %s; using defaults", p)
         return {}
     try:
-        with p.open("r", encoding="utf-8") as fh:
+        # utf-8-sig, not utf-8: Notepad and PowerShell's Out-File both prepend a
+        # byte-order mark, and a strict utf-8 read then fails on character zero.
+        # The failure is caught below and the file silently ignored, which is a
+        # miserable thing to debug — you edit your options, nothing changes, and
+        # the only clue is one line in the log. utf-8-sig reads both forms.
+        with p.open("r", encoding="utf-8-sig") as fh:
             return json.load(fh) or {}
-    except (json.JSONDecodeError, OSError) as exc:
-        log.warning("could not read %s: %s", p, exc)
+    except (json.JSONDecodeError, OSError, UnicodeDecodeError) as exc:
+        log.warning(
+            "could not read %s (%s) — falling back to defaults, so any options "
+            "set in that file are being ignored", p, exc
+        )
         return {}
 
 
